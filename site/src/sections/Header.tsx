@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
+
 import { AnimatedUnderlineLink } from '@/components/ui/animate-underline';
 
 /* ───────── links array once so we don’t repeat it ───────── */
@@ -23,16 +25,22 @@ export default function Header() {
 
     return (
         <motion.header
-            className="fixed top-0 left-0 w-full z-100 bg-black/90 backdrop-blur-lg"
+            className="fixed top-0 left-0 w-full z-100 bg-black/70 backdrop-blur-lg"
             initial={{ y: -80 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
         >
             <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
                 {/* Brand */}
+
+
                 <AnimatedUnderlineLink href="/" children={<div className="text-second text-xl font-semibold">
-                    Winglam&nbsp;<span className="font-light">Productions</span>
+                    <div className='flex items-center justify-evenly'>
+                        <Image src="/LogoWhite.png" alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
+                        <h1 className='relative -top-[2px] text-2xl'>Winglam&nbsp;<span className="font-light">Productions</span></h1>
+                    </div>
                 </div>} />
+
 
 
                 {/* Desktop links */}
