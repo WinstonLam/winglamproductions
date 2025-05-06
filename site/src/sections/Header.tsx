@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import DarkModeToggle from '@/components/ui/darkmode-switch';
 
 import { AnimatedUnderlineLink } from '@/components/ui/animate-underline';
 
@@ -25,7 +26,7 @@ export default function Header() {
 
     return (
         <motion.header
-            className="fixed top-0 left-0 w-full z-100 bg-black/70 backdrop-blur-lg"
+            className="fixed top-0 left-0 w-full z-100 dark:bg-black/70 bg-second/70 backdrop-blur-lg"
             initial={{ y: -80 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
@@ -34,8 +35,8 @@ export default function Header() {
                 {/* Brand */}
 
 
-                <AnimatedUnderlineLink href="/" children={<div className="text-second text-xl font-semibold">
-                    <div className='flex items-center justify-evenly'>
+                <AnimatedUnderlineLink href="/" children={<div className="dark:text-second text-black text-xl font-semibold">
+                    <div className='flex items-center justify-evenly dark:text-second text-black'>
                         <Image src="/LogoWhite.png" alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
                         <h1 className='relative -top-[2px] text-2xl'>Winglam&nbsp;<span className="font-light">Productions</span></h1>
                     </div>
@@ -44,13 +45,14 @@ export default function Header() {
 
 
                 {/* Desktop links */}
-                <ul className="hidden md:flex space-x-6 text-second">
+                <ul className="hidden md:flex space-x-6 dark:text-second text-black">
                     {navLinks.map(({ href, label }) => (
                         <li key={href}>
-                            <AnimatedUnderlineLink href={href} children={<div className='font-semibold text-second'>{label}</div>} />
+                            <AnimatedUnderlineLink href={href} children={<div className='font-semibold '>{label}</div>} />
                         </li>
                     ))}
                 </ul>
+                <DarkModeToggle />
 
                 {/* Hamburger (mobile only) */}
                 <button
@@ -59,18 +61,19 @@ export default function Header() {
                     className="md:hidden flex flex-col justify-between h-5 w-6 focus:outline-none"
                 >
                     <span
-                        className={`block h-0.5 w-full bg-second transition-transform ${mobileOpen ? 'translate-y-[6px] rotate-45' : ''
+                        className={`block h-0.5 w-full dark:bg-second bg-black transition-transform ${mobileOpen ? 'translate-y-[6px] rotate-45' : ''
                             }`}
                     />
                     <span
-                        className={`block h-0.5 w-full bg-second transition-opacity ${mobileOpen ? 'opacity-0' : ''
+                        className={`block h-0.5 w-full dark:bg-second bg-black transition-opacity ${mobileOpen ? 'opacity-0' : ''
                             }`}
                     />
                     <span
-                        className={`block h-0.5 w-full bg-second transition-transform ${mobileOpen ? '-translate-y-[12px] -rotate-45' : ''
+                        className={`block h-0.5 w-full dark:bg-second bg-black transition-transform ${mobileOpen ? '-translate-y-[12px] -rotate-45' : ''
                             }`}
                     />
                 </button>
+
 
             </nav>
 
@@ -79,14 +82,14 @@ export default function Header() {
 
             <nav
                 /* ───── styling ─────  */
-                className={`md:hidden fixed w-full z-40 bg-black/50 backdrop-blur py-4  flex ${mobileOpen ? 'translate-x-[0px]' : 'translate-x-[900px]'} transition-all duration-300`}>
-                <ul className="h-full w-full flex flex-col items-center justify-center gap-8 text-second text-2xl font-medium z-50">
+                className={`md:hidden fixed w-full z-40 dark:bg-black/50 bg-second/70 backdrop-blur py-4  flex ${mobileOpen ? 'translate-x-[0px]' : 'translate-x-[900px]'} transition-all duration-300`}>
+                <ul className="h-full w-full flex flex-col items-center justify-center gap-8 dark:text-second text-black text-2xl font-medium z-50">
                     {navLinks.map(({ href, label }) => (
-                        <li key={href} className='text-white'>
+                        <li key={href}>
                             <Link
                                 href={href}
                                 onClick={close}
-                                className="hover:underline underline-offset-4 text-second transition-colors duration-300"
+                                className="hover:underline underline-offset-4 dark:text-second text-black transition-colors duration-300"
                             >
                                 {label}
                             </Link>

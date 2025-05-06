@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
     return (
-        <section id="contact" className="bg-cream text-gray-900 py-16 px-4">
-            <div className="max-w-xl mx-auto text-second">
+        <section id="contact" className="bg-second dark:bg-black text-gray-900 py-16 px-4">
+            <div className="max-w-xl mx-auto dark:text-second">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
                     Contact Us
                 </h2>

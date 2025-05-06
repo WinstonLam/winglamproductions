@@ -11,10 +11,10 @@ const Services = () => {
             title: 'Brand',
             value: 'brand',
             content: (
-                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-stone-950 text-second">
-                    <div className="p-4 z-10">
+                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
+                    <div className="p-4 z-10 text-black dark:text-second">
                         <h1 className="font-bold text-xl md:text-4xl">Brand Story Elevation</h1>
-                        <p className="font-light text-base md:text-lg">
+                        <p className=" text-base md:text-lg">
                             Elevate the story of your brand
                         </p>
                     </div>
@@ -38,10 +38,10 @@ const Services = () => {
             title: 'Lifestyle',
             value: 'lifestyle',
             content: (
-                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-stone-950 text-second">
-                    <div className="p-4 z-10">
+                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
+                    <div className="p-4 z-10 text-black dark:text-second">
                         <h1 className="font-bold text-xl md:text-4xl">Lifestyle Elevation</h1>
-                        <p className="font-light text-base md:text-lg">
+                        <p className=" text-base md:text-lg">
                             Capture the genuine rhythm of everyday life
                         </p>
                     </div>
@@ -65,10 +65,10 @@ const Services = () => {
             title: 'Socials',
             value: 'social',
             content: (
-                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-stone-950 text-second">
-                    <div className="p-4 z-10">
+                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-second dark:bg-stone-950 text-second">
+                    <div className="p-4 z-10 text-black dark:text-second ">
                         <h1 className="font-bold text-xl md:text-4xl">Social Media Elevation</h1>
-                        <p className="font-light text-base md:text-lg">
+                        <p className=" text-base md:text-lg">
                             Snack‑size content engineered to stop the scroll
                         </p>
                     </div>
@@ -92,10 +92,10 @@ const Services = () => {
             title: 'Interviews',
             value: 'interview',
             content: (
-                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-stone-950 text-second">
-                    <div className="p-4 z-10">
+                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
+                    <div className="p-4 z-10 text-black dark:text-second">
                         <h1 className="font-bold text-xl md:text-4xl">Interview Elevation</h1>
-                        <p className="font-light text-base md:text-lg">
+                        <p className=" text-base md:text-lg">
                             Authentic voices. Compelling on‑screen conversations.
                         </p>
                     </div>
@@ -163,7 +163,7 @@ const Services = () => {
 
                         <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b ">
                             <a
-                                href="#services"
+                                href="/services"
                                 className="inline-block mb-3 sm:mb-6 bg-primary text-white font-medium px-4 py-2 rounded border border-white
                         rounded-full z-10 hover:bg-white hover:text-prime transition-all duration-300"
                             >

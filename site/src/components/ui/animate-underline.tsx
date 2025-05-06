@@ -33,7 +33,7 @@ export function AnimatedUnderlineLink({
             <span
                 className={cn(
                     heightClass,
-                    "block bg-current rounded-full transition-all origin-left",
+                    "block bg-current dark:text-second text-black rounded-full transition-all origin-left",
                     speed,
                     active
                         ? "max-w-full"
