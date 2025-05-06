@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTheme } from "next-themes";
 import { motion } from 'framer-motion';
 import DarkModeToggle from '@/components/ui/darkmode-switch';
 
@@ -23,6 +24,15 @@ export default function Header() {
     /* helpers */
     const close = () => setMobileOpen(false);
     const toggle = () => setMobileOpen((p) => !p);
+    const { resolvedTheme, theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    /* avoid hydration mismatch */
+    useEffect(() => setMounted(true), []);
+
+    /* true when currently in dark mode */
+    const isDark = (mounted ? resolvedTheme : theme) === "dark";
+
 
     return (
         <motion.header
@@ -37,7 +47,7 @@ export default function Header() {
 
                 <AnimatedUnderlineLink href="/" children={<div className="dark:text-second text-black text-xl font-semibold">
                     <div className='flex items-center justify-evenly dark:text-second text-black'>
-                        <Image src="/LogoWhite.png" alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
+                        <Image src={`${isDark ? "/LogoWhite.png" : "/LogoDark.png"}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
                         <h1 className='relative -top-[2px] text-2xl'>Winglam&nbsp;<span className="font-light">Productions</span></h1>
                     </div>
                 </div>} />
