@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
+import { prefix } from '@/lib/prefix';
 
 type ShowcaseItem = { title: string };
 
@@ -131,7 +132,7 @@ function ShowcaseCard({
                 {/* video fades in on hover */}
                 <motion.video
                     ref={vid}
-                    src="/hero.mp4"
+                    src={`${prefix}/media/hero.mp4`}
                     muted
                     loop
                     playsInline

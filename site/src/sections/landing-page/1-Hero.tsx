@@ -1,13 +1,14 @@
 'use client';
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { prefix } from "@/lib/prefix";
 
 const Hero = () => {
     return (
         <section id="hero" className="relative w-full text-second h-screen overflow-hidden">
             {/* Background video */}
             <div className="flex justify-center items-center h-full">
-                <video playsInline loop muted autoPlay preload="none" className="absolute w-full h-full object-cover " src="/hero.mp4" />
+                <video playsInline loop muted autoPlay preload="none" className="absolute w-full h-full object-cover " src={`${prefix}/media/hero.mp4`} />
 
 
                 {/* Overlay and content */}

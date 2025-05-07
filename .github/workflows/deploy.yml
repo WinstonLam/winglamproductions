@@ -1,0 +1,47 @@
+name: Deploy Next.js site (sub‑folder) to GitHub Pages
+on:
+  push:
+    branches: [main]        # adjust if your default branch is different
+  workflow_dispatch:
+
+env:
+  NEXT_PUBLIC_REPO: winglamproductions   # used by prefix helper
+  NODE_VERSION: 20
+
+permissions:
+  pages: write
+  id-token: write
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # All commands in the site/ directory ↓↓↓
+    defaults:
+      run:
+        working-directory: ./site
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm run export
+
+      # upload the exported static bundle (site/out)
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./site/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4

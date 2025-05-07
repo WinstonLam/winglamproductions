@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import { cn } from "@/lib/utils";
 import { AnimatedUnderlineLink } from "@/components/ui/animate-underline";
+import { prefix } from "@/lib/prefix";
 
 /* ------------------------------------------------------------------
    Mock data – replace with real projects later                       */
@@ -24,7 +25,7 @@ const categories = [
         items: [
             {
                 label: "Jason & Jina Wedding",
-                video: "/hero.mp4",
+                video: `${prefix}/media/hero.mp4`,
                 description:
                     "An intimate cinematic recap that captures every emotion of Jason & Jina’s big day.",
                 points: [
@@ -37,7 +38,7 @@ const categories = [
             },
             {
                 label: "Beachside Ceremony",
-                video: "/hero.mp4",
+                video: `${prefix}/media/hero.mp4`,
                 description:
                     "A sun‑kissed wedding film that celebrates a laid‑back coastal love story.",
                 points: [
@@ -54,7 +55,7 @@ const categories = [
         items: [
             {
                 label: "John Co. Re‑brand Showcase",
-                video: "/hero.mp4",
+                video: `${prefix}/media/hero.mp4`,
                 description:
                     "A punchy brand film launching John Co.’s new identity and core values.",
                 points: [
@@ -67,7 +68,7 @@ const categories = [
             },
             {
                 label: "Applebees Promo Series",
-                video: "/hero.mp4",
+                video: `${prefix}/media/hero.mp4`,
                 description:
                     "A mouth‑watering promo series that doubled Applebees’ social engagement.",
                 points: [
@@ -84,7 +85,7 @@ const categories = [
         items: [
             {
                 label: "Restaurant X Short‑form Push",
-                video: "/hero.mp4",
+                video: `${prefix}/media/hero.mp4`,
                 description:
                     "High‑energy snack‑size clips optimised for Reels & TikTok, boosting reach 2×.",
                 points: [
@@ -101,7 +102,7 @@ const categories = [
         items: [
             {
                 label: "Ashbourne Estate Showcase",
-                video: "/hero.mp4",
+                video: `${prefix}/media/hero.mp4`,
                 description:
                     "A relaxed lifestyle film capturing the warmth of this modern family home.",
                 points: [
