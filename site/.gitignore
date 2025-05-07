@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/public/hero.mp4
+
 /.pnp
 .pnp.*
 .yarn/*
