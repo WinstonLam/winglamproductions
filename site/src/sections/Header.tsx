@@ -11,7 +11,7 @@ import { AnimatedUnderlineLink } from '@/components/ui/animate-underline';
 
 /* ───────── links array once so we don’t repeat it ───────── */
 const navLinks = [
-    { href: '/', label: 'Home' },
+
     { href: '/services', label: 'Services' },
     { href: '/showcase', label: 'Showcase' },
     { href: '/about', label: 'About' },
@@ -24,7 +24,7 @@ export default function Header() {
     /* helpers */
     const close = () => setMobileOpen(false);
     const toggle = () => setMobileOpen((p) => !p);
-    const { resolvedTheme, theme, setTheme } = useTheme();
+    const { resolvedTheme, theme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     /* avoid hydration mismatch */
@@ -45,12 +45,14 @@ export default function Header() {
                 {/* Brand */}
 
 
-                <AnimatedUnderlineLink href="/" children={<div className="dark:text-second text-black text-xl font-semibold">
-                    <div className='flex items-center justify-evenly dark:text-second text-black'>
-                        <Image src={`${isDark ? "/LogoWhite.png" : "/LogoDark.png"}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
-                        <h1 className='relative -top-[2px] text-2xl'>Winglam&nbsp;<span className="font-light">Productions</span></h1>
+                <AnimatedUnderlineLink href="/">
+                    <div className="dark:text-second text-black text-xl font-semibold">
+                        <div className='flex items-center justify-evenly dark:text-second text-black'>
+                            <Image src={`${isDark ? "/LogoWhite.png" : "/LogoDark.png"}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
+                            <h1 className='relative -top-[2px] text-2xl'>Winglam&nbsp;<span className="font-light">Productions</span></h1>
+                        </div>
                     </div>
-                </div>} />
+                </AnimatedUnderlineLink>
 
 
 
@@ -58,7 +60,9 @@ export default function Header() {
                 <ul className="hidden md:flex space-x-6 dark:text-second text-black">
                     {navLinks.map(({ href, label }) => (
                         <li key={href}>
-                            <AnimatedUnderlineLink href={href} children={<div className='font-semibold '>{label}</div>} />
+                            <AnimatedUnderlineLink href={href} >
+                                <div className='font-semibold '>{label}</div>
+                            </AnimatedUnderlineLink >
                         </li>
                     ))}
                 </ul>

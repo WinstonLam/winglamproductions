@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { cn } from "@/lib/utils";
 
 /* ──────────────────────────────────────────────────────────────────
@@ -68,7 +69,7 @@ export default function ServicesSection() {
                     <motion.div
                         key={title}
                         initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                         className={cn(
@@ -78,23 +79,26 @@ export default function ServicesSection() {
                         )}
                     >
                         {/* video */}
-                        <motion.div
-                            whileHover={{ y: -8 }}
-                            className="w-full md:w-1/2 cursor-pointer rounded-lg overflow-hidden shadow-lg"
-                            onClick={() => setActiveSrc(video)}
-                        >
-                            <video
-                                src={video}
-                                playsInline
-                                loop
-                                muted
-                                autoPlay
-                                className="w-full h-[240px] md:h-[320px] object-cover"
-                            />
+                        <motion.div whileHover={{ y: -5 }}>
+                            <BackgroundGradient>
+                                <div
+                                    className="w-full cursor-pointer rounded-lg overflow-hidden shadow-lg"
+                                    onClick={() => setActiveSrc(video)}
+                                >
+                                    <video
+                                        src={video}
+                                        playsInline
+                                        loop
+                                        muted
+                                        autoPlay
+                                        className="w-full h-[240px] md:h-[320px] object-cover"
+                                    />
+                                </div>
+                            </BackgroundGradient>
                         </motion.div>
 
                         {/* copy */}
-                        <div className="w-full md:w-1/2 space-y-6">
+                        < div className="w-full md:w-1/2 space-y-6" >
                             <h3 className="text-2xl font-semibold">{title}</h3>
                             <p className="text-base md:text-lg text-zinc-800 dark:text-zinc-300">
                                 {desc}
@@ -108,50 +112,53 @@ export default function ServicesSection() {
                             </button>
                         </div>
                     </motion.div>
-                ))}
-            </div>
+                ))
+                }
+            </div >
 
             {/* ────────────── Lightbox / expanded video ────────────── */}
             <AnimatePresence>
-                {activeSrc && (
-                    <motion.div
-                        key="overlay"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
-                        onClick={close}
-                    >
+                {
+                    activeSrc && (
                         <motion.div
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
+                            key="overlay"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
                             transition={{ duration: 0.25 }}
-                            className="relative max-w-[90vw] max-h-[90vh] p-4"
-                            onClick={stop}
+                            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+                            onClick={close}
                         >
-                            {/* close button */}
-                            <button
-                                onClick={close}
-                                aria-label="Close"
-                                className="absolute w-8 h-8 right-4 top-3 rounded-full bg-white/90 text-black hover:bg-white shadow-md p-1 transition-all duration-300 z-100 cursor-pointer"
+                            <motion.div
+                                initial={{ scale: 0.9, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.9, opacity: 0 }}
+                                transition={{ duration: 0.25 }}
+                                className="relative max-w-[90vw] max-h-[90vh] p-4"
+                                onClick={stop}
                             >
-                                ✕
-                            </button>
+                                {/* close button */}
+                                <button
+                                    onClick={close}
+                                    aria-label="Close"
+                                    className="absolute w-8 h-8 right-4 top-3 rounded-full bg-white/90 text-black hover:bg-white shadow-md p-1 transition-all duration-300 z-100 cursor-pointer"
+                                >
+                                    ✕
+                                </button>
 
-                            <video
-                                src={activeSrc}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="w-full h-full object-contain rounded-lg"
-                            />
+                                <video
+                                    src={activeSrc}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-contain rounded-lg"
+                                />
+                            </motion.div>
                         </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </section>
+                    )
+                }
+            </AnimatePresence >
+        </section >
     );
 }

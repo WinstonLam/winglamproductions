@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import { cn } from "@/lib/utils";
 import { AnimatedUnderlineLink } from "@/components/ui/animate-underline";
@@ -321,7 +322,7 @@ export default function ShowcaseSection() {
                     <div className="flex flex-col sm:flex-row items-start ">
                         {/* description */}
                         <div className="flex flex-col  w-[40%] mt-4 mb-4 md:mt-0 md:mb-0">
-                            <h2 className="font-semibold text-xl">Client's Request:</h2>
+                            <h2 className="font-semibold text-xl">Client&apos;s Request:</h2>
                             <p className="max-w-2xl text-base  md:text-lg  dark:text-second text-black">
                                 {item.description}
                             </p>
@@ -362,7 +363,7 @@ export default function ShowcaseSection() {
                         className="fixed inset-0 bg-black/90 backdrop-blur flex items-center justify-center z-50"
                         onClick={() => setLightbox(null)}
                     >
-                        <img src={lightbox} alt="expanded" className="max-h-[90vh] max-w-[90vw] rounded-lg" />
+                        <Image src={lightbox} alt="expanded" className="max-h-[90vh] max-w-[90vw] rounded-lg" width={500} height={500} />
                     </motion.div>
                 )}
             </AnimatePresence>

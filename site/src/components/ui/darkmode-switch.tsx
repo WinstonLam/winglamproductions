@@ -21,6 +21,10 @@ export default function DarkModeToggle({ className, size = 20 }: Props) {
     /* avoid hydration mismatch */
     useEffect(() => setMounted(true), []);
 
+    if (!mounted) {
+        return <button aria-hidden className={className} style={{ width: size, height: size }} />;
+    }
+
     /* true when currently in dark mode */
     const isDark = (mounted ? resolvedTheme : theme) === "dark";
 

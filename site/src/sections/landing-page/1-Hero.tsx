@@ -7,7 +7,7 @@ const Hero = () => {
         <section id="hero" className="relative w-full text-second h-screen overflow-hidden">
             {/* Background video */}
             <div className="flex justify-center items-center h-full">
-                <video playsInline loop muted autoPlay className="absolute w-full h-full object-cover " src="/hero.mp4" />
+                <video playsInline loop muted autoPlay preload="none" className="absolute w-full h-full object-cover " src="/hero.mp4" />
 
 
                 {/* Overlay and content */}
@@ -29,11 +29,11 @@ const Hero = () => {
                         transition={{ delay: 1, duration: 0.5 }}>
 
                         <motion.a
-                            href="#services"
+                            href="/contact"
                             className="translate-y-40 inline-block bg-primary text-cream font-medium px-6 py-3 rounded border shadow-xl/30  
                         rounded-full z-10 hover:bg-second hover:text-prime transition-all duration-300"
                         >
-                            See Our Services
+                            Schedule a call
                         </motion.a>
                     </motion.div>
                 </div>

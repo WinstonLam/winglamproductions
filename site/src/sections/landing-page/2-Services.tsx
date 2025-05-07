@@ -164,8 +164,8 @@ const Services = () => {
                         <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b ">
                             <a
                                 href="/services"
-                                className="inline-block mb-3 sm:mb-6 bg-primary text-white font-medium px-4 py-2 rounded border border-white
-                        rounded-full z-10 hover:bg-white hover:text-prime transition-all duration-300"
+                                className="inline-block mb-3 sm:mb-6 bg-primary text-white font-medium px-4 py-2 rounded border border-white shadow-xl/70 
+                        rounded-full z-10 hover:bg-second hover:text-prime transition-all duration-300"
                             >
                                 See All Services
                             </a>
