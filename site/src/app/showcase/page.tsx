@@ -11,12 +11,12 @@ import { prefix } from "@/lib/prefix";
 /* ------------------------------------------------------------------
    Mock data – replace with real projects later                       */
 const imagesPlaceholder = [
-    "/hero.png",
-    "/hero.png",
-    "/hero.png",
-    "/hero.png",
-    "/hero.png",
-    "/hero.png",
+    `${prefix}/hero.png`,
+    `${prefix}/hero.png`,
+    `${prefix}/hero.png`,
+    `${prefix}/hero.png`,
+    `${prefix}/hero.png`,
+    `${prefix}/hero.png`,
 ];
 
 const categories = [
@@ -25,7 +25,7 @@ const categories = [
         items: [
             {
                 label: "Jason & Jina Wedding",
-                video: `${prefix}/media/hero.mp4`,
+                video: `${prefix}/hero.mp4`,
                 description:
                     "An intimate cinematic recap that captures every emotion of Jason & Jina’s big day.",
                 points: [
@@ -38,7 +38,7 @@ const categories = [
             },
             {
                 label: "Beachside Ceremony",
-                video: `${prefix}/media/hero.mp4`,
+                video: `${prefix}/hero.mp4`,
                 description:
                     "A sun‑kissed wedding film that celebrates a laid‑back coastal love story.",
                 points: [
@@ -55,7 +55,7 @@ const categories = [
         items: [
             {
                 label: "John Co. Re‑brand Showcase",
-                video: `${prefix}/media/hero.mp4`,
+                video: `${prefix}/hero.mp4`,
                 description:
                     "A punchy brand film launching John Co.’s new identity and core values.",
                 points: [
@@ -68,7 +68,7 @@ const categories = [
             },
             {
                 label: "Applebees Promo Series",
-                video: `${prefix}/media/hero.mp4`,
+                video: `${prefix}/hero.mp4`,
                 description:
                     "A mouth‑watering promo series that doubled Applebees’ social engagement.",
                 points: [
@@ -85,7 +85,7 @@ const categories = [
         items: [
             {
                 label: "Restaurant X Short‑form Push",
-                video: `${prefix}/media/hero.mp4`,
+                video: `${prefix}/hero.mp4`,
                 description:
                     "High‑energy snack‑size clips optimised for Reels & TikTok, boosting reach 2×.",
                 points: [
@@ -102,7 +102,7 @@ const categories = [
         items: [
             {
                 label: "Ashbourne Estate Showcase",
-                video: `${prefix}/media/hero.mp4`,
+                video: `${prefix}/hero.mp4`,
                 description:
                     "A relaxed lifestyle film capturing the warmth of this modern family home.",
                 points: [

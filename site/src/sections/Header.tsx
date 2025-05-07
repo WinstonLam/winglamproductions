@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useTheme } from "next-themes";
 import { motion } from 'framer-motion';
 import DarkModeToggle from '@/components/ui/darkmode-switch';
+import { prefix } from '@/lib/prefix';
 
 import { AnimatedUnderlineLink } from '@/components/ui/animate-underline';
 
@@ -48,7 +49,7 @@ export default function Header() {
                 <AnimatedUnderlineLink href="/">
                     <div className="dark:text-second text-black text-xl font-semibold">
                         <div className='flex items-center justify-evenly dark:text-second text-black'>
-                            <Image src={`${isDark ? "/LogoWhite.png" : "/LogoDark.png"}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
+                            <Image src={`${isDark ? `${prefix}/LogoWhite.png` : `${prefix}//LogoDark.png`}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
                             <h1 className='relative -top-[2px] text-2xl'>Winglam&nbsp;<span className="font-light">Productions</span></h1>
                         </div>
                     </div>

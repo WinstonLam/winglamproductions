@@ -15,7 +15,7 @@ export default function AboutPage() {
             {/* ───────────────── HERO ───────────────── */}
             <section className="relative flex items-center justify-center min-h-[60vh] px-6">
                 <video
-                    src={`${prefix}/media/hero.mp4`}
+                    src={`${prefix}/hero.mp4`}
                     playsInline
                     loop
                     muted

@@ -8,7 +8,7 @@ const Hero = () => {
         <section id="hero" className="relative w-full text-second h-screen overflow-hidden">
             {/* Background video */}
             <div className="flex justify-center items-center h-full">
-                <video playsInline loop muted autoPlay preload="none" className="absolute w-full h-full object-cover " src={`${prefix}/media/hero.mp4`} />
+                <video playsInline loop muted autoPlay preload="none" className="absolute w-full h-full object-cover " src={`${prefix}/hero.mp4`} />
 
 
                 {/* Overlay and content */}

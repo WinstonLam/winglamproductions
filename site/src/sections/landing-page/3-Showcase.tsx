@@ -124,7 +124,7 @@ function ShowcaseCard({
             <div className="relative w-full overflow-hidden rounded-lg shadow-lg group-hover:-translate-y-2 transition-all duration-300">
                 {/* poster sits behind */}
                 <img
-                    src="/hero.png"
+                    src={`${prefix}/hero.png`}
                     alt={`${title} poster`}
                     className="w-full h-56 md:h-64 object-cover"
                 />
@@ -132,7 +132,7 @@ function ShowcaseCard({
                 {/* video fades in on hover */}
                 <motion.video
                     ref={vid}
-                    src={`${prefix}/media/hero.mp4`}
+                    src={`${prefix}/hero.mp4`}
                     muted
                     loop
                     playsInline
