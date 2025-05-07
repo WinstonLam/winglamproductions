@@ -35,8 +35,7 @@ jobs:
       - run: npm run build
       - run: npm run export
 
-      # upload the exported static bundle (site/out)
-      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./site/out
 
