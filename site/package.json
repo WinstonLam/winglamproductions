@@ -8,9 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
-    "predeploy": "npm run build && npm run export",
-    "deploy": "gh-pages -d out -b gh-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d site/out -b gh-pages"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.31.0",
