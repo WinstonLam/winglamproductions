@@ -70,9 +70,6 @@ export default function ContactPage() {
                     <div className="bg-second h-[70vh] overflow-y-scroll dark:bg-black  rounded-xl p-8 backdrop-blur-sm  bg-second dark:bg-black rounded-xl p-8 
                     backdrop-blur-sm shadow-[0_0_20px_rgba(0,0,0,0.30)] dark:shadow-[0_0_20px_rgba(var(--color-second-rgb,255,255,255),0.20)]
                         [&::-webkit-scrollbar]:w-2
-                        [&::-webkit-scrollbar]:mr-4
-                        [&::-webkit-scrollbar-track]:mr-4
-                        [&::-webkit-scrollbar-thumb]:mr-4
                         [&::-webkit-scrollbar-track]:bg-transparent
                         [&::-webkit-scrollbar-thumb]:rounded-full
                         [&::-webkit-scrollbar-thumb]:bg-prime/70
