@@ -7,15 +7,15 @@ import { motion } from "framer-motion";
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 export default function ContactPage() {
     return (
-        <main className="bg-second dark:bg-black pt-28 pb-20 px-6 text-black dark:text-second h-[90vh] flex items-center ">
-            <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 ">
+        <main className="bg-second dark:bg-black pt-28 pb-20 px-6 text-black dark:text-second flex items-center ">
+            <section className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
                 {/* ───── intro copy ───── */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.6 }}
-                    className="md:mt-15"
+                    className="md:mt-15 w-[80%]"
                 >
                     <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                         Let’s make your story
@@ -63,11 +63,12 @@ export default function ContactPage() {
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
+                    className="w-full"
 
                 >
 
 
-                    <div className="bg-second h-[70vh] overflow-y-scroll dark:bg-black  rounded-xl p-8 backdrop-blur-sm  bg-second dark:bg-black rounded-xl p-8 
+                    <div className="bg-second w-60h-[70vh] overflow-y-scroll dark:bg-black  rounded-xl p-8 backdrop-blur-sm  bg-second dark:bg-black rounded-xl p-8 
                     backdrop-blur-sm shadow-[0_0_20px_rgba(0,0,0,0.30)] dark:shadow-[0_0_20px_rgba(var(--color-second-rgb,255,255,255),0.20)]
                         [&::-webkit-scrollbar]:w-2
                         [&::-webkit-scrollbar-track]:bg-transparent

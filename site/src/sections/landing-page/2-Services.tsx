@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Tabs } from "@/components/ui/tabs";
 import { prefix } from "@/lib/prefix";
-
+import Link from "next/link";
 
 
 const Services = () => {
@@ -163,13 +163,13 @@ const Services = () => {
                         </h2>
 
                         <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b ">
-                            <a
+                            <Link
                                 href="/services"
                                 className="inline-block mb-3 sm:mb-6 bg-primary text-white font-medium px-4 py-2 rounded border border-white shadow-xl/70 
                         rounded-full z-10 hover:bg-second hover:text-prime transition-all duration-300"
                             >
                                 See All Services
-                            </a>
+                            </Link>
                             <Tabs tabs={services} />
                         </div>
                     </motion.div>

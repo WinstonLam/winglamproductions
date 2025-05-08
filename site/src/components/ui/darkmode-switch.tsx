@@ -35,7 +35,7 @@ export default function DarkModeToggle({ className, size = 20 }: Props) {
             className={
                 [
                     /* default styling copied from your header  */
-                    "p-2 rounded-full bg-transparent border border-black dark:bg-second",
+                    "p-2 rounded-full bg-second border border-black",
                     "text-black ",
                     "hover:bg-gray-200 dark:hover:bg-gray-600",
                     "transition-all duration-300 cursor-pointer",

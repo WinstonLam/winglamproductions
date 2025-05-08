@@ -49,7 +49,7 @@ export default function Header() {
                 <AnimatedUnderlineLink href="/">
                     <div className="dark:text-second text-black text-xl font-semibold">
                         <div className='flex items-center justify-evenly dark:text-second text-black'>
-                            <Image src={`${isDark ? `${prefix}/LogoWhite.png` : `${prefix}//LogoDark.png`}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
+                            <Image src={`${isDark ? `${prefix}/LogoWhite.png` : `${prefix}/LogoDark.png`}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
                             <h1 className='relative -top-[2px] text-2xl'>Winglam&nbsp;<span className="font-light">Productions</span></h1>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ export default function Header() {
                         </li>
                     ))}
                 </ul>
-                <DarkModeToggle />
+                <DarkModeToggle className='absolute right-2 top-15 md:relative z-100 md:right-0 md:top-0' />
 
                 {/* Hamburger (mobile only) */}
                 <button
@@ -97,8 +97,8 @@ export default function Header() {
 
             <nav
                 /* ───── styling ─────  */
-                className={`md:hidden fixed w-full z-40 dark:bg-black/50 bg-second/70 backdrop-blur py-4  flex ${mobileOpen ? 'translate-x-[0px]' : 'translate-x-[900px]'} transition-all duration-300`}>
-                <ul className="h-full w-full flex flex-col items-center justify-center gap-8 dark:text-second text-black text-2xl font-medium z-50">
+                className={`md:hidden fixed w-full z-40 dark:bg-black/90 bg-second/90 backdrop-blur py-4  flex ${mobileOpen ? 'translate-x-[0px]' : 'translate-x-[900px]'} transition-all duration-300`}>
+                <ul className="h-full w-full flex flex-col items-center justify-center gap-8 dark:text-second text-black text-2xl font-medium z-100">
                     {navLinks.map(({ href, label }) => (
                         <li key={href}>
                             <Link

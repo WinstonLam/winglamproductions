@@ -141,11 +141,11 @@ export default function ShowcaseSection() {
         <section id="showcase" className="min-h-screen h-full flex dark:bg-black bg-second dark:text-second text-black text-black overflow-hidden">
             {/* ───────── Left side nav ───────── */}
             {/* close button (mobile only) */}
-            <div className="fixed md:hidden cursor-pointer dark:text-second text-black transition-all duration-300 left-5 z-100 flex " onClick={() => setDrawer(!drawer)}>
+            <div className="fixed md:hidden cursor-pointer dark:text-second text-black transition-all duration-300 left-5 z-60 flex " onClick={() => setDrawer(!drawer)}>
                 <svg
                     className={cn(
-                        "fixed md:hidden cursor-pointer dark:text-second text-black transition-all duration-300 left-5 text-shadow-lg/50 z-100 ",
-                        drawer ? "rotate-90 translate-x-50 h-5 w-5 top-[53px]" : "rotate-0 h-8 w-8 top-14"
+                        "fixed md:hidden cursor-pointer dark:text-second text-black transition-all duration-300 left-5 text-shadow-lg/50 ",
+                        drawer ? "rotate-90 translate-x-50 h-5 w-5 top-16" : "rotate-0 h-8 w-8 top-14"
                     )}
                     fill="none"
                     stroke="currentColor"
@@ -157,14 +157,14 @@ export default function ShowcaseSection() {
                 </svg>
 
 
-                <p className={`${drawer ? "opacity-0" : "opacity-100"} dark:text-shadow-lg/50 text-shadow-lg/10 fixed lg:hidden cursor-pointer hover:-translate-y-1 dark:text-second text-black transition-all duration-300 left-12 z-100 top-15`}>Menu</p>
+                <p className={`${drawer ? "opacity-0" : "opacity-100"} dark:text-shadow-lg/50 text-shadow-lg/10 fixed lg:hidden cursor-pointer hover:-translate-y-1 dark:text-second text-black transition-all duration-300 left-12 z-50 top-15`}>Menu</p>
 
 
 
             </div>
             <svg
                 className={cn(
-                    "fixed md:hidden h-8 w-8 cursor-pointer dark:text-second text-black transition-all duration-300 top-15 left-5 z-100 -rotate-90",
+                    "fixed md:hidden h-8 w-8 cursor-pointer dark:text-second text-black transition-all duration-300 top-18 left-5 z-60 -rotate-90",
                     drawer ? "opacity-100 translate-x-50 h-5 w-5" : "opacity-0 h-8 w-8"
                 )}
                 fill="none"
@@ -322,7 +322,7 @@ export default function ShowcaseSection() {
                     transition={{ duration: 0.4, delay: 0.1 }}>
                     <div className="flex flex-col sm:flex-row items-start ">
                         {/* description */}
-                        <div className="flex flex-col  w-[40%] mt-4 mb-4 md:mt-0 md:mb-0">
+                        <div className="flex flex-col  md:w-[40%] mt-4 mb-4 md:mt-0 md:mb-0">
                             <h2 className="font-semibold text-xl">Client&apos;s Request:</h2>
                             <p className="max-w-2xl text-base  md:text-lg  dark:text-second text-black">
                                 {item.description}

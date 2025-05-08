@@ -37,7 +37,7 @@ export default function AboutPage() {
             {/* ───────────────── MISSION ───────────────── */}
             <section className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <motion.div
-                    initial={{ opacity: 0, x: -40 }}
+                    initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.6 }}
@@ -58,18 +58,19 @@ export default function AboutPage() {
 
                 {/* stylised image card */}
                 <motion.div
-                    initial={{ opacity: 0, x: 40 }}
+                    initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
+                    className="flex items-center justify-center w-full overflow-hidden rounded-lg"
                 >
-                    <BackgroundGradient animate>
+                    <BackgroundGradient animate className="w-full sm:w-[90%] object-cover">
                         <Image
                             src="/about‑team.jpg"         /* swap for real asset */
                             alt="Winglam team on set"
-                            width={400}
-                            height={500}
-                            className="rounded-xl object-cover w-full h-[300px] md:h-[400px]"
+                            width={300}
+                            height={200}
+                            className="rounded-xl object-cover w-full h-[200px] md:h-[400px]"
                         />
                     </BackgroundGradient>
                 </motion.div>

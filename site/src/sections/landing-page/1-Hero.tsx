@@ -1,14 +1,48 @@
 'use client';
-import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from 'react';
+
+import { motion, useAnimationControls } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { prefix } from "@/lib/prefix";
+import Link from "next/link";
 
 const Hero = () => {
+    const [loading, setLoading] = useState(true);
+    const controls = useAnimationControls();
+
+
+    /* animate the bar left→right while loading */
+    useEffect(() => {
+        if (loading) {
+            controls.start({ scaleX: [0, 1], transition: { repeat: Infinity, ease: 'easeInOut', duration: 1.4 } });
+        } else {
+            controls.stop();
+        }
+    }, [loading]);
+
+
     return (
         <section id="hero" className="relative w-full text-second h-screen overflow-hidden">
             {/* Background video */}
             <div className="flex justify-center items-center h-full">
-                <video playsInline loop muted autoPlay preload="none" className="absolute w-full h-full object-cover " src={`${prefix}/hero.mp4`} />
+                <video playsInline loop muted autoPlay preload="none"
+                    className="absolute w-full h-full object-cover "
+                    src={`${prefix}/hero.mp4`}
+                    onCanPlay={() => setLoading(false)}
+                />
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="absolute bottom-12 left-1/2 w-48 h-0.5 origin-left bg-second/70 -translate-x-1/2 rounded-full overflow-hidden"
+                >
+                    <motion.span
+                        className="block h-full bg-primary"
+                        style={{ scaleX: 0 }}
+                        animate={controls}
+                    />
+                </motion.div>
 
 
                 {/* Overlay and content */}
@@ -29,13 +63,13 @@ const Hero = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 1, duration: 0.5 }}>
 
-                        <motion.a
+                        <Link
                             href="/contact"
                             className="translate-y-40 inline-block bg-primary text-cream font-medium px-6 py-3 rounded border shadow-xl/30  
                         rounded-full z-10 hover:bg-second hover:text-prime transition-all duration-300"
                         >
                             Schedule a call
-                        </motion.a>
+                        </Link>
                     </motion.div>
                 </div>
             </div>
