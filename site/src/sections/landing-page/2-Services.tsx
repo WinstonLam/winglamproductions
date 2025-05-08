@@ -49,7 +49,7 @@ const Services = () => {
 
                     <div className="w-full overflow-hidden aspect-video">
                         <video
-                            src={`${prefix}/media/hero.mp4`}
+                            src={`${prefix}/hero.mp4`}
                             playsInline
                             loop
                             muted
@@ -76,7 +76,7 @@ const Services = () => {
 
                     <div className="w-full overflow-hidden aspect-video">
                         <video
-                            src={`${prefix}/media/hero.mp4`}
+                            src={`${prefix}/hero.mp4`}
                             playsInline
                             loop
                             muted
@@ -103,7 +103,7 @@ const Services = () => {
 
                     <div className="w-full overflow-hidden aspect-video">
                         <video
-                            src={`${prefix}/media/hero.mp4`}
+                            src={`${prefix}/hero.mp4`}
                             playsInline
                             loop
                             muted
