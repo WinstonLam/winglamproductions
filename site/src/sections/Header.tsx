@@ -46,8 +46,8 @@ export default function Header() {
                 {/* Brand */}
 
 
-                <AnimatedUnderlineLink href="/">
-                    <div className="dark:text-second text-black text-xl font-semibold translate-y-1 md:translate-y-0">
+                <AnimatedUnderlineLink href="/" >
+                    <div className="dark:text-second text-black text-xl font-semibold translate-y-1 md:translate-y-0" onClick={close}>
                         <div className='flex items-center justify-evenly dark:text-second text-black'>
                             <Image src={`${isDark ? `${prefix}/LogoWhite.png` : `${prefix}/LogoDark.png`}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
                             <h1 className='relative -top-[2px] text-2xl'>Winglam&nbsp;<span className="font-light">Productions</span></h1>
@@ -58,7 +58,7 @@ export default function Header() {
 
 
                 {/* Desktop links */}
-                <ul className="hidden md:flex space-x-6 dark:text-second text-black">
+                <ul className="hidden lg:flex space-x-6 dark:text-second text-black">
                     {navLinks.map(({ href, label }) => (
                         <li key={href}>
                             <AnimatedUnderlineLink href={href} >
@@ -67,13 +67,20 @@ export default function Header() {
                         </li>
                     ))}
                 </ul>
-                <DarkModeToggle className='absolute right-2 top-15 md:relative z-100 md:right-0 md:top-0' />
+                <DarkModeToggle className='absolute right-2 top-15 lg:relative z-100 lg:right-0 lg:top-0' />
+                <Link
+                    href="/contact"
+                    className="hidden lg:flex bg-primary text-prime dark:text-second font-medium px-6 py-3 rounded border shadow-xl/30  
+                        rounded-full z-10 hover:bg-second hover:text-prime transition-all duration-300"
+                >
+                    Schedule a call
+                </Link>
 
                 {/* Hamburger (mobile only) */}
                 <button
                     aria-label="Open menu"
                     onClick={toggle}
-                    className="md:hidden flex flex-col justify-between h-5 w-6 focus:outline-none"
+                    className="lg:hidden flex flex-col justify-between h-5 w-6 focus:outline-none"
                 >
                     <span
                         className={`block h-0.5 w-full dark:bg-second bg-black transition-transform ${mobileOpen ? 'translate-y-[6px] rotate-45' : ''
@@ -90,6 +97,7 @@ export default function Header() {
                 </button>
 
 
+
             </nav>
 
             {/* ───────── Mobile overlay nav ───────── */}
@@ -97,7 +105,7 @@ export default function Header() {
 
             <nav
                 /* ───── styling ─────  */
-                className={`md:hidden fixed w-full z-40 dark:bg-black/90 bg-second/90 backdrop-blur py-4  flex ${mobileOpen ? 'translate-x-[0px]' : 'translate-x-[900px]'} transition-all duration-300`}>
+                className={`lg:hidden fixed w-full z-40 dark:bg-black/90 bg-second/90 backdrop-blur py-4 flex flex-col ${mobileOpen ? 'translate-x-[0px]' : 'translate-x-[900px]'} transition-all duration-300`}>
                 <ul className="h-full w-full flex flex-col items-center justify-center gap-8 dark:text-second text-black text-2xl font-medium z-100">
                     {navLinks.map(({ href, label }) => (
                         <li key={href}>
@@ -110,7 +118,16 @@ export default function Header() {
                             </Link>
                         </li>
                     ))}
+                    <Link
+                        href="/contact"
+                        onClick={close}
+                        className=" text-prime dark:text-second font-medium px-6 py-3 rounded border shadow-xl/30  
+                        rounded-full z-10 hover:bg-prime hover:text-second dark:hover:bg-second dark:hover:text-prime transition-all duration-300"
+                    >
+                        Schedule a call
+                    </Link>
                 </ul>
+
             </nav>
 
 

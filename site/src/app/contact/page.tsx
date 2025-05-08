@@ -242,7 +242,6 @@ export default function ContactPage() {
                                         Select an option
                                     </option>
                                     <option>Instagram</option>
-                                    <option>Facebook</option>
                                     <option>YouTube</option>
                                     <option>Google search</option>
                                     <option>Friend / referral</option>
