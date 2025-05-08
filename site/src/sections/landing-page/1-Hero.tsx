@@ -2,25 +2,13 @@
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { prefix } from "@/lib/prefix";
-import Link from "next/link";
 
 const Hero = () => {
-
-
-
-
-
     return (
         <section id="hero" className="relative w-full text-second h-screen overflow-hidden">
             {/* Background video */}
             <div className="flex justify-center items-center h-full">
-                <video playsInline loop muted autoPlay preload="none"
-                    className="absolute w-full h-full object-cover "
-                    src={`${prefix}/hero.mp4`}
-                    poster={`${prefix}/loading.gif`}
-                />
-
-
+                <video playsInline loop muted autoPlay preload="none" className="absolute w-full h-full object-cover " src={`${prefix}/hero.mp4`} />
 
 
                 {/* Overlay and content */}
@@ -41,13 +29,13 @@ const Hero = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 1, duration: 0.5 }}>
 
-                        <Link
+                        <motion.a
                             href="/contact"
                             className="translate-y-40 inline-block bg-primary text-cream font-medium px-6 py-3 rounded border shadow-xl/30  
                         rounded-full z-10 hover:bg-second hover:text-prime transition-all duration-300"
                         >
                             Schedule a call
-                        </Link>
+                        </motion.a>
                     </motion.div>
                 </div>
             </div>
