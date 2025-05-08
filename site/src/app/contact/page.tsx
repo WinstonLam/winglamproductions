@@ -181,17 +181,17 @@ export default function ContactPage() {
                                 <select
                                     name="budget"
                                     required
-                                    className="mt-2 w-full border border-prime dark:border-second rounded p-2 bg-transparent focus:outline-primary"
+                                    className="mt-2 w-full border border-prime dark:border-second rounded p-2 bg-transparent focus:outline-primary font-light"
                                 >
                                     <option value="" disabled selected>
-                                        Select a range
+                                        Select an option
                                     </option>
                                     <option>&lt; €2,500</option>
                                     <option>€2,500 - €5,000</option>
                                     <option>€5,000 - €7,500</option>
                                     <option>&gt; €7,500</option>
                                 </select>
-                                <p className="text-sm mt-1">
+                                <p className="text-sm mt-1 font-light">
                                     On average, most of our video projects sit between €2,500 - €7,500 excl. tax
                                 </p>
                             </label>
@@ -202,7 +202,7 @@ export default function ContactPage() {
                                 <select
                                     name="startTimeline"
                                     required
-                                    className="mt-2 w-full border border-prime dark:border-second rounded p-2 bg-transparent focus:outline-primary"
+                                    className="mt-2 w-full border border-prime dark:border-second rounded p-2 bg-transparent focus:outline-primary font-light"
                                 >
                                     <option value="" disabled selected>
                                         Select an option
@@ -236,7 +236,7 @@ export default function ContactPage() {
                                 How did you hear about us?
                                 <select
                                     name="referral"
-                                    className="mt-2 w-full border border-prime dark:border-second rounded p-2 bg-transparent focus:outline-primary"
+                                    className="mt-2 w-full border border-prime dark:border-second rounded p-2 bg-transparent focus:outline-primary font-light"
                                 >
                                     <option value="" disabled selected>
                                         Select an option
@@ -253,25 +253,16 @@ export default function ContactPage() {
                             {/* ── Submit ─────────────────────────────── */}
                             <button
                                 type="submit"
-                                className="w-full bg-primary text-cream py-3 rounded-full font-medium hover:bg-second hover:text-prime transition-colors duration-300"
+                                className="w-full bg-second dark:bg-black border border-prime dark:border-second 
+                                dark:text-second text-prime py-3 rounded-full  hover:bg-prime hover:text-second 
+                                dark:hover:bg-second dark:hover:text-prime font-bold
+                                transition-all duration-300 cursor-pointer"
                             >
-                                Send Message
+                                Book a call
                             </button>
                         </form>
 
 
-                        {/* Calendly */}
-                        <div className="text-center mt-8">
-                            <p className="mb-3">Prefer a face-to-face chat?</p>
-                            <a
-                                href="https://calendly.com/your-calendly-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block bg-primary text-cream px-5 py-2 rounded-full hover:bg-second hover:text-prime transition-colors duration-300"
-                            >
-                                Book a call
-                            </a>
-                        </div>
                     </div>
 
 
