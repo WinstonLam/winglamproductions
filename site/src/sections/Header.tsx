@@ -42,12 +42,12 @@ export default function Header() {
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+            <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 md:py-3">
                 {/* Brand */}
 
 
                 <AnimatedUnderlineLink href="/">
-                    <div className="dark:text-second text-black text-xl font-semibold">
+                    <div className="dark:text-second text-black text-xl font-semibold translate-y-1 md:translate-y-0">
                         <div className='flex items-center justify-evenly dark:text-second text-black'>
                             <Image src={`${isDark ? `${prefix}/LogoWhite.png` : `${prefix}/LogoDark.png`}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
                             <h1 className='relative -top-[2px] text-2xl'>Winglam&nbsp;<span className="font-light">Productions</span></h1>
