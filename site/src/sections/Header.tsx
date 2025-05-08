@@ -68,6 +68,26 @@ export default function Header() {
                     ))}
                 </ul>
                 <DarkModeToggle className='absolute right-2 top-15 lg:relative z-100 lg:right-0 lg:top-0' />
+                {/* Instagram icon */}
+                <Link
+                    href="https://www.instagram.com/winglam.productions/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" z-100
+                    absolute right-2 top-30 lg:top-0 lg:relative
+                    p-2 rounded-full bg-second border border-black
+                    text-black 
+                    hover:bg-gray-200 dark:hover:bg-gray-600
+                    transition-all duration-300 cursor-pointer
+                    "
+                >
+                    <img
+                        src={`${prefix}/instagram.svg`}
+                        alt="Instagram"
+                        width={20}
+                        height={20}
+                    />
+                </Link>
                 <Link
                     href="/contact"
                     className="hidden lg:flex bg-primary text-prime dark:text-second font-medium px-6 py-3 rounded border shadow-xl/30  
