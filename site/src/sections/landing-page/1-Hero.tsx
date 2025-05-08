@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import { motion, useAnimationControls } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
