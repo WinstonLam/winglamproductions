@@ -1,24 +1,13 @@
 'use client';
-import { useState, useEffect } from 'react';
-
-import { motion, useAnimationControls } from "framer-motion";
+import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { prefix } from "@/lib/prefix";
 import Link from "next/link";
 
 const Hero = () => {
-    const [loading, setLoading] = useState(true);
-    const controls = useAnimationControls();
 
 
-    /* animate the bar left→right while loading */
-    useEffect(() => {
-        if (loading) {
-            controls.start({ scaleX: [0, 1], transition: { repeat: Infinity, ease: 'easeInOut', duration: 1.4 } });
-        } else {
-            controls.stop();
-        }
-    }, [loading]);
+
 
 
     return (
@@ -28,21 +17,10 @@ const Hero = () => {
                 <video playsInline loop muted autoPlay preload="none"
                     className="absolute w-full h-full object-cover "
                     src={`${prefix}/hero.mp4`}
-                    onCanPlay={() => setLoading(false)}
+                    poster={`${prefix}/loading.gif`}
                 />
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="absolute bottom-12 left-1/2 w-48 h-0.5 origin-left bg-second/70 -translate-x-1/2 rounded-full overflow-hidden"
-                >
-                    <motion.span
-                        className="block h-full bg-primary"
-                        style={{ scaleX: 0 }}
-                        animate={controls}
-                    />
-                </motion.div>
+
 
 
                 {/* Overlay and content */}
