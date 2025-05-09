@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { cn } from "@/lib/utils";
 import YouTubeEmbed from "@/lib/youtubeVideo";
@@ -53,9 +53,6 @@ const services = [
    Component
 ───────────────────────────────────────────────────────────────────*/
 export default function ServicesSection() {
-    const [activeSrc, setActiveSrc] = useState<string | null>(null);
-    const stop = (e: React.MouseEvent) => e.stopPropagation();
-    const close = () => setActiveSrc(null);
 
     return (
         <section
