@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import Image from "next/image";
-import { prefix } from "@/lib/prefix";
 
 export default function AboutPage() {
     return (
@@ -15,7 +14,7 @@ export default function AboutPage() {
             {/* ───────────────── HERO ───────────────── */}
             <section className="relative flex items-center justify-center min-h-[60vh] px-6">
                 <video
-                    src={`${prefix}/hero.mp4`}
+                    src={`/hero.mp4`}
                     playsInline
                     loop
                     muted

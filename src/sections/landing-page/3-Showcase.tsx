@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
-import { prefix } from '@/lib/prefix';
+
 
 type ShowcaseItem = { title: string };
 
@@ -124,7 +124,7 @@ function ShowcaseCard({
             <div className="relative w-full overflow-hidden rounded-lg shadow-lg group-hover:-translate-y-2 transition-all duration-300">
                 {/* poster sits behind */}
                 <img
-                    src={`${prefix}/hero.png`}
+                    src={`/hero.png`}
                     alt={`${title} poster`}
                     className="w-full h-56 md:h-64 object-cover"
                 />
@@ -132,7 +132,7 @@ function ShowcaseCard({
                 {/* video fades in on hover */}
                 <motion.video
                     ref={vid}
-                    src={`${prefix}/hero.mp4`}
+                    src={`/hero.mp4`}
                     muted
                     loop
                     playsInline

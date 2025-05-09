@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Tabs } from "@/components/ui/tabs";
-import { prefix } from "@/lib/prefix";
+
 import Link from "next/link";
 
 
@@ -22,7 +22,7 @@ const Services = () => {
 
                     <div className="w-full overflow-hidden aspect-video">
                         <video
-                            src={`${prefix}/hero.mp4`}
+                            src={`/hero.mp4`}
                             playsInline
                             loop
                             muted
@@ -49,7 +49,7 @@ const Services = () => {
 
                     <div className="w-full overflow-hidden aspect-video">
                         <video
-                            src={`${prefix}/hero.mp4`}
+                            src={`/hero.mp4`}
                             playsInline
                             loop
                             muted
@@ -76,7 +76,7 @@ const Services = () => {
 
                     <div className="w-full overflow-hidden aspect-video">
                         <video
-                            src={`${prefix}/hero.mp4`}
+                            src={`/hero.mp4`}
                             playsInline
                             loop
                             muted
@@ -103,7 +103,7 @@ const Services = () => {
 
                     <div className="w-full overflow-hidden aspect-video">
                         <video
-                            src={`${prefix}/hero.mp4`}
+                            src={`/hero.mp4`}
                             playsInline
                             loop
                             muted

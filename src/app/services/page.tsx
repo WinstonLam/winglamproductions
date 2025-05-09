@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { cn } from "@/lib/utils";
-import { prefix } from "@/lib/prefix";
+
 import Link from "next/link";
 
 /* ──────────────────────────────────────────────────────────────────
@@ -13,35 +13,35 @@ import Link from "next/link";
 const services = [
     {
         title: "Brand Story Elevation",
-        video: `${prefix}/hero.mp4`,
+        video: `/hero.mp4`,
         desc:
             "A punchy, cinematic film that distils your brand DNA into a compelling \
        60‑second story—perfect for website hero banners and ad pre‑roll.",
     },
     {
         title: "Lifestyle Showcase",
-        video: `${prefix}/hero.mp4`,
+        video: `/hero.mp4`,
         desc:
             "We capture authentic, aspirational day‑in‑the‑life footage to connect \
        your product with the lifestyle your audience dreams of.",
     },
     {
         title: "Social‑Media Burst",
-        video: `${prefix}/hero.mp4`,
+        video: `/hero.mp4`,
         desc:
             "High‑energy snack‑size clips optimised for TikTok, Reels and Shorts. \
        Vertical from capture to delivery, complete with trending‑sound clearance.",
     },
     {
         title: "Interview / Testimonial",
-        video: `${prefix}/hero.mp4`,
+        video: `/hero.mp4`,
         desc:
             "Polished sit‑down interviews with multi‑cam angles, pro audio and subtle \
        animated lower‑thirds. Let your best advocates do the talking.",
     },
     {
         title: "Wedding Films",
-        video: `${prefix}/hero.mp4`,
+        video: `/hero.mp4`,
         desc:
             "From bridal prep to dance‑floor, every tear & laugh wrapped into a \
        timeless highlight film—delivered in beautiful 4K HDR.",
