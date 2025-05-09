@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 type Tab = { title: string; value: string; content: React.ReactNode };
 
 /* ───── helper: detect < 640 px ───── */
-function useIsMobile(breakpoint = 640) {
+function useIsMobile(breakpoint = 775) {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -90,7 +90,7 @@ export function Tabs({
             </div>
 
             {/* ───────── PANELS ───────── */}
-            <div className="relative mt-4 sm:mt-20 h-[18rem] sm:h-[40rem]">
+            <div className="relative mt-4 md:mt-20 h-[20rem] sm:h-[26rem] md:h-[40rem]">
                 {isMobile ? (
                     /* mobile → single panel, slide‑up/down */
                     <AnimatePresence mode="wait">
@@ -140,7 +140,7 @@ function CardPanel({
     const variants = isMobile ? mobileCardVariants : desktopCardVariants;
     return (
         <motion.div
-            layout={!isMobile}          /* FLIP only on desktop */
+            layout={!isMobile}
             layoutId={tab.value}
             custom={{ idx, hovering }}
             variants={variants}

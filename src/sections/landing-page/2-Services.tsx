@@ -2,15 +2,18 @@
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Tabs } from "@/components/ui/tabs";
+import YouTubeEmbed from "@/lib/youtubeVideo";
 
 import Link from "next/link";
 
-
 const Services = () => {
+
+    const videoId = "W9pzgz4NTZY"
     const services = [
         {
             title: 'Brand',
             value: 'brand',
+
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second">
@@ -19,16 +22,8 @@ const Services = () => {
                             Elevate the story of your brand
                         </p>
                     </div>
-
                     <div className="w-full overflow-hidden aspect-video">
-                        <video
-                            src={`/hero.mp4`}
-                            playsInline
-                            loop
-                            muted
-                            autoPlay
-                            className="w-full h-full object-cover"
-                        />
+                        <YouTubeEmbed videoId={videoId} />
                     </div>
                 </div>
             ),
@@ -38,6 +33,7 @@ const Services = () => {
         {
             title: 'Lifestyle',
             value: 'lifestyle',
+
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second">
@@ -46,16 +42,8 @@ const Services = () => {
                             Capture the genuine rhythm of everyday life
                         </p>
                     </div>
-
                     <div className="w-full overflow-hidden aspect-video">
-                        <video
-                            src={`/hero.mp4`}
-                            playsInline
-                            loop
-                            muted
-                            autoPlay
-                            className="w-full h-full object-cover"
-                        />
+                        <YouTubeEmbed videoId={videoId} />
                     </div>
                 </div>
             ),
@@ -66,23 +54,15 @@ const Services = () => {
             title: 'Socials',
             value: 'social',
             content: (
-                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-second dark:bg-stone-950 text-second">
+                <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second ">
                         <h1 className="font-bold text-xl md:text-4xl">Social Media Elevation</h1>
                         <p className=" text-base md:text-lg">
                             Snack‑size content engineered to stop the scroll
                         </p>
                     </div>
-
                     <div className="w-full overflow-hidden aspect-video">
-                        <video
-                            src={`/hero.mp4`}
-                            playsInline
-                            loop
-                            muted
-                            autoPlay
-                            className="w-full h-full object-cover"
-                        />
+                        <YouTubeEmbed videoId={videoId} />
                     </div>
                 </div>
             ),
@@ -100,22 +80,13 @@ const Services = () => {
                             Authentic voices. Compelling on‑screen conversations.
                         </p>
                     </div>
-
                     <div className="w-full overflow-hidden aspect-video">
-                        <video
-                            src={`/hero.mp4`}
-                            playsInline
-                            loop
-                            muted
-                            autoPlay
-                            className="w-full h-full object-cover"
-                        />
+                        <YouTubeEmbed videoId={videoId} />
                     </div>
                 </div>
             ),
         },
     ];
-
 
 
     return (
@@ -153,20 +124,20 @@ const Services = () => {
                             </motion.p>
                         </motion.div>
                     </div>
-                    <motion.div className="max-w-6xl py-16 px-4"
+                    <motion.div className="max-w-6xl w-full py-16 px-4 mx-auto"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                         viewport={{ once: true }}>
-                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-12 text-second text-shadow-lg/50">
+                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-12 text-second text-shadow-lg/50">
                             Our Services
                         </h2>
 
-                        <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b ">
+                        <div className="h-[25rem] sm:h-[35rem] md:h-[40rem] [perspective:1000px] relative flex flex-col ">
                             <Link
                                 href="/services"
-                                className="inline-block mb-3 sm:mb-6 bg-primary text-white font-medium px-4 py-2 rounded border border-white shadow-xl/70 
-                        rounded-full z-10 hover:bg-second hover:text-prime transition-all duration-300"
+                                className="inline-block mb-3 sm:mb-6 bg-primary text-white font-medium px-4 py-2 rounded-full border border-white shadow-xl/70 
+                        hover:bg-second hover:text-prime transition-all duration-300 w-[150px]"
                             >
                                 See All Services
                             </Link>

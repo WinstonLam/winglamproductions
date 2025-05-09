@@ -129,20 +129,7 @@ function ShowcaseCard({
                     className="w-full h-56 md:h-64 object-cover"
                 />
 
-                {/* video fades in on hover */}
-                <motion.video
-                    ref={vid}
-                    src={`/hero.mp4`}
-                    muted
-                    loop
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover "
-                    variants={{
-                        rest: { opacity: 0 },
-                        hover: { opacity: 1 },
-                    }}
-                    transition={{ duration: 0.25 }}
-                />
+
             </div>
         </motion.div>
     );

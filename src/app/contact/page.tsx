@@ -121,9 +121,7 @@ export default function ContactPage() {
                     <div
                         className="bg-second dark:bg-black rounded-xl p-8 backdrop-blur-sm shadow-[0_0_20px_rgba(0,0,0,0.30)]
                        dark:shadow-[0_0_20px_rgba(var(--color-second-rgb,255,255,255),0.20)]
-                       [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent
-                       [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-prime/70
-                       dark:[&::-webkit-scrollbar-thumb]:bg-second/70 h-[70vh] overflow-y-auto"
+                        h-full"
                     >
                         <h2 className="text-2xl font-semibold mb-6 text-prime dark:text-second">
                             Send us a message

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import { cn } from "@/lib/utils";
 import { AnimatedUnderlineLink } from "@/components/ui/animate-underline";
+import YouTubeEmbed from "@/lib/youtubeVideo";
 
 
 /* ------------------------------------------------------------------
@@ -25,7 +26,7 @@ const categories = [
         items: [
             {
                 label: "Jason & Jina Wedding",
-                video: `/hero.mp4`,
+                video: `W9pzgz4NTZY`,
                 description:
                     "An intimate cinematic recap that captures every emotion of Jason & Jina’s big day.",
                 points: [
@@ -38,7 +39,7 @@ const categories = [
             },
             {
                 label: "Beachside Ceremony",
-                video: `/hero.mp4`,
+                video: `W9pzgz4NTZY`,
                 description:
                     "A sun‑kissed wedding film that celebrates a laid‑back coastal love story.",
                 points: [
@@ -55,7 +56,7 @@ const categories = [
         items: [
             {
                 label: "John Co. Re‑brand Showcase",
-                video: `/hero.mp4`,
+                video: `W9pzgz4NTZY`,
                 description:
                     "A punchy brand film launching John Co.’s new identity and core values.",
                 points: [
@@ -68,7 +69,7 @@ const categories = [
             },
             {
                 label: "Applebees Promo Series",
-                video: `/hero.mp4`,
+                video: `W9pzgz4NTZY`,
                 description:
                     "A mouth‑watering promo series that doubled Applebees’ social engagement.",
                 points: [
@@ -85,7 +86,7 @@ const categories = [
         items: [
             {
                 label: "Restaurant X Short‑form Push",
-                video: `/hero.mp4`,
+                video: `W9pzgz4NTZY`,
                 description:
                     "High‑energy snack‑size clips optimised for Reels & TikTok, boosting reach 2×.",
                 points: [
@@ -102,7 +103,7 @@ const categories = [
         items: [
             {
                 label: "Ashbourne Estate Showcase",
-                video: `/hero.mp4`,
+                video: `W9pzgz4NTZY`,
                 description:
                     "A relaxed lifestyle film capturing the warmth of this modern family home.",
                 points: [
@@ -305,16 +306,10 @@ export default function ShowcaseSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.1 }}
-                    className="w-full overflow-hidden rounded-lg shadow-lg mb-6"
+                    className="w-full overflow-hidden rounded-lg shadow-lg mb-6 aspect-video"
                 >
-                    <video
-                        src={item.video}
-                        playsInline
-                        loop
-                        muted
-                        autoPlay
-                        className="w-full h-[320px] md:h-[420px] object-cover"
-                    />
+                    <YouTubeEmbed videoId={item.video} />
+
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

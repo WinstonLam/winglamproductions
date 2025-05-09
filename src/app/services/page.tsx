@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { cn } from "@/lib/utils";
+import YouTubeEmbed from "@/lib/youtubeVideo";
 
 import Link from "next/link";
 
@@ -13,35 +14,35 @@ import Link from "next/link";
 const services = [
     {
         title: "Brand Story Elevation",
-        video: `/hero.mp4`,
+        video: `W9pzgz4NTZY`,
         desc:
             "A punchy, cinematic film that distils your brand DNA into a compelling \
        60‑second story—perfect for website hero banners and ad pre‑roll.",
     },
     {
         title: "Lifestyle Showcase",
-        video: `/hero.mp4`,
+        video: `W9pzgz4NTZY`,
         desc:
             "We capture authentic, aspirational day‑in‑the‑life footage to connect \
        your product with the lifestyle your audience dreams of.",
     },
     {
         title: "Social‑Media Burst",
-        video: `/hero.mp4`,
+        video: `W9pzgz4NTZY`,
         desc:
             "High‑energy snack‑size clips optimised for TikTok, Reels and Shorts. \
        Vertical from capture to delivery, complete with trending‑sound clearance.",
     },
     {
         title: "Interview / Testimonial",
-        video: `/hero.mp4`,
+        video: `W9pzgz4NTZY`,
         desc:
             "Polished sit‑down interviews with multi‑cam angles, pro audio and subtle \
        animated lower‑thirds. Let your best advocates do the talking.",
     },
     {
         title: "Wedding Films",
-        video: `/hero.mp4`,
+        video: `W9pzgz4NTZY`,
         desc:
             "From bridal prep to dance‑floor, every tear & laugh wrapped into a \
        timeless highlight film—delivered in beautiful 4K HDR.",
@@ -75,32 +76,12 @@ export default function ServicesSection() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                         className={cn(
-                            "flex flex-col md:flex-row items-center gap-10 group",
-                            // alternate direction on even rows
-                            idx % 2 === 1 && "md:flex-row-reverse"
+                            "flex flex-col lg:flex-row items-center gap-10 group",
+                            idx % 2 === 1 && "lg:flex-row-reverse"
                         )}
                     >
-                        {/* video */}
-                        <motion.div whileHover={{ y: -5 }}>
-                            <BackgroundGradient>
-                                <div
-                                    className="w-full cursor-pointer rounded-lg overflow-hidden shadow-lg"
-                                    onClick={() => setActiveSrc(video)}
-                                >
-                                    <video
-                                        src={video}
-                                        playsInline
-                                        loop
-                                        muted
-                                        autoPlay
-                                        className="w-full h-[240px] md:h-[320px] object-cover"
-                                    />
-                                </div>
-                            </BackgroundGradient>
-                        </motion.div>
 
-                        {/* copy */}
-                        < div className="w-full md:w-1/2 space-y-6" >
+                        < div className="w-full lg:w-1/2 space-y-6" >
                             <h3 className="text-2xl font-semibold">{title}</h3>
                             <p className="text-base md:text-lg text-zinc-800 dark:text-zinc-300">
                                 {desc}
@@ -114,54 +95,26 @@ export default function ServicesSection() {
                                 Book this service
                             </Link>
                         </div>
+                        {/* video */}
+                        <motion.div whileHover={{ y: -5 }}>
+                            <BackgroundGradient>
+                                <div
+                                    className="w-[20rem] h-[10rem] sm:w-[33rem] sm:h-[18rem] cursor-pointer rounded-lg overflow-hidden shadow-lg aspect-video"
+                                    onClick={() => setActiveSrc(video)}
+                                >
+                                    <YouTubeEmbed videoId={video} customParams={{ autoplay: "0", controls: '1' }} />
+                                </div>
+                            </BackgroundGradient>
+                        </motion.div>
+
+
+
                     </motion.div>
                 ))
                 }
             </div >
 
-            {/* ────────────── Lightbox / expanded video ────────────── */}
-            <AnimatePresence>
-                {
-                    activeSrc && (
-                        <motion.div
-                            key="overlay"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.25 }}
-                            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
-                            onClick={close}
-                        >
-                            <motion.div
-                                initial={{ scale: 0.9, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                exit={{ scale: 0.9, opacity: 0 }}
-                                transition={{ duration: 0.25 }}
-                                className="relative max-w-[90vw] max-h-[90vh] p-4"
-                                onClick={stop}
-                            >
-                                {/* close button */}
-                                <button
-                                    onClick={close}
-                                    aria-label="Close"
-                                    className="absolute w-8 h-8 right-4 top-3 rounded-full bg-white/90 text-black hover:bg-white shadow-md p-1 transition-all duration-300 z-100 cursor-pointer"
-                                >
-                                    ✕
-                                </button>
 
-                                <video
-                                    src={activeSrc}
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    className="w-full h-full object-contain rounded-lg"
-                                />
-                            </motion.div>
-                        </motion.div>
-                    )
-                }
-            </AnimatePresence >
         </section >
     );
 }
