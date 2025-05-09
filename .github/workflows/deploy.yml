@@ -1,45 +1,53 @@
-name: Deploy Next.js site (sub‑folder) to GitHub Pages
+name: Deploy Next.js site to GitHub Pages
+
 on:
   push:
-    branches: [main]        # adjust if your default branch is different
+    branches: [main] # Adjust if your default branch is different
   workflow_dispatch:
 
-env:
-  NEXT_PUBLIC_REPO: winglamproductions   # used by prefix helper
-  NODE_VERSION: 20
 
 permissions:
+  contents: read # Changed from write, as deploy-pages handles content pushing to gh-pages branch
   pages: write
   id-token: write
-  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    # All commands in the site/ directory ↓↓↓
-    defaults:
-      run:
-        working-directory: ./site
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: ${{ env.NODE_VERSION || '20' }} 
           cache: npm
-          cache-dependency-path: site/package-lock.json
+   
 
-      - run: npm ci
-      - run: npm run build
+      - name: Install dependencies
+        run: npm ci
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Build Next.js site
+
+        run: npm run build 
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site/out
+  
+          path: ./out
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment: 
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+  
