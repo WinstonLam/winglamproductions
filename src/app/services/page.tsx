@@ -96,7 +96,7 @@ export default function ServicesSection() {
                             <BackgroundGradient>
                                 <div
                                     className="w-[20rem] h-[10rem] sm:w-[33rem] sm:h-[18rem] cursor-pointer rounded-lg overflow-hidden shadow-lg aspect-video"
-                                    onClick={() => setActiveSrc(video)}
+
                                 >
                                     <YouTubeEmbed videoId={video} customParams={{ autoplay: "0", controls: '1' }} />
                                 </div>
