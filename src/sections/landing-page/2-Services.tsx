@@ -133,11 +133,11 @@ const Services = () => {
                             Our Services
                         </h2>
 
-                        <div className="h-[25rem] sm:h-[35rem] md:h-[40rem] [perspective:1000px] relative flex flex-col ">
+                        <div className="h-[25rem] sm:h-[35rem] md:h-[40rem] [perspective:1000px] relative flex flex-col items-center ">
                             <Link
                                 href="/services"
                                 className="inline-block mb-3 sm:mb-6 bg-primary text-white font-medium px-4 py-2 rounded-full border border-white shadow-xl/70 
-                        hover:bg-second hover:text-prime transition-all duration-300 w-[150px]"
+                        hover:bg-second hover:text-prime transition-all duration-300 w-[50%] sm:w-[30%] text-center"
                             >
                                 See All Services
                             </Link>

@@ -53,7 +53,7 @@ export default function ContactPage() {
     };
 
     return (
-        <main className="bg-second dark:bg-black pt-28 pb-20 px-6 text-black dark:text-second flex items-center ">
+        <main className="bg-second dark:bg-black pt-20 sm:pt-28 pb-20 px-6 text-black dark:text-second flex items-center ">
             <section className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
                 {/* ───── intro copy ───── */}
                 <motion.div

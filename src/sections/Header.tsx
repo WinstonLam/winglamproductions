@@ -104,6 +104,23 @@ export default function Header() {
                     }`} // Changed to h-screen and top-0, left-0 for full coverage
             >
                 <ul className="w-full flex flex-col items-center justify-start gap-8 dark:text-second text-black text-2xl font-medium py-4">
+                    <div className="mt-auto mb-8 flex items-center space-x-6"> {/* Position at the bottom */}
+                        <DarkModeToggle />
+                        <Link
+                            href="https://www.instagram.com/winglam.productions/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-full bg-second border border-black text-black hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer"
+                            onClick={close} // Optional: close nav on icon click
+                        >
+                            <img
+                                src={`/instagram.svg`}
+                                alt="Instagram"
+                                width={20}
+                                height={20}
+                            />
+                        </Link>
+                    </div>
                     {navLinks.map(({ href, label }) => (
                         <li key={href} className='w-auto'>
                             <Link
@@ -126,25 +143,8 @@ export default function Header() {
                     </li>
                 </ul>
 
-                {/* Icons for Mobile Nav - only shown when mobileOpen is true */}
-                {/* These will naturally be part of the mobile nav flow */}
-                <div className="mt-auto mb-8 flex items-center space-x-6"> {/* Position at the bottom */}
-                    <DarkModeToggle />
-                    <Link
-                        href="https://www.instagram.com/winglam.productions/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-second border border-black text-black hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 cursor-pointer"
-                        onClick={close} // Optional: close nav on icon click
-                    >
-                        <img
-                            src={`/instagram.svg`}
-                            alt="Instagram"
-                            width={20}
-                            height={20}
-                        />
-                    </Link>
-                </div>
+
+
             </nav>
         </motion.header>
     );

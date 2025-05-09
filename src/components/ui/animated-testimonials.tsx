@@ -2,7 +2,7 @@
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
-
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type Testimonial = {
@@ -44,7 +44,7 @@ export const AnimatedTestimonials = ({
     };
     return (
         <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
-            <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
+            <div className="relative grid grid-cols-1 gap-0 sm:gap-20 md:grid-cols-2">
                 <div>
                     <div className="relative h-80 w-full">
                         <AnimatePresence>
@@ -77,22 +77,21 @@ export const AnimatedTestimonials = ({
                                         duration: 0.8,
                                         ease: "easeInOut",
                                     }}
-                                    className="absolute inset-0 origin-bottom"
+                                    className="absolute inset-0 origin-bottom flex items-center justify-center"
                                 >
-                                    <img
+                                    <Image
                                         src={testimonial.src}
                                         alt={testimonial.name}
-                                        width={500}
-                                        height={500}
-                                        draggable={false}
-                                        className="h-full w-full rounded-3xl object-cover object-center"
+                                        width={200}
+                                        height={200}
+                                        className="h-[50%] w-[50%] sm:h-full sm:w-full rounded-3xl object-cover object-center"
                                     />
                                 </motion.div>
                             ))}
                         </AnimatePresence>
                     </div>
                 </div>
-                <div className="flex flex-col justify-between py-4">
+                <div className="flex flex-col justify-between sm:py-4">
                     <motion.div
                         key={active}
                         initial={{
