@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { cn } from "@/lib/utils";
