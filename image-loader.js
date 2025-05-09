@@ -1,10 +1,9 @@
 // image-loader.js
-const isProd = process.env.NODE_ENV === 'production';
-// Match the repoName logic from next.config.js
-const repoName = process.env.NEXT_PUBLIC_REPO || 'winglamproductions';
-const basePath = isProd ? `/${repoName}` : '';
 
+// For root deployment, we don't need to prepend any basePath.
+// The 'src' from next/image will already be root-relative (e.g., '/LogoDark.png').
 export default function customImageLoader({ src, width, quality }) {
-    // src will be like '/my-image.png'. We prepend the basePath.
-    return `${basePath}${src}?w=${width}&q=${quality || 75}`;
+    // Simply return the src with query parameters.
+    // No basePath concatenation.
+    return `${src}?w=${width}&q=${quality || 75}`;
 }
