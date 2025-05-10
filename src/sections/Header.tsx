@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTheme } from "next-themes";
 import { motion } from 'framer-motion';
 import DarkModeToggle from '@/components/ui/darkmode-switch';
 import { AnimatedUnderlineLink } from '@/components/ui/animate-underline';
@@ -17,14 +16,10 @@ const navLinks = [
 
 export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
-    const { resolvedTheme, theme } = useTheme();
-    const [mounted, setMounted] = useState(false);
 
-    useEffect(() => setMounted(true), []);
 
     const close = () => setMobileOpen(false);
     const toggle = () => setMobileOpen((p) => !p);
-    const isDark = (mounted ? resolvedTheme : theme) === "dark";
 
     return (
         <motion.header
@@ -46,7 +41,7 @@ export default function Header() {
                     </div>
                 </AnimatedUnderlineLink>
 
-                {/* Desktop links & Right-side Icons for Desktop */}
+
                 <div className="hidden lg:flex items-center space-x-6">
                     <ul className="flex space-x-6 dark:text-second text-black">
                         {navLinks.map(({ href, label }) => (
@@ -57,7 +52,7 @@ export default function Header() {
                             </li>
                         ))}
                     </ul>
-                    <DarkModeToggle /> {/* Always visible on desktop */}
+                    <DarkModeToggle />
                     <Link
                         href="https://www.instagram.com/winglam.productions/"
                         target="_blank"
