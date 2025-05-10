@@ -113,7 +113,6 @@ export default function AboutPage() {
                 </motion.h2>
                 <Link
                     href="/contact"
-                    onClick={close}
                     className="text-prime dark:text-second font-medium px-6 py-3 rounded-full border shadow-xl/30 hover:bg-prime hover:text-second dark:hover:bg-second dark:hover:text-prime transition-all duration-300"
                 >
                     Schedule a call
