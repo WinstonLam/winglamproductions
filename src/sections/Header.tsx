@@ -38,7 +38,9 @@ export default function Header() {
                 <AnimatedUnderlineLink href="/" >
                     <div className="dark:text-second text-black text-xl font-semibold translate-y-1 md:translate-y-0" onClick={close}>
                         <div className='flex items-center justify-evenly dark:text-second text-black'>
-                            <Image src={`${isDark ? `/LogoWhite.png` : `/LogoDark.png`}`} alt="logo" width={50} height={50} className='relative -top-1 mr-2' />
+                            <Image src="/LogoDark.png" alt="logo" width={50} height={50} className='block dark:hidden relative -top-1 mr-2' />
+                            <Image src="/LogoWhite.png" alt="logo" width={50} height={50} className='dark:block hidden relative -top-1 mr-2' />
+
                             <h1 className='relative -top-[2px] text-2xl'>Winglam <span className="font-light">Productions</span></h1>
                         </div>
                     </div>

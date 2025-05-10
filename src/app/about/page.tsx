@@ -6,21 +6,23 @@
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+import Link from "next/link";
 import Image from "next/image";
+import YouTubeEmbed from "@/lib/youtubeVideo";
 
 export default function AboutPage() {
+    const video = 'W9pzgz4NTZY'
     return (
         <main className="flex flex-col gap-28 bg-second dark:bg-black text-black dark:text-second">
             {/* ───────────────── HERO ───────────────── */}
-            <section className="relative flex items-center justify-center min-h-[60vh] px-6">
-                <video
-                    src={`/hero.mp4`}
-                    playsInline
-                    loop
-                    muted
-                    autoPlay
-                    className="absolute inset-0 w-full h-full object-cover"
+            <section className="relative flex items-center justify-center min-h-[60vh] px-6 overflow-hidden">
+
+                <YouTubeEmbed
+                    videoId={video}
+                    isBackgroundVideo={true}
+                    customParams={{ autoplay: "1", controls: "0", mute: "1", loop: "1", modestbranding: "1" }}
                 />
+
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
                 <motion.h1
@@ -63,9 +65,9 @@ export default function AboutPage() {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="flex items-center justify-center w-full overflow-hidden rounded-lg"
                 >
-                    <BackgroundGradient animate className="w-full sm:w-[90%] object-cover">
+                    <BackgroundGradient animate className="w-full  object-cover">
                         <Image
-                            src="/about‑team.jpg"         /* swap for real asset */
+                            src="/crew.png"
                             alt="Winglam team on set"
                             width={300}
                             height={200}
@@ -109,13 +111,13 @@ export default function AboutPage() {
                 >
                     Ready to elevate <span className="text-primary">your</span> story?
                 </motion.h2>
-                <motion.a
+                <Link
                     href="/contact"
-                    whileHover={{ scale: 1.05 }}
-                    className="inline-block bg-primary text-cream px-8 py-3 rounded-full shadow-lg hover:bg-second hover:text-prime transition-colors duration-300"
+                    onClick={close}
+                    className="text-prime dark:text-second font-medium px-6 py-3 rounded-full border shadow-xl/30 hover:bg-prime hover:text-second dark:hover:bg-second dark:hover:text-prime transition-all duration-300"
                 >
-                    Let’s Talk
-                </motion.a>
+                    Schedule a call
+                </Link>
             </section>
         </main>
     );

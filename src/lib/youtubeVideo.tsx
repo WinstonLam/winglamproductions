@@ -28,6 +28,7 @@ const DEFAULT_YOUTUBE_PARAMS: Readonly<YouTubeEmbedParams> = {
     rel: "0",
     showinfo: "0",
     modestbranding: "1",
+
 };
 
 interface YouTubeEmbedProps {
@@ -37,6 +38,7 @@ interface YouTubeEmbedProps {
     className?: string;
     width?: string | number;
     height?: string | number;
+    isBackgroundVideo?: boolean;
 }
 
 const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({
@@ -44,9 +46,10 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({
     customParams = {},
     title = "YouTube video player",
     className,
-
     width,
     height,
+    isBackgroundVideo = false,
+
 }) => {
     if (!videoId) {
         console.error("YouTubeEmbed: videoId prop is required.");
@@ -75,17 +78,46 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({
     const searchParams = new URLSearchParams(finalParams).toString();
     const embedUrl = `https://www.youtube.com/embed/${videoId}${searchParams ? `?${searchParams}` : ''}`;
 
-    return (
-        <iframe
-            src={embedUrl}
-            title={title}
-            width={width}
-            height={height}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className={`w-full h-full object-cover ${className}`}
-        ></iframe>
-    );
-};
+    if (isBackgroundVideo) {
+        const wrapperStyles: React.CSSProperties = {
+            position: 'absolute', // Assumes parent is relative and has overflow:hidden
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '100vw', // Force 16:9 aspect ratio, wider than tall viewports
+            height: '56.25vw', // 100 * (9/16)
+            minWidth: '177.77vh', // Force 16:9 aspect ratio, taller than wide viewports
+            minHeight: '100vh',   // 100 * (16/9)
+            pointerEvents: 'none', // Usually desired for backgrounds
+        };
+
+        return (
+            <div style={wrapperStyles} className={className || ''}>
+                <iframe
+                    src={embedUrl}
+                    title={title}
+                    width="100%" // Fills the wrapper
+                    height="100%" // Fills the wrapper
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    style={{ border: 'none' }} // Remove iframe default border
+                ></iframe>
+            </div>
+        );
+    } else {
+
+        return (
+            <iframe
+                src={embedUrl}
+                title={title}
+                width={width}
+                height={height}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className={`w-full h-full object-cover ${className}`}
+            ></iframe>
+        );
+    };
+}
 
 export default YouTubeEmbed;
