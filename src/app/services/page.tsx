@@ -1,58 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { cn } from "@/lib/utils";
-import YouTubeEmbed from "@/lib/youtubeVideo";
-
+import { BackgroundGradient } from "@/components/ui/background-gradient"; // Adjust path if needed
+import { cn } from "@/lib/utils"; // Assuming you have this utility
+import YouTubeEmbed from "@/lib/youtubeVideo"; // Adjust path if needed
 import Link from "next/link";
-
-/* ──────────────────────────────────────────────────────────────────
-   Dummy data (swap with real videos / copy later)
-───────────────────────────────────────────────────────────────────*/
-const services = [
-    {
-        title: "Brand Story Elevation",
-        video: `W9pzgz4NTZY`,
-        desc:
-            "A punchy, cinematic film that distils your brand DNA into a compelling \
-       60‑second story—perfect for website hero banners and ad pre‑roll.",
-    },
-    {
-        title: "Lifestyle Showcase",
-        video: `W9pzgz4NTZY`,
-        desc:
-            "We capture authentic, aspirational day‑in‑the‑life footage to connect \
-       your product with the lifestyle your audience dreams of.",
-    },
-    {
-        title: "Social‑Media Burst",
-        video: `W9pzgz4NTZY`,
-        desc:
-            "High‑energy snack‑size clips optimised for TikTok, Reels and Shorts. \
-       Vertical from capture to delivery, complete with trending‑sound clearance.",
-    },
-    {
-        title: "Interview / Testimonial",
-        video: `W9pzgz4NTZY`,
-        desc:
-            "Polished sit‑down interviews with multi‑cam angles, pro audio and subtle \
-       animated lower‑thirds. Let your best advocates do the talking.",
-    },
-    {
-        title: "Wedding Films",
-        video: `W9pzgz4NTZY`,
-        desc:
-            "From bridal prep to dance‑floor, every tear & laugh wrapped into a \
-       timeless highlight film—delivered in beautiful 4K HDR.",
-    },
-];
+import { servicesData } from "@/lib/servicesData";
 
 /* ──────────────────────────────────────────────────────────────────
    Component
 ───────────────────────────────────────────────────────────────────*/
 export default function ServicesSection() {
-
     return (
         <section
             id="services"
@@ -64,53 +22,72 @@ export default function ServicesSection() {
             </h2>
 
             <div className="space-y-24 w-full max-w-6xl">
-                {services.map(({ title, desc, video }, idx) => (
+                {servicesData.map(({ title, shortDesc, video, priceFrom, slug }, idx) => (
                     <motion.div
                         key={title}
                         initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                         className={cn(
-                            "flex flex-col lg:flex-row items-center gap-10 group",
+                            "flex flex-col lg:flex-row items-center gap-10 lg:gap-16 group",
                             idx % 2 === 1 && "lg:flex-row-reverse"
                         )}
                     >
+                        <div className="w-full lg:w-1/2 space-y-6">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                                <h3 className="text-2xl font-semibold">{title}</h3>
+                                {priceFrom && (
+                                    <p className="font-semibold text-lg sm:text-base whitespace-nowrap">From €{priceFrom} excl. VAT</p>
+                                )}
+                            </div>
 
-                        < div className="w-full lg:w-1/2 space-y-6" >
-                            <h3 className="text-2xl font-semibold">{title}</h3>
                             <p className="text-base md:text-lg text-zinc-800 dark:text-zinc-300">
-                                {desc}
+                                {shortDesc}
                             </p>
 
-                            <Link
-                                href="/contact"
-                                className="inline-block bg-primary dark:text-white font-medium px-6 py-2 rounded-full border dark:border-white
-                         hover:bg-black dark:hover:bg-white hover:text-second dark:hover:text-prime transition-all duration-300 cursor-pointer"
-                            >
-                                Book this service
-                            </Link>
-                        </div>
-                        {/* video */}
-                        <motion.div whileHover={{ y: -5 }}>
-                            <BackgroundGradient>
-                                <div
-                                    className="w-[20rem] h-[10rem] sm:w-[33rem] sm:h-[18rem] cursor-pointer rounded-lg overflow-hidden shadow-lg aspect-video"
-
+                            <div className="flex flex-col sm:flex-row gap-4 items-start mt-4">
+                                <Link
+                                    href={`/services/${slug}`}
+                                    className="inline-block bg-transparent border border-black text-primary dark:border-second dark:text-second font-medium px-6 py-3 rounded-full
+                                     hover:bg-black hover:text-second dark:hover:bg-second dark:hover:text-black transition-all duration-300 cursor-pointer text-center w-full sm:w-auto"
                                 >
-                                    <YouTubeEmbed videoId={video} customParams={{ autoplay: "0", controls: '1' }} />
+                                    More Information
+                                </Link>
+                                <Link
+                                    href="/contact"
+                                    className="inline-block bg-primary text-white bg-black dark:bg-second dark:text-black font-medium px-6 py-3 rounded-full border border-black dark:border-second
+                                     hover:bg-transparent  hover:text-black dark:hover:text-second transition-all duration-300 cursor-pointer text-center w-full sm:w-auto"
+                                >
+                                    Book this service
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* video */}
+                        <motion.div
+                            whileHover={{ y: -5 }}
+                            className="w-full lg:w-1/2"
+                        >
+                            <BackgroundGradient containerClassName="rounded-lg" className="p-0 bg-transparent">
+                                <div
+                                    className="w-full aspect-video cursor-pointer rounded-lg overflow-hidden shadow-lg"
+                                >
+                                    {video ? (
+                                        <YouTubeEmbed videoId={video} customParams={{ autoplay: "0", controls: '1' }} />
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-zinc-800 rounded-lg">
+                                            <h1 className="text-zinc-600 dark:text-zinc-400 font-bold text-2xl sm:text-3xl text-center p-4">
+                                                Visual Coming Soon
+                                            </h1>
+                                        </div>
+                                    )}
                                 </div>
                             </BackgroundGradient>
                         </motion.div>
-
-
-
                     </motion.div>
-                ))
-                }
-            </div >
-
-
-        </section >
+                ))}
+            </div>
+        </section>
     );
 }

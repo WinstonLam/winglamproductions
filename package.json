@@ -12,9 +12,11 @@
     "deploy": "gh-pages -d site/out -b gh-pages"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.9.4",
+    "heroicons": "^2.2.0",
     "lucide-react": "^0.503.0",
     "motion": "^12.9.4",
     "next": "15.3.1",

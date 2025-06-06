@@ -57,9 +57,10 @@ export function Tabs({
                         onMouseEnter={() => !isMobile && setHoverIdx(i)}
                         onMouseLeave={() => !isMobile && setHoverIdx(null)}
                         className={cn(
-                            'relative px-4 py-2 rounded-full transition-all duration-300 text-second',
+                            'relative px-4 py-2 rounded-full transition-all duration-300 dark:text-second',
                             tabButtonClassName,
-                            i === activeIdx && activeButtonClassName
+                            i === activeIdx && activeButtonClassName,
+                            i === activeIdx ? "text-second" : ""
                         )}
                     >
                         {t.title}
