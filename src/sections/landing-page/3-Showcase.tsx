@@ -54,7 +54,7 @@ const testimonials = [
 
 export default function Showcase() {
     return (
-        <section id="showcase" className="bg-second dark:bg-black py-16 px-4 text-prime dark:text-second">
+        <section id="showcase" className="bg-second dark:bg-black sm:py-16 px-4 text-prime dark:text-second">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold text-center  mb-12">
                     Project Showcase
@@ -65,7 +65,12 @@ export default function Showcase() {
                         <ShowcaseCard key={p.title} title={p.title} index={i} />
                     ))}
                 </div>
-                <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+                <div className='max-w-6xl mx-auto'>
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mt-20">
+                        Testimonials
+                    </h2>
+                    <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+                </div>
             </div>
         </section>
     );
@@ -105,29 +110,35 @@ function ShowcaseCard({
             onHoverStart={play}
             onHoverEnd={reset}
         >
-            {/* ── TITLE ── */}
-            <motion.span
-                variants={{
-                    rest: { y: 0, textShadow: '0px 0px 0px rgba(0,0,0,0)' },
-                    hover: {
-                        y: -8,
-                        textShadow: '0px 4px 12px rgba(0,0,0,0.35)',
-                    },
-                }}
-                transition={{ type: 'tween', duration: 0.25 }}
-                className="mb-3 text-lg font-semibold text-prime dark:text-second select-none"
-            >
-                {title}
-            </motion.span>
+
 
             {/* ── POSTER + VIDEO STACK ── */}
-            <div className="relative w-full overflow-hidden rounded-lg shadow-lg group-hover:-translate-y-2 transition-all duration-300">
+            <div className="relative w-full overflow-hidden 
+            flex flex-col items-center justify-center ">
+                {/* ── TITLE ── */}
+                <motion.span
+                    variants={{
+                        rest: { y: 0, textShadow: '0px 0px 0px rgba(0,0,0,0)' },
+                        hover: {
+                            y: -8,
+                            textShadow: '0px 4px 12px rgba(0,0,0,0.35)',
+                        },
+                    }}
+                    transition={{ type: 'tween', duration: 0.25 }}
+                    className="mb-3 text-lg font-semibold text-prime dark:text-second select-none"
+                >
+                    {title}
+                </motion.span>
                 {/* poster sits behind */}
-                <img
-                    src={`/hero.png`}
-                    alt={`${title} poster`}
-                    className="w-full h-56 md:h-64 object-cover"
-                />
+                <div className='relative w-[80%] overflow-hidden rounded-lg shadow-lg group-hover:-translate-y-2 transition-all duration-300
+            flex items-center justify-center'>
+
+                    <img
+                        src={`/hero.png`}
+                        alt={`${title} poster`}
+                        className="w-full h-56 md:h-64 object-cover"
+                    />
+                </div>
 
 
             </div>

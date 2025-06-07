@@ -15,7 +15,7 @@ const Contact = () => {
                     className="flex flex-col items-center"
 
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 mt-10 sm:mt-0">
                         Elevate your story now
                     </h2>
                     <Link

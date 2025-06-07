@@ -4,13 +4,22 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Tabs } from "@/components/ui/tabs";
 import YouTubeEmbed from "@/lib/youtubeVideo";
 import Link from "next/link";
-import { useState, useEffect } from 'react'; // Import hooks
+import { useState, useEffect } from 'react';
 
 const Services = () => {
     const videoIds = {
-        brand: "W9pzgz4NTZY",
-        lifestyle: "y_oWn83xevQ"
+        brand: "3S8BE5M0fI0",
+        lifestyle: "y_oWn83xevQ",
+        socials: "", // Empty, should show "Coming Soon"
+        wedding: ""  // Empty, should show "Coming Soon"
     };
+
+    // Helper for the "Coming Soon" message
+    const ComingSoonMessage = () => (
+        <h2 className="text-4xl sm:text-6xl -mt-20 font-bold text-center text-black dark:text-second">
+            Coming Soon
+        </h2>
+    );
 
     const services = [
         {
@@ -24,8 +33,13 @@ const Services = () => {
                             Elevate the story of your brand
                         </p>
                     </div>
-                    <div className="w-full overflow-hidden aspect-video">
-                        <YouTubeEmbed videoId={videoIds.brand} />
+                    {/* Video/Coming Soon section for Brand */}
+                    <div className="w-full overflow-hidden aspect-video flex items-center justify-center">
+                        {videoIds.brand ? (
+                            <YouTubeEmbed videoId={videoIds.brand} />
+                        ) : (
+                            <ComingSoonMessage />
+                        )}
                     </div>
                 </div>
             ),
@@ -41,15 +55,20 @@ const Services = () => {
                             Capture the genuine rhythm of everyday life
                         </p>
                     </div>
-                    <div className="w-full overflow-hidden aspect-video">
-                        <YouTubeEmbed videoId={videoIds.lifestyle} />
+                    {/* Video/Coming Soon section for Lifestyle */}
+                    <div className="w-full overflow-hidden aspect-video flex items-center justify-center">
+                        {videoIds.lifestyle ? (
+                            <YouTubeEmbed videoId={videoIds.lifestyle} />
+                        ) : (
+                            <ComingSoonMessage />
+                        )}
                     </div>
                 </div>
             ),
         },
         {
             title: 'Socials',
-            value: 'social',
+            value: 'social', // Ensure this value aligns if used to dynamically fetch videoId
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second ">
@@ -58,25 +77,35 @@ const Services = () => {
                             Snack‑size content engineered to stop the scroll
                         </p>
                     </div>
-                    <div className="w-full overflow-hidden aspect-video">
-                        <YouTubeEmbed videoId={videoIds.brand} />
+                    {/* Video/Coming Soon section for Socials */}
+                    <div className="w-full overflow-hidden aspect-video flex items-center justify-center">
+                        {videoIds.socials ? (
+                            <YouTubeEmbed videoId={videoIds.socials} />
+                        ) : (
+                            <ComingSoonMessage />
+                        )}
                     </div>
                 </div>
             ),
         },
         {
-            title: 'Business',
-            value: 'Business', // Note: value is typically lowercase like 'business' for consistency
+            title: 'Wedding',
+            value: 'wedding',
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second">
-                        <h1 className="font-bold text-xl md:text-4xl">Business Elevation</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">Wedding Elevation</h1>
                         <p className=" text-base md:text-lg">
-                            Authentic voices. Compelling on‑screen conversations.
+                            Capturing your most special moment.
                         </p>
                     </div>
-                    <div className="w-full overflow-hidden aspect-video">
-                        <YouTubeEmbed videoId={videoIds.brand} />
+                    {/* Video/Coming Soon section for Wedding */}
+                    <div className="w-full overflow-hidden aspect-video flex items-center justify-center">
+                        {videoIds.wedding ? (
+                            <YouTubeEmbed videoId={videoIds.wedding} />
+                        ) : (
+                            <ComingSoonMessage />
+                        )}
                     </div>
                 </div>
             ),
@@ -87,13 +116,13 @@ const Services = () => {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true); // Component has mounted
+        setMounted(true);
 
         const handleResize = () => {
             setIsMobile(window.innerWidth < 640);
         };
 
-        handleResize(); // Check on initial mount
+        handleResize();
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -102,17 +131,13 @@ const Services = () => {
     }, []);
 
     const pageContent = (
-        <div className={`flex flex-col z-10 pt-20 sm:pt-10 pb-4 sm:pb-12 px-14 sm:px-4",
-            ${!isMobile ? "text-second" : "text-prime dark:text-second"} 
-        `}>
-            {/* "About us" section text will inherit from the parent above */}
+        <div className={`flex flex-col z-10 pt-20 sm:pt-10 pb-4 sm:pb-12 px-6 sm:px-4 ${!isMobile ? "text-second" : "text-prime dark:text-second"}`}>
             <div className="max-w-5xl mx-auto text-center flex flex-col sm:flex-row text-left items-center justify-evenly z-10">
-                <motion.div className="w-[80%] sm:w-[50%]"
+                <motion.div className="w-full sm:w-[50%]"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     viewport={{ once: true }}>
-                    {/* Removed explicit text colors, will inherit */}
                     <motion.h1 className="text-3xl md:text-2xl mb-4 font-bold text-shadow-lg dark:text-shadow-lg/50">
                         About us
                     </motion.h1>
@@ -122,25 +147,23 @@ const Services = () => {
                         Empowering passionate stories through creative, professional filmmaking.
                     </motion.p>
                 </motion.div>
-                <motion.div className="w-[80%] sm:w-[50%]"
+                <motion.div className="w-full sm:w-[50%]"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     viewport={{ once: true }}>
-                    {/* Removed explicit text colors, will inherit */}
                     <motion.p
                         className="text-lg md:text-xl">
                         At Winglam Productions our mission is to empower people to share their passion in life, and we are there to elevate it by bringing it to life on screen.
-                        We believe every story is unique and deserves to be told with creativity and professionalism. From concept to final cut, we work closely with our clients to produce videos that truly resonate.
+                        We believe every story is unique and deserves to be told with creativity and professionalism ✨
                     </motion.p>
                 </motion.div>
             </div>
-            <motion.div className="max-w-6xl w-full py-16 px-4 mx-auto"
+            <motion.div className="max-w-6xl w-full py-16 sm:px-4 sm:mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}>
-                {/* "Our Services" title will also inherit the conditional text color */}
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-12 text-shadow-lg dark:text-shadow-lg/50">
                     Our Services
                 </h2>
@@ -148,15 +171,12 @@ const Services = () => {
                     <Link
                         href="/services"
                         className={`
-                            inline-block mb-3 sm:mb-6 bg-primary dark:text-second font-medium px-4 py-2 rounded-full border border-black dark:border-white shadow-xl/20 dark:shadow-xl/70 transition-all duration-300 w-[50%] sm:w-[30%] text-center
-                            hover:bg-second
-                            ${isMobile ? "hover:text-prime" : "hover:text-second"}`
-                        }
+                            inline-block mb-3 sm:mb-6 bg-primary dark:text-second font-medium px-4 py-2 rounded-full border dark:border-second 
+                            shadow-xl/20 dark:shadow-xl/70 transition-all duration-300 w-[60%] sm:w-[30%] min-w-[152px] text-center hover:bg-second hover:text-black
+                            `}
                     >
-                        See All Services
+                        More information
                     </Link>
-                    {/* Pass isMobile to Tabs if its own hook isn't sufficient or causes issues */}
-                    {/* For now, Tabs uses its own useIsMobile hook which should be fine */}
                     <Tabs tabs={services} />
                 </div>
             </motion.div >
@@ -164,11 +184,6 @@ const Services = () => {
     );
 
     if (!mounted) {
-        // This renders the mobile-like background during SSR / pre-hydration
-        // If isMobile is false initially, pageContent will get 'text-second'
-        // leading to desktop text on mobile background.
-        // Consider setting initial isMobile state based on common case or making this block neutral.
-        // For now, sticking to your provided !mounted block.
         return (
             <section id="services" className="z-10 min-h-screen overflow-hidden">
                 <div className="bg-second dark:bg-black text-prime dark:text-second min-h-screen">
@@ -181,14 +196,10 @@ const Services = () => {
     return (
         <section id="services" className="z-10 min-h-screen overflow-hidden">
             {isMobile ? (
-                // Mobile view: simple background with its own text styling context
-                // The pageContent div inside will correctly use its isMobile=true logic for text.
                 <div className="bg-second dark:bg-black text-prime dark:text-second min-h-screen">
                     {pageContent}
                 </div>
             ) : (
-                // Desktop view: AuroraBackground
-                // The pageContent div inside will correctly use its isMobile=false logic for text (i.e., text-second).
                 <AuroraBackground className="-mt-0 min-h-screen">
                     {pageContent}
                 </AuroraBackground>

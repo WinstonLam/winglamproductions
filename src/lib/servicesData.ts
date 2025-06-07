@@ -1,7 +1,7 @@
 // src/lib/servicesData.ts
 
 const videoIds = {
-    brand: "W9pzgz4NTZY",
+    brand: "3S8BE5M0fI0",
     lifestyle: "y_oWn83xevQ"
 };
 
