@@ -54,13 +54,7 @@ export default function ServicesSection() {
                                 >
                                     More Information
                                 </Link>
-                                <Link
-                                    href="/contact"
-                                    className="inline-block bg-primary text-white bg-black dark:bg-second dark:text-black font-medium px-6 py-3 rounded-full border border-black dark:border-second
-                                     hover:bg-transparent  hover:text-black dark:hover:text-second transition-all duration-300 cursor-pointer text-center w-full sm:w-auto"
-                                >
-                                    Book this service
-                                </Link>
+
                             </div>
                         </div>
 

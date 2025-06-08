@@ -33,8 +33,8 @@ export const servicesData: Service[] = [
         video: videoIds.brand,
         shortDesc:
             "A punchy, cinematic film that distils your brand DNA into a compelling \
-       60‑second story—perfect for website hero banners and ad pre‑roll.",
-        priceFrom: "380",
+       1.5-2 minute story. Perfect for website hero banners and ad pre‑roll.",
+        priceFrom: "375",
         pageTitle: "Brand Story Elevation: Making Your Brand Impactful",
         pageDescription: "Today, attention moves at the speed of a swipe. Our Brand Story Elevation Service turns your restaurant’s personality, craft, and atmosphere into scroll-stopping video and photo content that looks, feels, and tastes like your brand. From a single half-day shoot to a multi-location cinematic production, each tier below is built to give you exactly the volume, polish, and strategic guidance you need.",
         tiers: [
@@ -42,49 +42,48 @@ export const servicesData: Service[] = [
                 name: "Standard Launch Tier",
                 perfectFor: "Polished content fast for a menu revamp, soft opening or re-brand",
                 strategy: ["1 x pre-shoot content strategy meeting"],
-                production: ["1 × half-day shoot (≈ 4 h, one location)"],
+                production: ["1 × half-day shoot (≈ 4-5 h, one location)"],
                 deliverables: [
                     "1 x hero video edit of 1-2 minutes long",
-                    "3 x 15-30 seconds social media vertical reels",
-                    "20 x fully edited photos in library"
+                    "10 x fully edited photos in library"
                 ],
                 serviceFeatures: [
                     "1 x feedback round",
                     "3 working days delivery (after day of shooting)"
                 ],
-                price: "350"
+                price: "€375"
             },
             {
                 name: "Pro Momentum Tier",
                 perfectFor: "A fuller narrative and a month of social fuel without the agency overhead",
                 strategy: ["1 x pre-shoot content strategy meeting"],
-                production: ["1 × full-day shoot (≈ 6 h, one location)"],
+                production: ["1 × full-day shoot (≈ 7-8 h, one location)"],
                 deliverables: [
                     "1 x flagship brand film ≈ 1-2 minutes long",
-                    "5 x 15-30 seconds social media vertical reels",
-                    "35 x fully edited photos in library"
+                    "3 x 15-30 seconds social media vertical reels",
+                    "25 x fully edited photos in library"
                 ],
                 serviceFeatures: [
                     "1 x feedback round",
                     "5 working days delivery (after day of shooting)"
                 ],
-                price: "500"
+                price: "€550"
             },
             {
-                name: "Premium Signature Tier",
-                perfectFor: "Seasonal campaigns, new collections, and brands that want to tell their story over multiple episodes",
-                strategy: ["2 x pre-shoot content strategy meeting"],
-                production: ["2 × full-day shoot (≈ 5 h each, multi-location)"],
+                name: "Custom Quote",
+                perfectFor: "When you need a more elaborate project or unique requirements. We are happy to discuss a custom quote tailored to your specific needs.",
+                strategy: ["pre-shoot content strategy meeting"],
+                production: ["full-day shoots (≈ 7-8 h each, multi-location)"],
                 deliverables: [
-                    "2 x flagship brand film ≈ 2+ minutes long",
-                    "7 x 15-30 seconds social media vertical reels",
-                    "40 x fully edited photos in library"
+                    "tailored made flagship brand film",
+                    "social media vertical reels",
+                    "fully edited photos in library"
                 ],
                 serviceFeatures: [
                     "2 x feedback rounds",
                     "7 working days delivery (after day of shooting)"
                 ],
-                price: "650"
+                price: "from €1250"
             }
         ]
     },
@@ -95,7 +94,7 @@ export const servicesData: Service[] = [
         shortDesc:
             "We capture authentic, aspirational day‑in‑the‑life footage to connect \
        your product with the lifestyle your audience dreams of.",
-        priceFrom: "380",
+        priceFrom: "395",
         pageTitle: "Lifestyle & Event Showcase: Capturing Authentic Moments",
         pageDescription: "Showcase the vibrant lifestyle your brand embodies or the unforgettable atmosphere of your events. We craft compelling visual narratives that connect with your audience on an emotional level.",
         tiers: [
@@ -103,9 +102,9 @@ export const servicesData: Service[] = [
                 name: "Essential Lifestyle Package",
                 perfectFor: "Small brands or events needing a concise, impactful showcase.",
                 production: ["1 x half-day shoot (≈ 4h, one location)"],
-                deliverables: ["1 x highlight video (1-2 minutes)", "2 x social media clips (15-30s)", "15 x edited photos"],
-                serviceFeatures: ["1 feedback round", "5 working days delivery"],
-                price: "350"
+                deliverables: ["1 x highlight video (1.5-2 minutes)", "2 x social media clips (15-30s)", "15 x edited photos"],
+                serviceFeatures: ["1 feedback round", "3 working days delivery"],
+                price: "€395"
             },
             {
                 name: "Comprehensive Event Coverage",
@@ -113,7 +112,7 @@ export const servicesData: Service[] = [
                 production: ["1 x full-day shoot (≈ 8h, multi-angle)"],
                 deliverables: ["1 x main event film (3-5 minutes)", "5 x social media reels", "50 x edited photos"],
                 serviceFeatures: ["2 feedback rounds", "7 working days delivery"],
-                price: "600"
+                price: "€600"
             }
         ]
     },
@@ -133,43 +132,14 @@ export const servicesData: Service[] = [
                 perfectFor: "Quick content boost for social channels.",
                 deliverables: ["5 x vertical short videos (15-60s)", "Trending sound research"],
                 serviceFeatures: ["Fast turnaround (3 days)"],
-                price: "300"
+                price: "€300"
             },
             {
                 name: "Monthly Social Retainer",
                 perfectFor: "Consistent, high-quality social content.",
                 deliverables: ["10 x vertical short videos per month", "Content calendar planning", "Performance analytics"],
                 serviceFeatures: ["Priority support", "2 feedback rounds per batch"],
-                price: "550"
-            }
-        ]
-    },
-    {
-        title: "Business / Testimonial",
-        slug: "business-testimonial", // Manually defined slug
-        video: "",
-        shortDesc:
-            "Polished sit‑down interviews with multi‑cam angles, pro audio and subtle \
-       animated lower‑thirds. Let your best advocates do the talking.",
-        priceFrom: null,
-        pageTitle: "Business Profiles & Testimonials: Build Trust",
-        pageDescription: "Let your success stories and satisfied clients speak for you. We produce professional interviews and testimonials that build credibility and showcase the value you provide, complete with multi-camera setups, high-quality audio, and tasteful graphics.",
-        tiers: [
-            {
-                name: "Single Testimonial Video",
-                perfectFor: "Highlighting a key client success story.",
-                production: ["1 x half-day shoot for interview + B-roll"],
-                deliverables: ["1 x testimonial video (2-3 minutes)", "Animated lower-thirds"],
-                serviceFeatures: ["1 feedback round", "7 working days delivery"],
-                price: "450"
-            },
-            {
-                name: "Company Profile Package",
-                perfectFor: "Comprehensive business overview with multiple voices.",
-                production: ["1 x full-day shoot, multiple interviews + location shots"],
-                deliverables: ["1 x company story video (3-5 minutes)", "3 x short testimonial clips"],
-                serviceFeatures: ["2 feedback rounds", "10 working days delivery"],
-                price: "800"
+                price: "€550"
             }
         ]
     },
