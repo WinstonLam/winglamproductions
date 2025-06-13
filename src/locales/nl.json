@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "services": "Diensten",
+    "showcase": "Vitrines",
+    "about": "Over ons",
+    "contact": "Contact"
+  },
+  "header": {
+    "scheduleCall": "Plan een gesprek"
+  },
+  "hero": {
+    "title": "Uw verhaal verheffen met professionele media"
+  }
+}
