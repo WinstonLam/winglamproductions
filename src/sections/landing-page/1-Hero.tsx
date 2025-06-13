@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import YouTubeEmbed from "@/lib/youtubeVideo";
 import Link from "next/link";
-import { useState, useEffect } from 'react'; // Added useState, useEffect
+// useState and useEffect removed as they are no longer used
 import { useTranslations } from '@/lib/useTranslations'; // Added useTranslations
+import { useLanguage } from '@/context/LanguageContext'; // Added useLanguage
 
 const Hero = () => {
     const video = 'W9pzgz4NTZY';
-    // TEMPORARY: Language state for demonstration. Replace with global context/props in a real app.
-    const [currentLanguage, setCurrentLanguage] = useState('nl');
-    const { t } = useTranslations(currentLanguage as 'en' | 'nl');
+    const { currentLanguage } = useLanguage();
+    const { t } = useTranslations(currentLanguage);
 
     return (
         <section id="hero" className="relative w-full text-second h-screen overflow-hidden">

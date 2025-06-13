@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState } from 'react'; // useState will remain for mobileOpen
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import DarkModeToggle from '@/components/ui/darkmode-switch'; // Assuming this is correctly imported
 import { AnimatedUnderlineLink } from '@/components/ui/animate-underline';
 import { useTranslations } from '@/lib/useTranslations';
+import { useLanguage } from '@/context/LanguageContext'; // Added useLanguage import
 
 const navLinks = [
     { href: '/services', labelKey: 'nav.services' },
@@ -17,18 +18,18 @@ const navLinks = [
 
 export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
-    // 1. State for current language (default to English)
-    const [currentLanguage, setCurrentLanguage] = useState('nl');
-    const { t, currentLocale } = useTranslations(currentLanguage as 'en' | 'nl');
+    const { currentLanguage, setCurrentLanguage: setContextLanguage } = useLanguage();
+    const { t } = useTranslations(currentLanguage); // currentLocale removed as it was unused
 
     const close = () => setMobileOpen(false);
     const toggleMobileMenu = () => setMobileOpen((p) => !p);
 
     // 2. Function to toggle language
     const toggleLanguage = () => {
-        setCurrentLanguage((prevLang) => (prevLang === 'en' ? 'nl' : 'en'));
+        const newLanguage = currentLanguage === 'en' ? 'nl' : 'en';
+        setContextLanguage(newLanguage);
         // In a real application, you'd trigger language change here (e.g., update context, call i18n library)
-        console.log(`Language switched to: ${currentLanguage === 'en' ? 'Nederlands' : 'English'}`);
+        console.log(`Language switched to: ${newLanguage === 'en' ? 'English' : 'Nederlands'}`);
     };
 
     // Consistent button styling for small utility icons

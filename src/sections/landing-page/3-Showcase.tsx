@@ -3,26 +3,28 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
+import { useLanguage } from '@/context/LanguageContext';
+import { useTranslations } from '@/lib/useTranslations';
 
 
-type ShowcaseItem = { title: string };
+// type ShowcaseItem = { title: string }; // Will be { titleKey: string, id: string }
 
-const projects: ShowcaseItem[] = [
-    { title: "John's Burgers" },
-    { title: 'Lotus Yoga' },
-    { title: 'Aurora Tech' },
-    { title: 'Vintage Wheels' },
+const projects = [ // No specific type, will be inferred
+    { titleKey: 'showcase.projectJohnsBurgers', id: 'johns-burgers' },
+    { titleKey: 'showcase.projectLotusYoga', id: 'lotus-yoga' },
+    { titleKey: 'showcase.projectAuroraTech', id: 'aurora-tech' },
+    { titleKey: 'showcase.projectVintageWheels', id: 'vintage-wheels' },
 ];
 
 const testimonials = [
     {
-        quote:
-            "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-        name: "Sarah Chen",
-        designation: "Product Manager at TechFlow",
+        quoteKey: 'showcase.testimonial1Quote',
+        nameKey: 'showcase.testimonial1Name',
+        designationKey: 'showcase.testimonial1Designation',
         src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
+        // This testimonial remains untranslated as per instructions for this step
         quote:
             "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
         name: "Michael Rodriguez",
@@ -53,23 +55,44 @@ const testimonials = [
 ];
 
 export default function Showcase() {
+    const { currentLanguage } = useLanguage();
+    const { t } = useTranslations(currentLanguage);
+
+    // Map translated testimonials for AnimatedTestimonials
+    // For this step, only the first testimonial is being fully translated in the data structure.
+    // The AnimatedTestimonials component would ideally consume these keys directly or be adapted.
+    // Here, we prepare the data as if it would.
+    const processedTestimonials = testimonials.map((testimonial, index) => {
+        if (index === 0) {
+            return {
+                quote: t(testimonial.quoteKey!), // Non-null assertion as we know it's there for the first one
+                name: t(testimonial.nameKey!),
+                designation: t(testimonial.designationKey!),
+                src: testimonial.src,
+            };
+        }
+        // For other testimonials, pass them as they are (untranslated for this step)
+        return testimonial;
+    });
+
+
     return (
         <section id="showcase" className="bg-second dark:bg-black sm:py-16 px-4 text-prime dark:text-second">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold text-center  mb-12">
-                    Project Showcase
+                    {t('showcase.mainTitle')}
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {projects.map((p, i) => (
-                        <ShowcaseCard key={p.title} title={p.title} index={i} />
+                        <ShowcaseCard key={p.id} title={t(p.titleKey)} index={i} />
                     ))}
                 </div>
                 <div className='max-w-6xl mx-auto'>
                     <h2 className="text-3xl md:text-4xl font-bold text-center mt-20">
-                        Testimonials
+                        {t('showcase.testimonialsTitle')}
                     </h2>
-                    <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+                    <AnimatedTestimonials testimonials={processedTestimonials} autoplay={true} />
                 </div>
             </div>
         </section>
@@ -135,7 +158,7 @@ function ShowcaseCard({
 
                     <img
                         src={`/hero.png`}
-                        alt={`${title} poster`}
+                        alt={t('showcase.projectPosterAlt').replace('{title}', title)}
                         className="w-full h-56 md:h-64 object-cover"
                     />
                 </div>
