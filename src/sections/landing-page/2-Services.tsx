@@ -13,7 +13,7 @@ const Services = () => {
     const { t } = useTranslations(currentLanguage);
 
     const videoIds = {
-        brand: "3S8BE5M0fI0",
+        brand: "LxFu2WuuxxI",
         lifestyle: "y_oWn83xevQ",
         socials: "", // Empty, should show "Coming Soon"
         wedding: ""  // Empty, should show "Coming Soon"

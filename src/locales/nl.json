@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "Diensten",
-    "showcase": "Vitrines",
+    "showcase": "Projecten",
     "about": "Over ons",
     "contact": "Contact"
   },
@@ -9,12 +9,12 @@
     "scheduleCall": "Plan een gesprek"
   },
   "hero": {
-    "title": "Uw verhaal verheffen met professionele media"
+    "title": "Uw verhaal naar nieuwe hoogtes tillen met professionele media"
   },
   "services": {
     "aboutUsTitle": "Over ons",
     "aboutUsP1": "Gepassioneerde verhalen versterken door creatieve, professionele filmproductie.",
-    "aboutUsP2": "Bij Winglam Productions is het onze missie om mensen in staat te stellen hun passie in het leven te delen, en wij zijn er om dit te verheffen door het tot leven te brengen op het scherm. Wij geloven dat elk verhaal uniek is en het verdient om verteld te worden met creativiteit en professionaliteit ✨",
+    "aboutUsP2": "Bij Winglam Productions is het onze missie om mensen in staat te stellen hun passie in het leven te delen, waarbij wij deze verhalen tot leven brengne met professionele media. Wij geloven dat elk verhaal uniek is en het verdient om verteld te worden met creativiteit en professionaliteit ✨",
     "ourServicesTitle": "Onze Diensten",
     "moreInfoButton": "Meer informatie",
     "tabBrand": "Merk",
@@ -32,7 +32,7 @@
     "comingSoon": "Binnenkort beschikbaar"
   },
   "showcase": {
-    "mainTitle": "Project Vitrine",
+    "mainTitle": "Projecten",
     "projectJohnsBurgers": "John's Burgers",
     "projectLotusYoga": "Lotus Yoga",
     "projectAuroraTech": "Aurora Tech",
@@ -44,6 +44,6 @@
     "projectPosterAlt": "{title} poster"
   },
   "contact": {
-    "title": "Verhef uw verhaal nu"
+    "title": "Uw verhaal naar nieuwe hoogtes tillen met professionele media"
   }
 }

@@ -58,10 +58,6 @@ export default function Showcase() {
     const { currentLanguage } = useLanguage();
     const { t } = useTranslations(currentLanguage);
 
-    // Map translated testimonials for AnimatedTestimonials
-    // For this step, only the first testimonial is being fully translated in the data structure.
-    // The AnimatedTestimonials component would ideally consume these keys directly or be adapted.
-    // Here, we prepare the data as if it would.
     const processedTestimonials = testimonials.map((testimonial, index) => {
         if (index === 0) {
             return {
@@ -108,6 +104,10 @@ function ShowcaseCard({
     index: number;
 }) {
     const vid = useRef<HTMLVideoElement>(null);
+    const { currentLanguage } = useLanguage();
+
+    const { t } = useTranslations(currentLanguage);
+
 
     /* helper callbacks */
     const play = () => vid.current?.play();
