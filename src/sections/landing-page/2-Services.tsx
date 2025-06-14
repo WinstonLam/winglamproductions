@@ -5,10 +5,15 @@ import { Tabs } from "@/components/ui/tabs";
 import YouTubeEmbed from "@/lib/youtubeVideo";
 import Link from "next/link";
 import { useState, useEffect } from 'react';
+import { useLanguage } from '@/context/LanguageContext';
+import { useTranslations } from '@/lib/useTranslations';
 
 const Services = () => {
+    const { currentLanguage } = useLanguage();
+    const { t } = useTranslations(currentLanguage);
+
     const videoIds = {
-        brand: "3S8BE5M0fI0",
+        brand: "LxFu2WuuxxI",
         lifestyle: "y_oWn83xevQ",
         socials: "", // Empty, should show "Coming Soon"
         wedding: ""  // Empty, should show "Coming Soon"
@@ -17,20 +22,20 @@ const Services = () => {
     // Helper for the "Coming Soon" message
     const ComingSoonMessage = () => (
         <h2 className="text-4xl sm:text-6xl -mt-20 font-bold text-center text-black dark:text-second">
-            Coming Soon
+            {t('services.comingSoon')}
         </h2>
     );
 
     const services = [
         {
-            title: 'Brand',
+            title: t('services.tabBrand'),
             value: 'brand',
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second">
-                        <h1 className="font-bold text-xl md:text-4xl">Brand Story Elevation</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">{t('services.brandTitle')}</h1>
                         <p className=" text-base md:text-lg">
-                            Elevate the story of your brand
+                            {t('services.brandDesc')}
                         </p>
                     </div>
                     {/* Video/Coming Soon section for Brand */}
@@ -45,14 +50,14 @@ const Services = () => {
             ),
         },
         {
-            title: 'Lifestyle',
+            title: t('services.tabLifestyle'),
             value: 'lifestyle',
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second">
-                        <h1 className="font-bold text-xl md:text-4xl">Lifestyle Elevation</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">{t('services.lifestyleTitle')}</h1>
                         <p className=" text-base md:text-lg">
-                            Capture the genuine rhythm of everyday life
+                            {t('services.lifestyleDesc')}
                         </p>
                     </div>
                     {/* Video/Coming Soon section for Lifestyle */}
@@ -67,14 +72,14 @@ const Services = () => {
             ),
         },
         {
-            title: 'Socials',
+            title: t('services.tabSocials'),
             value: 'social', // Ensure this value aligns if used to dynamically fetch videoId
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second ">
-                        <h1 className="font-bold text-xl md:text-4xl">Social Media Elevation</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">{t('services.socialsTitle')}</h1>
                         <p className=" text-base md:text-lg">
-                            Snack‑size content engineered to stop the scroll
+                            {t('services.socialsDesc')}
                         </p>
                     </div>
                     {/* Video/Coming Soon section for Socials */}
@@ -89,14 +94,14 @@ const Services = () => {
             ),
         },
         {
-            title: 'Wedding',
+            title: t('services.tabWedding'),
             value: 'wedding',
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second">
-                        <h1 className="font-bold text-xl md:text-4xl">Wedding Elevation</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">{t('services.weddingTitle')}</h1>
                         <p className=" text-base md:text-lg">
-                            Capturing your most special moment.
+                            {t('services.weddingDesc')}
                         </p>
                     </div>
                     {/* Video/Coming Soon section for Wedding */}
@@ -139,12 +144,12 @@ const Services = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     viewport={{ once: true }}>
                     <motion.h1 className="text-3xl md:text-2xl mb-4 font-bold text-shadow-lg dark:text-shadow-lg/50">
-                        About us
+                        {t('services.aboutUsTitle')}
                     </motion.h1>
                     <motion.p
                         className="text-xl md:text-3xl mb-4 text-shadow-lg dark:text-shadow-lg/50"
                     >
-                        Empowering passionate stories through creative, professional filmmaking.
+                        {t('services.aboutUsP1')}
                     </motion.p>
                 </motion.div>
                 <motion.div className="w-full sm:w-[50%]"
@@ -154,8 +159,7 @@ const Services = () => {
                     viewport={{ once: true }}>
                     <motion.p
                         className="text-lg md:text-xl">
-                        At Winglam Productions our mission is to empower people to share their passion in life, and we are there to elevate it by bringing it to life on screen.
-                        We believe every story is unique and deserves to be told with creativity and professionalism ✨
+                        {t('services.aboutUsP2')}
                     </motion.p>
                 </motion.div>
             </div>
@@ -165,7 +169,7 @@ const Services = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}>
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-12 text-shadow-lg dark:text-shadow-lg/50">
-                    Our Services
+                    {t('services.ourServicesTitle')}
                 </h2>
                 <div className="h-[25rem] sm:h-[35rem] md:h-[40rem] [perspective:1000px] relative flex flex-col items-center ">
                     <Link
@@ -175,7 +179,7 @@ const Services = () => {
                             shadow-xl/20 dark:shadow-xl/70 transition-all duration-300 w-[60%] sm:w-[30%] min-w-[152px] text-center hover:bg-second hover:text-black
                             `}
                     >
-                        More information
+                        {t('services.moreInfoButton')}
                     </Link>
                     <Tabs tabs={services} />
                 </div>
