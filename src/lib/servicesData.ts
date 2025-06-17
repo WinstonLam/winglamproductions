@@ -34,56 +34,83 @@ export const servicesData: Service[] = [
         shortDesc:
             "A punchy, cinematic film that distils your brand DNA into a compelling \
        1.5-2 minute story. Perfect for website hero banners and ad pre‑roll.",
-        priceFrom: "375",
+        priceFrom: "385", // Updated to reflect the lowest new price
         pageTitle: "Brand Story Elevation: Making Your Brand Impactful",
         pageDescription: "Today, attention moves at the speed of a swipe. Our Brand Story Elevation Service turns your restaurant’s personality, craft, and atmosphere into scroll-stopping video and photo content that looks, feels, and tastes like your brand. From a single half-day shoot to a multi-location cinematic production, each tier below is built to give you exactly the volume, polish, and strategic guidance you need.",
         tiers: [
             {
-                name: "Standard Launch Tier",
-                perfectFor: "Polished content fast for a menu revamp, soft opening or re-brand",
-                strategy: ["1 x pre-shoot content strategy meeting"],
-                production: ["1 × half-day shoot (≈ 4-5 h, one location)"],
+                name: "Social Spark",
+                perfectFor: "Ideal for showcasing your brand with a focused content package.",
+                strategy: ["1 x pre-shoot content strategie meeting"],
+                production: ["1 × halve dag shoot (≈ 4-5 uur, één locatie)"],
                 deliverables: [
-                    "1 x hero video edit of 1-2 minutes long",
-                    "10 x fully edited photos in library"
+                    "1 x flagship brand film (≈ 2 minuten lang) OR 5 x social media reels (≈ 20-30 seconden lang)",
+                    "10 x volledig bewerkte foto’s"
                 ],
                 serviceFeatures: [
-                    "1 x feedback round",
-                    "3 working days delivery (after day of shooting)"
+                    "1 x feedback ronde",
+                    "3 werkdagen oplevering (na dag van filmen)"
                 ],
-                price: "€375"
+                price: "€385"
             },
             {
-                name: "Pro Momentum Tier",
-                perfectFor: "A fuller narrative and a month of social fuel without the agency overhead",
-                strategy: ["1 x pre-shoot content strategy meeting"],
-                production: ["1 × full-day shoot (≈ 7-8 h, one location)"],
+                name: "Pro Momentum",
+                perfectFor: "For a comprehensive brand narrative and social media presence.",
+                strategy: ["1 x pre-shoot content strategie meeting"],
+                production: ["1 × volle dag shoot (≈ 7-8 uur, één locatie)"],
                 deliverables: [
-                    "1 x flagship brand film ≈ 1-2 minutes long",
-                    "3 x 15-30 seconds social media vertical reels",
-                    "25 x fully edited photos in library"
+                    "1 x flagship brand film ≈ 2 minuten lang",
+                    "3 x social media reels (≈ 20-30 seconden lang)",
+                    "25 x volledig bewerkte foto’s"
                 ],
                 serviceFeatures: [
-                    "1 x feedback round",
-                    "5 working days delivery (after day of shooting)"
+                    "1 x feedback ronde",
+                    "5 werkdagen oplevering (na dag van filmen)"
                 ],
-                price: "€550"
+                price: "€575"
             },
             {
-                name: "Custom Quote",
-                perfectFor: "When you need a more elaborate project or unique requirements. We are happy to discuss a custom quote tailored to your specific needs.",
-                strategy: ["pre-shoot content strategy meeting"],
-                production: ["full-day shoots (≈ 7-8 h each, multi-location)"],
+                name: "Content Momentum",
+                perfectFor: "Ultimate content creation for maximum impact across multiple platforms.",
+                strategy: ["1 x pre-shoot content strategie meeting"],
+                production: ["volle dagen shoots (≈ 7-8 uur, meerdere locaties)"],
                 deliverables: [
-                    "tailored made flagship brand film",
-                    "social media vertical reels",
-                    "fully edited photos in library"
+                    "1 x op maat gemaakte flagship brand film",
+                    "5 x social media reels (≈ 20-30 seconden lang)",
+                    "40 x volledig bewerkte foto’s"
                 ],
                 serviceFeatures: [
-                    "2 x feedback rounds",
-                    "7 working days delivery (after day of shooting)"
+                    "2 x feedback rondes",
+                    "7 werkdagen oplevering (na dag van filmen)"
                 ],
-                price: "from €1250"
+                price: "€1050"
+            }
+        ]
+    },
+    {
+        title: "Dynamic Photoshoot",
+        slug: "dynamic-photoshoot",
+        video: "",
+        shortDesc: "Professional on-location photoshoots including live photos and short form hero shots. Perfect for capturing dynamic images of individuals or products.",
+        priceFrom: "150",
+        pageTitle: "Dynamic Photoshoot: On-Location Photography",
+        pageDescription: "Our Dynamic Photoshoot service offers flexible on-location photography. We specialize in creating vibrant images, including live photos and short hero shots, tailored to your needs. Please note that specific packages and pricing are being finalized. Contact us for a custom consultation.",
+        tiers: [
+            {
+                name: "Starter On-Location Shoot",
+                perfectFor: "Individuals or small businesses looking for a quick, professional photoshoot.",
+                strategy: ["Consultation to define shoot goals and location specifics"],
+                production: ["1-hour on-location photo session"],
+                deliverables: [
+                    "Set of professionally edited digital images",
+                    "Online gallery for viewing and downloading photos",
+                    "Includes a selection of live photos and short form hero shots"
+                ],
+                serviceFeatures: [
+                    "Quick turnaround time",
+                    "Travel within Amsterdam included (additional travel may incur extra cost)"
+                ],
+                price: "€175"
             }
         ]
     },
@@ -113,33 +140,6 @@ export const servicesData: Service[] = [
                 deliverables: ["1 x main event film (3-5 minutes)", "5 x social media reels", "50 x edited photos"],
                 serviceFeatures: ["2 feedback rounds", "7 working days delivery"],
                 price: "€600"
-            }
-        ]
-    },
-    {
-        title: "Social‑Media Burst",
-        slug: "social-media-burst", // Manually defined slug
-        video: "",
-        shortDesc:
-            "High‑energy snack‑size clips optimised for TikTok, Reels and Shorts. \
-       Vertical from capture to delivery, complete with trending‑sound clearance.",
-        priceFrom: "380",
-        pageTitle: "Social Media Burst: Go Viral",
-        pageDescription: "Energize your social media presence with a burst of short, dynamic video content. Perfectly optimized for platforms like TikTok, Instagram Reels, and YouTube Shorts, these clips are designed for maximum engagement and reach.",
-        tiers: [
-            {
-                name: "Starter Social Pack",
-                perfectFor: "Quick content boost for social channels.",
-                deliverables: ["5 x vertical short videos (15-60s)", "Trending sound research"],
-                serviceFeatures: ["Fast turnaround (3 days)"],
-                price: "€300"
-            },
-            {
-                name: "Monthly Social Retainer",
-                perfectFor: "Consistent, high-quality social content.",
-                deliverables: ["10 x vertical short videos per month", "Content calendar planning", "Performance analytics"],
-                serviceFeatures: ["Priority support", "2 feedback rounds per batch"],
-                price: "€550"
             }
         ]
     },
