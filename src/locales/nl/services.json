@@ -1,0 +1,34 @@
+{
+  "page": {
+    "title": "Bekijk al onze diensten",
+    "moreInfoButton": "Meer informatie",
+    "visualComingSoon": "Visual komt binnenkort",
+    "priceFromLabel": "Vanaf"
+  },
+  "servicesData": {
+    "brand": {
+      "title": "Merkverhaal Elevatie",
+      "shortDesc": "Een krachtige, cinematische film die uw merk-DNA vertaalt naar een meeslepend verhaal van 1,5-2 minuten. Perfect voor website hero banners en pre-roll advertenties.",
+      "pageTitle": "Merkverhaal Elevatie: Maak Uw Merk Impactvol",
+      "pageDescription": "Vandaag de dag beweegt aandacht met de snelheid van een swipe. Onze Merkverhaal Elevatie Service zet de persoonlijkheid, het vakmanschap en de sfeer van uw restaurant om in scroll-stoppende video- en fotocontent die eruitziet, voelt en smaakt als uw merk. Van een enkele shoot van een halve dag tot een cinematische productie op meerdere locaties, elke onderstaande laag is ontworpen om u precies het volume, de afwerking en de strategische begeleiding te geven die u nodig heeft."
+    },
+    "lifestyle-event-showcase": {
+      "title": "Levensstijl / Evenement Showcase",
+      "shortDesc": "We leggen authentieke, ambitieuze 'dag-in-het-leven'-beelden vast om uw product te verbinden met de levensstijl waar uw publiek van droomt.",
+      "pageTitle": "Levensstijl & Evenement Showcase: Authentieke Momenten Vastleggen",
+      "pageDescription": "Toon de levendige levensstijl die uw merk belichaamt of de onvergetelijke sfeer van uw evenementen. We creëren meeslepende visuele verhalen die op emotioneel niveau contact maken met uw publiek."
+    },
+    "dynamic-photoshoot": {
+      "title": "Dynamische Fotoshoot",
+      "shortDesc": "Professionele fotoshoots op locatie, inclusief live foto's en korte hero shots. Perfect voor het vastleggen van dynamische beelden van personen of producten.",
+      "pageTitle": "Dynamische Fotoshoot: Fotografie op Locatie",
+      "pageDescription": "Onze Dynamische Fotoshoot service biedt flexibele fotografie op locatie. Wij zijn gespecialiseerd in het creëren van levendige beelden, inclusief live foto's en korte hero shots, afgestemd op uw behoeften. Let op: specifieke pakketten en prijzen worden momenteel afgerond. Neem contact met ons op voor een adviesgesprek op maat."
+    },
+    "wedding-films": {
+      "title": "Bruiloftsfilms",
+      "shortDesc": "Van voorbereidingen tot dansvloer, elke traan & lach verpakt in een tijdloze highlightfilm—geleverd in prachtig 4K HDR.",
+      "pageTitle": "Cinematografische Bruiloftsfilms: Uw Liefdesverhaal, Prachtig Verteld",
+      "pageDescription": "Bewaar de magie van uw trouwdag met een adembenemende cinematografische film. We leggen elke emotie vast, van de intieme voorbereidingsmomenten tot de vreugdevolle viering op de dansvloer, en leveren een tijdloos aandenken in verbluffende 4K HDR."
+    }
+  }
+}

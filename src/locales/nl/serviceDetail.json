@@ -1,0 +1,133 @@
+{
+  "backToServices": "← Terug naar Alle Diensten",
+  "ourPackages": "Onze Pakketten",
+  "noPackagesAvailable": {
+    "title": "Gedetailleerde pakketten zijn onderweg!",
+    "description": "We stellen de perfecte opties voor deze dienst samen. Neem in de tussentijd contact met ons op voor een consult op maat.",
+    "contactUsButton": "Neem contact op"
+  },
+  "tierCard": {
+    "perfectFor": "Perfect voor:",
+    "strategy": "Strategie",
+    "production": "Productie",
+    "deliverables": "Leveringen",
+    "serviceFeatures": "Service",
+    "bookServiceButton": "Boek deze dienst",
+    "vatExclusive": "excl. BTW",
+    "mostPopular": "Meest Populair",
+    "optionLabel": "Optie {option}",
+    "deliverableChoiceLabel": "Kies een van de volgende:"
+  },
+  "servicesData": {
+    "brand": {
+      "tiers": {
+        "social-spark": {
+          "name": "Social Spark",
+          "perfectFor": "Ideaal om uw merk te presenteren met een gericht contentpakket.",
+          "strategy": { "0": "1 x pre-shoot contentstrategie meeting" },
+          "production": { "0": "1 × halve dag shoot (≈ 4-5 uur, één locatie)" },
+          "deliverables": {
+            "choice": {
+              "0": "1 x flagship merkfilm (≈ 2 minuten lang)",
+              "1": "5 x social media reels (≈ 20-30 seconden lang)"
+            },
+            "1": "10 x volledig bewerkte foto’s"
+          },
+          "serviceFeatures": { "0": "1 x feedback ronde", "1": "3 werkdagen oplevering (na dag van filmen)" }
+        },
+        "pro-momentum": {
+          "name": "Pro Momentum",
+          "perfectFor": "Voor een uitgebreid merkverhaal en aanwezigheid op sociale media.",
+          "strategy": { "0": "1 x pre-shoot contentstrategie meeting" },
+          "production": { "0": "1 × volle dag shoot (≈ 7-8 uur, één locatie)" },
+          "deliverables": {
+            "0": "1 x flagship merkfilm ≈ 2 minuten lang",
+            "1": "3 x social media reels (≈ 20-30 seconden lang)",
+            "2": "25 x volledig bewerkte foto’s"
+          },
+          "serviceFeatures": { "0": "1 x feedback ronde", "1": "5 werkdagen oplevering (na dag van filmen)" }
+        },
+        "content-momentum": {
+          "name": "Content Momentum",
+          "perfectFor": "Ultieme contentcreatie voor maximale impact op meerdere platforms.",
+          "strategy": { "0": "1 x pre-shoot contentstrategie meeting" },
+          "production": { "0": "volle dagen shoots (≈ 7-8 uur, meerdere locaties)" },
+          "deliverables": {
+            "0": "1 x op maat gemaakte flagship merkfilm",
+            "1": "5 x social media reels (≈ 20-30 seconden lang)",
+            "2": "40 x volledig bewerkte foto’s"
+          },
+          "serviceFeatures": { "0": "2 x feedback rondes", "1": "7 werkdagen oplevering (na dag van filmen)" }
+        }
+      }
+    },
+    "lifestyle-event-showcase": {
+      "tiers": {
+        "essential-lifestyle-package": {
+          "name": "Essentieel Levensstijl Pakket",
+          "perfectFor": "Kleine merken of evenementen die een beknopte, impactvolle showcase nodig hebben.",
+          "production": { "0": "1 x halve dag shoot (≈ 4u, één locatie)" },
+          "deliverables": {
+            "0": "1 x highlight video (1.5-2 minuten)",
+            "1": "2 x social media clips (15-30s)",
+            "2": "15 x bewerkte foto's"
+          },
+          "serviceFeatures": { "0": "1 feedback ronde", "1": "3 werkdagen levering" }
+        },
+        "comprehensive-event-coverage": {
+          "name": "Uitgebreide Evenementdekking",
+          "perfectFor": "Grotere evenementen of campagnes die uitgebreide beelden nodig hebben.",
+          "production": { "0": "1 x volledige dag shoot (≈ 8u, multi-angle)" },
+          "deliverables": {
+            "0": "1 x hoofdevenementfilm (3-5 minuten)",
+            "1": "5 x social media reels",
+            "2": "50 x bewerkte foto's"
+          },
+          "serviceFeatures": { "0": "2 feedback rondes", "1": "7 werkdagen levering" }
+        }
+      }
+    },
+    "dynamic-photoshoot": {
+      "tiers": {
+        "starter-on-location-shoot": {
+          "name": "Starter Op Locatie Shoot",
+          "perfectFor": "Individuen of kleine bedrijven die op zoek zijn naar een snelle, professionele fotoshoot.",
+          "strategy": { "0": "Consultatie om shootdoelen en locatiespecifieke details te bepalen" },
+          "production": { "0": "1 uur durende fotosessie op locatie" },
+          "deliverables": {
+            "0": "Set professioneel bewerkte digitale afbeeldingen",
+            "1": "Online galerij voor het bekijken en downloaden van foto's",
+            "2": "Inclusief een selectie van live foto's en korte hero shots"
+          },
+          "serviceFeatures": { "0": "Snelle levertijd", "1": "Reizen binnen Amsterdam inbegrepen (extra reiskosten kunnen van toepassing zijn)" }
+        }
+      }
+    },
+    "wedding-films": {
+      "tiers": {
+        "highlight-reel-package": {
+          "name": "Highlight Reel Pakket",
+          "perfectFor": "De essentie van uw speciale dag vastleggen.",
+          "production": { "0": "6 uur dekking" },
+          "deliverables": {
+            "0": "1 x cinematografische highlight film (3-5 minuten)",
+            "1": "Online galerij"
+          },
+          "serviceFeatures": { "0": "Consultatiegesprek", "1": "Dronebeelden (indien locatie het toelaat)" }
+        },
+        "feature-film-package": {
+          "name": "Speelfilm Pakket",
+          "perfectFor": "Een uitgebreid verhaal van uw trouwdag.",
+          "production": { "0": "Volledige dag dekking (10 uur)" },
+          "deliverables": {
+            "0": "1 x speelfilm (15-20 minuten)",
+            "1": "1 x highlight film (3-5 minuten)",
+            "2": "Volledige ceremonie & speeches montage",
+            "3": "USB levering"
+          },
+          "serviceFeatures": { "0": "Twee cinematografen", "1": "Uitgebreide consultatie", "2": "Dronebeelden" }
+        }
+      }
+    }
+  }
+}

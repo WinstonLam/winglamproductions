@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "services": "Diensten",
+    "showcase": "Projecten",
+    "about": "Over ons",
+    "contact": "Contact"
+  },
+  "header": {
+    "scheduleCall": "Plan een gesprek",
+    "switchToDutch": "Schakel over naar Nederlands",
+    "switchToEnglish": "Schakel over naar Engels",
+    "logoAlt": "Winglam Productions Logo",
+    "openMenu": "Open menu"
+  }
+}

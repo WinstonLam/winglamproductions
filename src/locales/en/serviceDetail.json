@@ -1,0 +1,149 @@
+{
+  "backToServices": "← Back to All Services",
+  "ourPackages": "Our Packages",
+  "noPackagesAvailable": {
+    "title": "Detailed packages are on their way!",
+    "description": "We're crafting the perfect options for this service. In the meantime, please reach out for a custom consultation.",
+    "contactUsButton": "Contact Us"
+  },
+  "tierCard": {
+    "perfectFor": "Perfect for:",
+    "strategy": "Strategy",
+    "production": "Production",
+    "deliverables": "Deliverables",
+    "serviceFeatures": "Service",
+    "bookServiceButton": "Book this service",
+    "vatExclusive": "excl. VAT",
+    "mostPopular": "Most Popular",
+    "optionLabel": "Option {option}",
+    "deliverableChoiceLabel": "Choose one of the following:"
+  },
+  "servicesData": {
+    "brand": {
+      "tiers": {
+        "social-spark": {
+          "name": "Social Spark",
+          "perfectFor": "Ideal for showcasing your brand with a focused content package.",
+          "strategy": {
+            "0": "1 x pre-shoot content strategie meeting"
+          },
+          "production": {
+            "0": "1 × halve dag shoot (≈ 4-5 uur, één locatie)"
+          },
+          "deliverables": {
+            "choice": {
+              "0": "1 x flagship brand film (≈ 2 minuten lang)",
+              "1": "5 x social media reels (≈ 20-30 seconden lang)"
+            },
+            "1": "10 x volledig bewerkte foto’s"
+          },
+          "serviceFeatures": {
+            "0": "1 x feedback ronde",
+            "1": "3 werkdagen oplevering (na dag van filmen)"
+          }
+        },
+        "pro-momentum": {
+          "name": "Pro Momentum",
+          "perfectFor": "For a comprehensive brand narrative and social media presence.",
+          "strategy": { "0": "1 x pre-shoot content strategie meeting" },
+          "production": { "0": "1 × volle dag shoot (≈ 7-8 uur, één locatie)" },
+          "deliverables": {
+            "0": "1 x flagship brand film ≈ 2 minuten lang",
+            "1": "3 x social media reels (≈ 20-30 seconden lang)",
+            "2": "25 x volledig bewerkte foto’s"
+          },
+          "serviceFeatures": {
+            "0": "1 x feedback ronde",
+            "1": "5 werkdagen oplevering (na dag van filmen)"
+          }
+        },
+        "content-momentum": {
+          "name": "Content Momentum",
+          "perfectFor": "Ultimate content creation for maximum impact across multiple platforms.",
+          "strategy": { "0": "1 x pre-shoot content strategie meeting" },
+          "production": { "0": "volle dagen shoots (≈ 7-8 uur, meerdere locaties)" },
+          "deliverables": {
+            "0": "1 x op maat gemaakte flagship brand film",
+            "1": "5 x social media reels (≈ 20-30 seconden lang)",
+            "2": "40 x volledig bewerkte foto’s"
+          },
+          "serviceFeatures": {
+            "0": "2 x feedback rondes",
+            "1": "7 werkdagen oplevering (na dag van filmen)"
+          }
+        }
+      }
+    },
+    "lifestyle-event-showcase": {
+      "tiers": {
+        "essential-lifestyle-package": {
+          "name": "Essential Lifestyle Package",
+          "perfectFor": "Small brands or events needing a concise, impactful showcase.",
+          "production": { "0": "1 x half-day shoot (≈ 4h, one location)" },
+          "deliverables": {
+            "0": "1 x highlight video (1.5-2 minutes)",
+            "1": "2 x social media clips (15-30s)",
+            "2": "15 x edited photos"
+          },
+          "serviceFeatures": { "0": "1 feedback round", "1": "3 working days delivery" }
+        },
+        "comprehensive-event-coverage": {
+          "name": "Comprehensive Event Coverage",
+          "perfectFor": "Larger events or campaigns needing extensive footage.",
+          "production": { "0": "1 x full-day shoot (≈ 8h, multi-angle)" },
+          "deliverables": {
+            "0": "1 x main event film (3-5 minutes)",
+            "1": "5 x social media reels",
+            "2": "50 x edited photos"
+          },
+          "serviceFeatures": { "0": "2 feedback rounds", "1": "7 working days delivery" }
+        }
+      }
+    },
+    "dynamic-photoshoot": {
+      "tiers": {
+        "starter-on-location-shoot": {
+          "name": "Starter On-Location Shoot",
+          "perfectFor": "Individuals or small businesses looking for a quick, professional photoshoot.",
+          "strategy": { "0": "Consultation to define shoot goals and location specifics" },
+          "production": { "0": "1-hour on-location photo session" },
+          "deliverables": {
+            "0": "Set of professionally edited digital images",
+            "1": "Online gallery for viewing and downloading photos",
+            "2": "Includes a selection of live photos and short form hero shots"
+          },
+          "serviceFeatures": {
+            "0": "Quick turnaround time",
+            "1": "Travel within Amsterdam included (additional travel may incur extra cost)"
+          }
+        }
+      }
+    },
+    "wedding-films": {
+      "tiers": {
+        "highlight-reel-package": {
+          "name": "Highlight Reel Package",
+          "perfectFor": "Capturing the essence of your special day.",
+          "production": { "0": "6 hours coverage" },
+          "deliverables": {
+            "0": "1 x cinematic highlight film (3-5 minutes)",
+            "1": "Online gallery"
+          },
+          "serviceFeatures": { "0": "Consultation call", "1": "Drone footage (location permitting)" }
+        },
+        "feature-film-package": {
+          "name": "Feature Film Package",
+          "perfectFor": "A comprehensive story of your wedding day.",
+          "production": { "0": "Full day coverage (10 hours)" },
+          "deliverables": {
+            "0": "1 x feature film (15-20 minutes)",
+            "1": "1 x highlight film (3-5 minutes)",
+            "2": "Full ceremony & speeches edit",
+            "3": "USB delivery"
+          },
+          "serviceFeatures": { "0": "Two cinematographers", "1": "Extended consultation", "2": "Drone footage" }
+        }
+      }
+    }
+  }
+}

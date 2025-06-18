@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "services": "Services",
+    "showcase": "Showcase",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "header": {
+    "scheduleCall": "Schedule a call",
+    "switchToDutch": "Switch to Nederlands",
+    "switchToEnglish": "Switch to English",
+    "logoAlt": "Winglam Productions Logo",
+    "openMenu": "Open menu"
+  }
+}

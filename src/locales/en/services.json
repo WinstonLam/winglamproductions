@@ -1,0 +1,34 @@
+{
+  "page": {
+    "title": "See all our services",
+    "moreInfoButton": "More Information",
+    "visualComingSoon": "Visual Coming Soon",
+    "priceFromLabel": "From"
+  },
+  "servicesData": {
+    "brand": {
+      "title": "Brand Story Elevation",
+      "shortDesc": "A punchy, cinematic film that distils your brand DNA into a compelling 1.5-2 minute story. Perfect for website hero banners and ad pre‑roll.",
+      "pageTitle": "Brand Story Elevation: Making Your Brand Impactful",
+      "pageDescription": "Today, attention moves at the speed of a swipe. Our Brand Story Elevation Service turns your restaurant’s personality, craft, and atmosphere into scroll-stopping video and photo content that looks, feels, and tastes like your brand. From a single half-day shoot to a multi-location cinematic production, each tier below is built to give you exactly the volume, polish, and strategic guidance you need."
+    },
+    "lifestyle-event-showcase": {
+      "title": "Lifestyle / Event Showcase",
+      "shortDesc": "We capture authentic, aspirational day‑in‑the‑life footage to connect your product with the lifestyle your audience dreams of.",
+      "pageTitle": "Lifestyle & Event Showcase: Capturing Authentic Moments",
+      "pageDescription": "Showcase the vibrant lifestyle your brand embodies or the unforgettable atmosphere of your events. We craft compelling visual narratives that connect with your audience on an emotional level."
+    },
+    "dynamic-photoshoot": {
+      "title": "Dynamic Photoshoot",
+      "shortDesc": "Professional on-location photoshoots including live photos and short form hero shots. Perfect for capturing dynamic images of individuals or products.",
+      "pageTitle": "Dynamic Photoshoot: On-Location Photography",
+      "pageDescription": "Our Dynamic Photoshoot service offers flexible on-location photography. We specialize in creating vibrant images, including live photos and short hero shots, tailored to your needs. Please note that specific packages and pricing are being finalized. Contact us for a custom consultation."
+    },
+    "wedding-films": {
+      "title": "Wedding Films",
+      "shortDesc": "From bridal prep to dance‑floor, every tear & laugh wrapped into a timeless highlight film—delivered in beautiful 4K HDR.",
+      "pageTitle": "Cinematic Wedding Films: Your Love Story, Beautifully Told",
+      "pageDescription": "Preserve the magic of your wedding day with a breathtaking cinematic film. We capture every emotion, from the intimate moments of preparation to the joyous celebration on the dance floor, delivering a timeless keepsake in stunning 4K HDR."
+    }
+  }
+}
