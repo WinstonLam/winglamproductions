@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "Uw verhaal verheffen met professionele media"
+  },
+  "services": {
+    "aboutUsTitle": "Over ons",
+    "aboutUsP1": "Gepassioneerde verhalen versterken door creatieve, professionele filmproductie.",
+    "aboutUsP2": "Bij Winglam Productions is het onze missie om mensen in staat te stellen hun passie in het leven te delen, en wij zijn er om dit te verheffen door het tot leven te brengen op het scherm. Wij geloven dat elk verhaal uniek is en het verdient om verteld te worden met creativiteit en professionaliteit ✨",
+    "ourServicesTitle": "Onze Diensten",
+    "moreInfoButton": "Meer informatie",
+    "tabBrand": "Merk",
+    "tabLifestyle": "Levensstijl",
+    "tabSocials": "Socials",
+    "tabWedding": "Bruiloft",
+    "brandTitle": "Merkverhaal Elevatie",
+    "brandDesc": "Verhef het verhaal van uw merk",
+    "lifestyleTitle": "Levensstijl Elevatie",
+    "lifestyleDesc": "Leg het authentieke ritme van het dagelijks leven vast",
+    "socialsTitle": "Social Media Elevatie",
+    "socialsDesc": "Hapklare content, ontworpen om het scrollen te stoppen",
+    "weddingTitle": "Bruiloft Elevatie",
+    "weddingDesc": "Uw meest speciale moment vastleggen.",
+    "comingSoon": "Binnenkort beschikbaar"
+  },
+  "showcase": {
+    "mainTitle": "Project Vitrine",
+    "projectJohnsBurgers": "John's Burgers",
+    "projectLotusYoga": "Lotus Yoga",
+    "projectAuroraTech": "Aurora Tech",
+    "projectVintageWheels": "Vintage Wielen",
+    "testimonialsTitle": "Getuigenissen",
+    "testimonial1Quote": "De aandacht voor detail en innovatieve functies hebben onze workflow volledig getransformeerd. Dit is precies wat we zochten.",
+    "testimonial1Name": "Sarah Chen",
+    "testimonial1Designation": "Productmanager bij TechFlow",
+    "projectPosterAlt": "{title} poster"
+  },
+  "contact": {
+    "title": "Verhef uw verhaal nu"
+  }
+}

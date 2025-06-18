@@ -1,0 +1,63 @@
+{
+  "pageTitle": "See all our services",
+  "moreInfoButton": "More Information",
+  "visualComingSoon": "Visual Coming Soon",
+  "priceFrom": "From €{priceFrom} excl. VAT",
+  "detailPageStatic": {
+    "backToServices": "← Back to All Services",
+    "ourPackages": "Our Packages",
+    "noPackagesTitle": "Detailed packages are on their way!",
+    "noPackagesDescription": "We're crafting the perfect options for this service. In the meantime, please reach out for a custom consultation.",
+    "contactUsButton": "Contact Us",
+    "mostPopularRibbon": "Most Popular",
+    "perfectForLabel": "Perfect for:",
+    "strategySectionTitle": "Strategy",
+    "productionSectionTitle": "Production",
+    "deliverablesSectionTitle": "Deliverables",
+    "serviceSectionTitle": "Service",
+    "priceSuffix": ",- excl. VAT",
+    "bookServiceButton": "Book this service"
+  },
+  "servicesList": {
+    "brand": {
+      "title": "Brand Story Elevation",
+      "shortDesc": "Crafting compelling narratives that resonate with your audience and elevate your brand's presence.",
+      "detailPage": {
+        "pageTitle": "Full Brand Story Video Production (EN)",
+        "pageDescription": "Detailed description of our brand story elevation service, focusing on how we transform your narrative into a compelling visual journey from start to finish (EN).",
+        "tiers": {
+          "Standard Launch Tier": {
+            "name": "Standard Launch Tier (EN)",
+            "perfectFor": "Polished content fast for a menu revamp, soft opening or re-brand (EN)",
+            "strategy": ["1 x pre-shoot content strategy meeting (EN)"],
+            "production": ["1 × half-day shoot (≈ 4-5 h, one location) (EN)"],
+            "deliverables": [
+              "1 x hero video edit of 1-2 minutes long (EN)",
+              "10 x fully edited photos in library (EN)"
+            ],
+            "serviceFeatures": [
+              "1 x feedback round (EN)",
+              "3 working days delivery (after day of shooting) (EN)"
+            ]
+          }
+          // Add Pro Momentum Tier and Custom Quote here later
+        }
+      }
+    },
+    "lifestyle-event-showcase": {
+      "title": "Lifestyle & Event Showcase",
+      "shortDesc": "Capturing the essence of lifestyles and events with authentic and engaging visual storytelling."
+      // Detail page and tiers to be added later
+    },
+    "social-media-burst": {
+      "title": "Social Media Burst",
+      "shortDesc": "Creating impactful, scroll-stopping content tailored for your social media success."
+      // Detail page and tiers to be added later
+    },
+    "wedding-films": {
+      "title": "Wedding Films",
+      "shortDesc": "Beautifully capturing the magic and emotion of your special day with cinematic wedding films."
+      // Detail page and tiers to be added later
+    }
+  }
+}

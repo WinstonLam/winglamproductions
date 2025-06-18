@@ -1,32 +1,35 @@
 'use client';
 
-import { useState } from 'react';
+import { useState } from 'react'; // useState will remain for mobileOpen
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import DarkModeToggle from '@/components/ui/darkmode-switch'; // Assuming this is correctly imported
 import { AnimatedUnderlineLink } from '@/components/ui/animate-underline';
+import { useTranslations } from '@/lib/useTranslations';
+import { useLanguage } from '@/context/LanguageContext'; // Added useLanguage import
 
 const navLinks = [
-    { href: '/services', label: 'Services' },
-    { href: '/showcase', label: 'Showcase' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/services', labelKey: 'common.nav.services' },
+    { href: '/showcase', labelKey: 'common.nav.showcase' },
+    { href: '/about', labelKey: 'common.nav.about' },
+    { href: '/contact', labelKey: 'common.nav.contact' },
 ];
 
 export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
-    // 1. State for current language (default to English)
-    const [currentLanguage, setCurrentLanguage] = useState('nl');
+    const { currentLanguage, setCurrentLanguage: setContextLanguage } = useLanguage();
+    const { t, loading } = useTranslations(currentLanguage, ['common']); // Updated useTranslations call
 
     const close = () => setMobileOpen(false);
     const toggleMobileMenu = () => setMobileOpen((p) => !p);
 
     // 2. Function to toggle language
     const toggleLanguage = () => {
-        setCurrentLanguage((prevLang) => (prevLang === 'en' ? 'nl' : 'en'));
+        const newLanguage = currentLanguage === 'en' ? 'nl' : 'en';
+        setContextLanguage(newLanguage);
         // In a real application, you'd trigger language change here (e.g., update context, call i18n library)
-        console.log(`Language switched to: ${currentLanguage === 'en' ? 'Nederlands' : 'English'}`);
+        console.log(`Language switched to: ${newLanguage === 'en' ? 'English' : 'Nederlands'}`);
     };
 
     // Consistent button styling for small utility icons
@@ -54,10 +57,10 @@ export default function Header() {
                 {/* Desktop Navigation & Utilities */}
                 <div className="hidden lg:flex items-center space-x-6">
                     <ul className="flex space-x-6 dark:text-second text-black">
-                        {navLinks.map(({ href, label }) => (
+                        {navLinks.map(({ href, labelKey }) => (
                             <li key={href}>
                                 <AnimatedUnderlineLink href={href}>
-                                    <div className='font-semibold'>{label}</div>
+                                    <div className='font-semibold'>{t(labelKey)}</div>
                                 </AnimatedUnderlineLink>
                             </li>
                         ))}
@@ -67,7 +70,7 @@ export default function Header() {
                     <div className="flex items-center space-x-3">
                         <DarkModeToggle />
                         {/* Language Toggle Button */}
-                        {/* <button
+                        <button
                             onClick={toggleLanguage}
                             aria-label={`Switch to ${currentLanguage === 'en' ? 'Nederlands' : 'English'}`}
                             className={utilityButtonBaseStyle}
@@ -75,7 +78,7 @@ export default function Header() {
                             <span className="text-xs font-semibold">
                                 {currentLanguage === 'nl' ? 'NL' : 'EN'}
                             </span>
-                        </button> */}
+                        </button>
                         {/* Instagram Link */}
                         <Link
                             href="https://www.instagram.com/winglam.productions/"
@@ -98,7 +101,7 @@ export default function Header() {
                         href="/contact"
                         className="bg-primary text-prime dark:text-second font-medium px-6 py-3 rounded-full border shadow-xl/30 hover:bg-second hover:text-prime transition-all duration-300" // Assuming bg-primary and text-prime are defined
                     >
-                        Schedule a call
+                        {t('common.header.scheduleCall')}
                     </Link>
                 </div>
 
@@ -156,14 +159,14 @@ export default function Header() {
                         </Link>
                     </div>
 
-                    {navLinks.map(({ href, label }) => (
+                    {navLinks.map(({ href, labelKey }) => (
                         <li key={href} className='w-auto'>
                             <Link
                                 href={href}
                                 onClick={close}
                                 className="hover:underline underline-offset-4 dark:text-second text-black transition-colors duration-300"
                             >
-                                {label}
+                                {t(labelKey)}
                             </Link>
                         </li>
                     ))}
@@ -173,7 +176,7 @@ export default function Header() {
                             onClick={close}
                             className="text-prime dark:text-second font-medium px-6 py-3 rounded-full border shadow-xl/30 hover:bg-prime hover:text-second dark:hover:bg-second dark:hover:text-prime transition-all duration-300" // Assuming text-prime and bg-prime are defined
                         >
-                            Schedule a call
+                            {t('common.header.scheduleCall')}
                         </Link>
                     </li>
                 </ul>

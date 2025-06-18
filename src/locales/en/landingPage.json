@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "Elevating your story with professional media"
+  },
+  "services": {
+    "aboutUsTitle": "About us",
+    "aboutUsP1": "Empowering passionate stories through creative, professional filmmaking.",
+    "aboutUsP2": "At Winglam Productions our mission is to empower people to share their passion in life, and we are there to elevate it by bringing it to life on screen. We believe every story is unique and deserves to be told with creativity and professionalism ✨",
+    "ourServicesTitle": "Our Services",
+    "moreInfoButton": "More information",
+    "tabBrand": "Brand",
+    "tabLifestyle": "Lifestyle",
+    "tabSocials": "Socials",
+    "tabWedding": "Wedding",
+    "brandTitle": "Brand Story Elevation",
+    "brandDesc": "Elevate the story of your brand",
+    "lifestyleTitle": "Lifestyle Elevation",
+    "lifestyleDesc": "Capture the genuine rhythm of everyday life",
+    "socialsTitle": "Social Media Elevation",
+    "socialsDesc": "Snack‑size content engineered to stop the scroll",
+    "weddingTitle": "Wedding Elevation",
+    "weddingDesc": "Capturing your most special moment.",
+    "comingSoon": "Coming Soon"
+  },
+  "showcase": {
+    "mainTitle": "Project Showcase",
+    "projectJohnsBurgers": "John's Burgers",
+    "projectLotusYoga": "Lotus Yoga",
+    "projectAuroraTech": "Aurora Tech",
+    "projectVintageWheels": "Vintage Wheels",
+    "testimonialsTitle": "Testimonials",
+    "testimonial1Quote": "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+    "testimonial1Name": "Sarah Chen",
+    "testimonial1Designation": "Product Manager at TechFlow",
+    "projectPosterAlt": "{title} poster"
+  },
+  "contact": {
+    "title": "Elevate your story now"
+  }
+}

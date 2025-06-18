@@ -3,9 +3,15 @@ import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import YouTubeEmbed from "@/lib/youtubeVideo";
 import Link from "next/link";
+// useState and useEffect removed as they are no longer used
+import { useTranslations } from '@/lib/useTranslations'; // Added useTranslations
+import { useLanguage } from '@/context/LanguageContext'; // Added useLanguage
 
 const Hero = () => {
-    const video = 'W9pzgz4NTZY'
+    const video = 'W9pzgz4NTZY';
+    const { currentLanguage } = useLanguage();
+    const { t, loading } = useTranslations(currentLanguage, ['landingPage', 'common']); // Updated useTranslations
+
     return (
         <section id="hero" className="relative w-full text-second h-screen overflow-hidden">
             {/* Background video */}
@@ -32,7 +38,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <TextGenerateEffect words={'Elevating your story with professional media'} />
+                    <TextGenerateEffect words={t('landingPage.hero.title')} />
                     {/* <span className="font-bold">Elevating</span> your story <br /> with professional media */}
                 </motion.h1>
                 <motion.div initial={{ opacity: 0, scale: 0.8 }}
@@ -44,7 +50,7 @@ const Hero = () => {
                         className="translate-y-40 inline-block bg-primary text-cream font-medium px-6 py-3 rounded border shadow-xl/30  
                         rounded-full z-10 hover:bg-second hover:text-prime transition-all duration-300"
                     >
-                        Schedule a call
+                        {t('common.header.scheduleCall')}
                     </Link>
                 </motion.div>
             </div>

@@ -4,6 +4,8 @@
 import { Service as ServiceType, Tier as TierType } from "@/lib/servicesData"; // Use descriptive names
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useLanguage } from '@/context/LanguageContext';
+import { useTranslations } from '@/lib/useTranslations';
 import { CheckCircleIcon, StarIcon } from '@heroicons/react/24/solid';
 import { AnimatedUnderlineLink } from "@/components/ui/animate-underline";
 import { cn } from "@/lib/utils";
@@ -15,17 +17,19 @@ import { cn } from "@/lib/utils";
 const TierCard = ({
     tier,
     themeColor = "black",
-    isPopular = false // New prop
+    isPopular = false, // New prop
+    t // t function prop
 }: {
     tier: TierType,
     themeColor?: string,
-    isPopular?: boolean // New prop
+    isPopular?: boolean, // New prop
+    t: (key: string) => any // Updated type for t
 }) => {
-    const renderList = (items?: string[]) => {
+    const renderList = (items?: string[]) => { // items is now pre-translated
         if (!items || items.length === 0) return null;
         return (
             <ul className="space-y-1.5 text-sm text-zinc-700 dark:text-zinc-300">
-                {items.map((item, index) => (
+                {items.map((item, index) => ( // item is now a translated string
                     <li key={index} className="flex items-start">
                         <CheckCircleIcon className={`h-5 w-5 dark:text-second mr-2 mt-0.5 flex-shrink-0`} />
                         <span>{item}</span>
@@ -59,51 +63,53 @@ const TierCard = ({
                     `bg-${themeColor}`
                 )}>
                     <StarIcon className="h-3 w-3 inline-block mr-1 mb-0.5" />
-                    Most Popular
+                    {t('servicesPage.detailPageStatic.mostPopularRibbon')}
                 </div>
             )}
 
-            <h3 className={"text-2xl font-semibold mb-3"}>{tier.name}</h3>
+            <h3 className={"text-2xl font-semibold mb-3"}>{t(tier.nameKey)}</h3>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4 italic">
-                <strong>Perfect for:</strong> {tier.perfectFor}
+                <strong>{t('servicesPage.detailPageStatic.perfectForLabel')}</strong> {t(tier.perfectForKey)}
             </p>
 
             <div className="space-y-4 mb-6 flex-grow">
-                {tier.strategy && tier.strategy.length > 0 && (
+                {tier.strategyKey && (
                     <div>
-                        <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-1">Strategy</h4>
-                        {renderList(tier.strategy)}
+                        <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-1">{t('servicesPage.detailPageStatic.strategySectionTitle')}</h4>
+                        {renderList(t(tier.strategyKey) as string[])}
                     </div>
                 )}
-                {tier.production && tier.production.length > 0 && (
+                {tier.productionKey && (
                     <div>
-                        <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-1">Production</h4>
-                        {renderList(tier.production)}
+                        <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-1">{t('servicesPage.detailPageStatic.productionSectionTitle')}</h4>
+                        {renderList(t(tier.productionKey) as string[])}
                     </div>
                 )}
-                <div>
-                    <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-1">Deliverables</h4>
-                    {renderList(tier.deliverables)}
-                </div>
-                {tier.serviceFeatures && tier.serviceFeatures.length > 0 && (
+                {tier.deliverablesKey && ( // deliverablesKey should always exist as per interface
                     <div>
-                        <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-1">Service</h4>
-                        {renderList(tier.serviceFeatures)}
+                        <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-1">{t('servicesPage.detailPageStatic.deliverablesSectionTitle')}</h4>
+                        {renderList(t(tier.deliverablesKey) as string[])}
+                    </div>
+                )}
+                {tier.serviceFeaturesKey && ( // serviceFeaturesKey should always exist
+                    <div>
+                        <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-1">{t('servicesPage.detailPageStatic.serviceSectionTitle')}</h4>
+                        {renderList(t(tier.serviceFeaturesKey) as string[])}
                     </div>
                 )}
             </div>
 
             <div className="mt-auto pt-4  ">
                 <p className={"text-3xl font-bold mb-4"}>
-                    {tier.price},-
-                    <span className="text-sm font-normal text-zinc-500 dark:text-zinc-400"> excl. VAT</span>
+                    {tier.price}
+                    <span className="text-sm font-normal text-zinc-500 dark:text-zinc-400">{t('servicesPage.detailPageStatic.priceSuffix')}</span>
                 </p>
                 <Link
                     href="/contact" // Ensure this links to your contact page
                     className={` inline-block text-second font-medium px-6 py-3 rounded-full transition-all duration-300 cursor-pointer text-center w-full sm:w-auto 
                          bg-${themeColor} hover:bg-transparent border-4 border-${themeColor} hover:text-black dark:hover:text-second `}
                 >
-                    Book this service
+                    {t('servicesPage.detailPageStatic.bookServiceButton')}
                 </Link>
             </div>
         </motion.div>
@@ -117,6 +123,13 @@ interface ServiceDetailClientPageProps {
 
 export default function ServiceDetailClientPage({ service }: ServiceDetailClientPageProps) {
     const tierThemeColors = ["black", "prime", "black"]; // Example theme colors
+    const { currentLanguage } = useLanguage();
+    const { t, loading } = useTranslations(currentLanguage, ['servicesPage', 'common']);
+
+    if (loading) {
+        // Optional: render a loading state or return null
+        // For now, t() will return keys, which might be acceptable during loading.
+    }
 
     return (
         <section className="bg-second dark:bg-black text-black dark:text-second py-16 sm:py-24 px-4 sm:px-6 md:px-8"> {/* Adjusted padding */}
@@ -129,22 +142,22 @@ export default function ServiceDetailClientPage({ service }: ServiceDetailClient
                 >
                     <AnimatedUnderlineLink href="/services" >
                         <div className="inline-block text-base text-primary dark:text-second hover:text-primary-dark dark:hover:text-primary-light transition-colors" > {/* Adjusted size and hover */}
-                            ← Back to All Services
+                            {t('servicesPage.detailPageStatic.backToServices')}
                         </div>
                     </AnimatedUnderlineLink>
 
                     <h1 className="text-4xl sm:text-5xl font-bold mb-3 mt-6 text-zinc-900 dark:text-white"> {/* Adjusted margin */}
-                        {service.pageTitle || service.title}
+                        {t(service.pageTitleKey || service.titleKey)}
                     </h1>
                     <p className="text-lg sm:text-xl text-zinc-700 dark:text-zinc-300 leading-relaxed max-w-3xl mx-auto md:mx-0"> {/* Max-width for readability */}
-                        {service.pageDescription}
+                        {t(service.pageDescriptionKey)}
                     </p>
                 </motion.div>
 
                 {service.tiers && service.tiers.length > 0 ? (
                     <>
                         <h2 className="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-12 text-center text-zinc-900 dark:text-white">
-                            Our Packages
+                            {t('servicesPage.detailPageStatic.ourPackages')}
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
                             {service.tiers.map((tier, index) => {
@@ -152,10 +165,12 @@ export default function ServiceDetailClientPage({ service }: ServiceDetailClient
                                 // Or, if you have a specific flag in your data: const isPopularTier = tier.isPopular;
                                 return (
                                     <TierCard
-                                        key={tier.name}
+                                        key={tier.originalName || tier.nameKey} // Use originalName or nameKey for key
                                         tier={tier}
                                         themeColor={tierThemeColors[index % tierThemeColors.length]}
                                         isPopular={isMiddleTier} // Pass the isPopular prop
+                                        t={t} // Pass t function
+                                        // serviceSlug prop removed
                                     />
                                 );
                             })}
@@ -171,16 +186,16 @@ export default function ServiceDetailClientPage({ service }: ServiceDetailClient
                             <path vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <p className="text-xl font-medium text-zinc-700 dark:text-zinc-300 mb-3">
-                            Detailed packages are on their way!
+                            {t('servicesPage.detailPageStatic.noPackagesTitle')}
                         </p>
                         <p className="text-base text-zinc-500 dark:text-zinc-400 mb-6">
-                            We&apos;re crafting the perfect options for this service. In the meantime, please reach out for a custom consultation.
+                            {t('servicesPage.detailPageStatic.noPackagesDescription')}
                         </p>
                         <Link
                             href="/contact"
                             className="inline-block bg-primary text-white font-medium px-6 py-2.5 rounded-full hover:bg-primary-dark transition-colors duration-300"
                         >
-                            Contact Us
+                            {t('servicesPage.detailPageStatic.contactUsButton')}
                         </Link>
                     </motion.div>
                 )}

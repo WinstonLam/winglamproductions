@@ -5,169 +5,155 @@ const videoIds = {
     lifestyle: "y_oWn83xevQ"
 };
 
+// 1. Modify the Tier and Service interfaces
 export interface Tier {
-    name: string;
-    perfectFor: string;
-    strategy?: string[];
-    production?: string[];
-    deliverables: string[];
-    serviceFeatures: string[]; // Renamed from 'service'
+    nameKey: string;
+    originalName?: string;
+    perfectForKey: string;
+    strategyKey?: string;
+    productionKey?: string;
+    deliverablesKey: string;
+    serviceFeaturesKey: string;
     price: string;
 }
 
 export interface Service {
-    title: string;
+    titleKey: string;
     slug: string;
     video: string;
-    shortDesc: string;
+    shortDescKey: string;
     priceFrom?: string | null;
-    pageTitle?: string;
-    pageDescription: string;
+    pageTitleKey?: string;
+    pageDescriptionKey: string;
     tiers: Tier[];
 }
 
 export const servicesData: Service[] = [
     {
-        title: "Brand Story Elevation",
-        slug: "brand", // Manually defined slug
+        titleKey: "servicesPage.servicesList.brand.title",
+        slug: "brand",
         video: videoIds.brand,
-        shortDesc:
-            "A punchy, cinematic film that distils your brand DNA into a compelling \
-       1.5-2 minute story. Perfect for website hero banners and ad pre‑roll.",
+        shortDescKey: "servicesPage.servicesList.brand.shortDesc",
         priceFrom: "375",
-        pageTitle: "Brand Story Elevation: Making Your Brand Impactful",
-        pageDescription: "Today, attention moves at the speed of a swipe. Our Brand Story Elevation Service turns your restaurant’s personality, craft, and atmosphere into scroll-stopping video and photo content that looks, feels, and tastes like your brand. From a single half-day shoot to a multi-location cinematic production, each tier below is built to give you exactly the volume, polish, and strategic guidance you need.",
+        pageTitleKey: "servicesPage.servicesList.brand.detailPage.pageTitle",
+        pageDescriptionKey: "servicesPage.servicesList.brand.detailPage.pageDescription",
         tiers: [
             {
-                name: "Standard Launch Tier",
-                perfectFor: "Polished content fast for a menu revamp, soft opening or re-brand",
-                strategy: ["1 x pre-shoot content strategy meeting"],
-                production: ["1 × half-day shoot (≈ 4-5 h, one location)"],
-                deliverables: [
-                    "1 x hero video edit of 1-2 minutes long",
-                    "10 x fully edited photos in library"
-                ],
-                serviceFeatures: [
-                    "1 x feedback round",
-                    "3 working days delivery (after day of shooting)"
-                ],
+                nameKey: "servicesPage.servicesList.brand.detailPage.tiers.Standard Launch Tier.name",
+                originalName: "Standard Launch Tier",
+                perfectForKey: "servicesPage.servicesList.brand.detailPage.tiers.Standard Launch Tier.perfectFor",
+                strategyKey: "servicesPage.servicesList.brand.detailPage.tiers.Standard Launch Tier.strategy",
+                productionKey: "servicesPage.servicesList.brand.detailPage.tiers.Standard Launch Tier.production",
+                deliverablesKey: "servicesPage.servicesList.brand.detailPage.tiers.Standard Launch Tier.deliverables",
+                serviceFeaturesKey: "servicesPage.servicesList.brand.detailPage.tiers.Standard Launch Tier.serviceFeatures",
                 price: "€375"
             },
             {
-                name: "Pro Momentum Tier",
-                perfectFor: "A fuller narrative and a month of social fuel without the agency overhead",
-                strategy: ["1 x pre-shoot content strategy meeting"],
-                production: ["1 × full-day shoot (≈ 7-8 h, one location)"],
-                deliverables: [
-                    "1 x flagship brand film ≈ 1-2 minutes long",
-                    "3 x 15-30 seconds social media vertical reels",
-                    "25 x fully edited photos in library"
-                ],
-                serviceFeatures: [
-                    "1 x feedback round",
-                    "5 working days delivery (after day of shooting)"
-                ],
+                nameKey: "servicesPage.servicesList.brand.detailPage.tiers.Pro Momentum Tier.name",
+                originalName: "Pro Momentum Tier",
+                perfectForKey: "servicesPage.servicesList.brand.detailPage.tiers.Pro Momentum Tier.perfectFor",
+                strategyKey: "servicesPage.servicesList.brand.detailPage.tiers.Pro Momentum Tier.strategy",
+                productionKey: "servicesPage.servicesList.brand.detailPage.tiers.Pro Momentum Tier.production",
+                deliverablesKey: "servicesPage.servicesList.brand.detailPage.tiers.Pro Momentum Tier.deliverables",
+                serviceFeaturesKey: "servicesPage.servicesList.brand.detailPage.tiers.Pro Momentum Tier.serviceFeatures",
                 price: "€550"
             },
             {
-                name: "Custom Quote",
-                perfectFor: "When you need a more elaborate project or unique requirements. We are happy to discuss a custom quote tailored to your specific needs.",
-                strategy: ["pre-shoot content strategy meeting"],
-                production: ["full-day shoots (≈ 7-8 h each, multi-location)"],
-                deliverables: [
-                    "tailored made flagship brand film",
-                    "social media vertical reels",
-                    "fully edited photos in library"
-                ],
-                serviceFeatures: [
-                    "2 x feedback rounds",
-                    "7 working days delivery (after day of shooting)"
-                ],
+                nameKey: "servicesPage.servicesList.brand.detailPage.tiers.Custom Quote.name",
+                originalName: "Custom Quote",
+                perfectForKey: "servicesPage.servicesList.brand.detailPage.tiers.Custom Quote.perfectFor",
+                strategyKey: "servicesPage.servicesList.brand.detailPage.tiers.Custom Quote.strategy",
+                productionKey: "servicesPage.servicesList.brand.detailPage.tiers.Custom Quote.production",
+                deliverablesKey: "servicesPage.servicesList.brand.detailPage.tiers.Custom Quote.deliverables",
+                serviceFeaturesKey: "servicesPage.servicesList.brand.detailPage.tiers.Custom Quote.serviceFeatures",
                 price: "from €1250"
             }
         ]
     },
     {
-        title: "Lifestyle / Event Showcase",
-        slug: "lifestyle-event-showcase", // Manually defined slug
+        titleKey: "servicesPage.servicesList.lifestyle-event-showcase.title",
+        slug: "lifestyle-event-showcase",
         video: videoIds.lifestyle,
-        shortDesc:
-            "We capture authentic, aspirational day‑in‑the‑life footage to connect \
-       your product with the lifestyle your audience dreams of.",
+        shortDescKey: "servicesPage.servicesList.lifestyle-event-showcase.shortDesc",
         priceFrom: "395",
-        pageTitle: "Lifestyle & Event Showcase: Capturing Authentic Moments",
-        pageDescription: "Showcase the vibrant lifestyle your brand embodies or the unforgettable atmosphere of your events. We craft compelling visual narratives that connect with your audience on an emotional level.",
-        tiers: [
+        pageTitleKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.pageTitle", // Assuming this key will exist
+        pageDescriptionKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.pageDescription", // Assuming this key will exist
+        tiers: [ // Original tier data for this service, needs full refactor later
             {
-                name: "Essential Lifestyle Package",
-                perfectFor: "Small brands or events needing a concise, impactful showcase.",
-                production: ["1 x half-day shoot (≈ 4h, one location)"],
-                deliverables: ["1 x highlight video (1.5-2 minutes)", "2 x social media clips (15-30s)", "15 x edited photos"],
-                serviceFeatures: ["1 feedback round", "3 working days delivery"],
+                nameKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Essential Lifestyle Package.name",
+                originalName: "Essential Lifestyle Package",
+                perfectForKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Essential Lifestyle Package.perfectFor",
+                // strategyKey, productionKey etc. would follow the same pattern
+                // For now, map existing deliverables and serviceFeatures to their new key names,
+                // assuming they point to arrays in the JSON.
+                productionKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Essential Lifestyle Package.production", // Placeholder key
+                deliverablesKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Essential Lifestyle Package.deliverables",
+                serviceFeaturesKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Essential Lifestyle Package.serviceFeatures",
                 price: "€395"
             },
             {
-                name: "Comprehensive Event Coverage",
-                perfectFor: "Larger events or campaigns needing extensive footage.",
-                production: ["1 x full-day shoot (≈ 8h, multi-angle)"],
-                deliverables: ["1 x main event film (3-5 minutes)", "5 x social media reels", "50 x edited photos"],
-                serviceFeatures: ["2 feedback rounds", "7 working days delivery"],
+                nameKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Comprehensive Event Coverage.name",
+                originalName: "Comprehensive Event Coverage",
+                perfectForKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Comprehensive Event Coverage.perfectFor",
+                productionKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Comprehensive Event Coverage.production", // Placeholder
+                deliverablesKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Comprehensive Event Coverage.deliverables",
+                serviceFeaturesKey: "servicesPage.servicesList.lifestyle-event-showcase.detailPage.tiers.Comprehensive Event Coverage.serviceFeatures",
                 price: "€600"
             }
         ]
     },
     {
-        title: "Social‑Media Burst",
-        slug: "social-media-burst", // Manually defined slug
+        titleKey: "servicesPage.servicesList.social-media-burst.title",
+        slug: "social-media-burst",
         video: "",
-        shortDesc:
-            "High‑energy snack‑size clips optimised for TikTok, Reels and Shorts. \
-       Vertical from capture to delivery, complete with trending‑sound clearance.",
+        shortDescKey: "servicesPage.servicesList.social-media-burst.shortDesc",
         priceFrom: "380",
-        pageTitle: "Social Media Burst: Go Viral",
-        pageDescription: "Energize your social media presence with a burst of short, dynamic video content. Perfectly optimized for platforms like TikTok, Instagram Reels, and YouTube Shorts, these clips are designed for maximum engagement and reach.",
-        tiers: [
+        pageTitleKey: "servicesPage.servicesList.social-media-burst.detailPage.pageTitle", // Placeholder
+        pageDescriptionKey: "servicesPage.servicesList.social-media-burst.detailPage.pageDescription", // Placeholder
+        tiers: [ // Tiers need full refactor to use keys
             {
-                name: "Starter Social Pack",
-                perfectFor: "Quick content boost for social channels.",
-                deliverables: ["5 x vertical short videos (15-60s)", "Trending sound research"],
-                serviceFeatures: ["Fast turnaround (3 days)"],
+                nameKey: "servicesPage.servicesList.social-media-burst.detailPage.tiers.Starter Social Pack.name",
+                originalName: "Starter Social Pack",
+                perfectForKey: "servicesPage.servicesList.social-media-burst.detailPage.tiers.Starter Social Pack.perfectFor",
+                deliverablesKey: "servicesPage.servicesList.social-media-burst.detailPage.tiers.Starter Social Pack.deliverables",
+                serviceFeaturesKey: "servicesPage.servicesList.social-media-burst.detailPage.tiers.Starter Social Pack.serviceFeatures",
                 price: "€300"
             },
             {
-                name: "Monthly Social Retainer",
-                perfectFor: "Consistent, high-quality social content.",
-                deliverables: ["10 x vertical short videos per month", "Content calendar planning", "Performance analytics"],
-                serviceFeatures: ["Priority support", "2 feedback rounds per batch"],
+                nameKey: "servicesPage.servicesList.social-media-burst.detailPage.tiers.Monthly Social Retainer.name",
+                originalName: "Monthly Social Retainer",
+                perfectForKey: "servicesPage.servicesList.social-media-burst.detailPage.tiers.Monthly Social Retainer.perfectFor",
+                deliverablesKey: "servicesPage.servicesList.social-media-burst.detailPage.tiers.Monthly Social Retainer.deliverables",
+                serviceFeaturesKey: "servicesPage.servicesList.social-media-burst.detailPage.tiers.Monthly Social Retainer.serviceFeatures",
                 price: "€550"
             }
         ]
     },
     {
-        title: "Wedding Films",
-        slug: "wedding-films", // Manually defined slug
+        titleKey: "servicesPage.servicesList.wedding-films.title",
+        slug: "wedding-films",
         video: "",
-        shortDesc:
-            "From bridal prep to dance‑floor, every tear & laugh wrapped into a \
-       timeless highlight film—delivered in beautiful 4K HDR.",
+        shortDescKey: "servicesPage.servicesList.wedding-films.shortDesc",
         priceFrom: "380",
-        pageTitle: "Cinematic Wedding Films: Your Love Story, Beautifully Told",
-        pageDescription: "Preserve the magic of your wedding day with a breathtaking cinematic film. We capture every emotion, from the intimate moments of preparation to the joyous celebration on the dance floor, delivering a timeless keepsake in stunning 4K HDR.",
-        tiers: [
+        pageTitleKey: "servicesPage.servicesList.wedding-films.detailPage.pageTitle", // Placeholder
+        pageDescriptionKey: "servicesPage.servicesList.wedding-films.detailPage.pageDescription", // Placeholder
+        tiers: [ // Tiers need full refactor to use keys
             {
-                name: "Highlight Reel Package",
-                perfectFor: "Capturing the essence of your special day.",
-                production: ["6 hours coverage"],
-                deliverables: ["1 x cinematic highlight film (3-5 minutes)", "Online gallery"],
-                serviceFeatures: ["Consultation call", "Drone footage (location permitting)"],
+                nameKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Highlight Reel Package.name",
+                originalName: "Highlight Reel Package",
+                perfectForKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Highlight Reel Package.perfectFor",
+                productionKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Highlight Reel Package.production", // Placeholder
+                deliverablesKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Highlight Reel Package.deliverables",
+                serviceFeaturesKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Highlight Reel Package.serviceFeatures",
                 price: "1200"
             },
             {
-                name: "Feature Film Package",
-                perfectFor: "A comprehensive story of your wedding day.",
-                production: ["Full day coverage (10 hours)"],
-                deliverables: ["1 x feature film (15-20 minutes)", "1 x highlight film (3-5 minutes)", "Full ceremony & speeches edit", "USB delivery"],
-                serviceFeatures: ["Two cinematographers", "Extended consultation", "Drone footage"],
+                nameKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Feature Film Package.name",
+                originalName: "Feature Film Package",
+                perfectForKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Feature Film Package.perfectFor",
+                productionKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Feature Film Package.production", // Placeholder
+                deliverablesKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Feature Film Package.deliverables",
+                serviceFeaturesKey: "servicesPage.servicesList.wedding-films.detailPage.tiers.Feature Film Package.serviceFeatures",
                 price: "2500"
             }
         ]

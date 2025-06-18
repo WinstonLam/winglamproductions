@@ -1,0 +1,63 @@
+{
+  "pageTitle": "Bekijk al onze diensten",
+  "moreInfoButton": "Meer Informatie",
+  "visualComingSoon": "Visual Binnenkort Beschikbaar",
+  "priceFrom": "Vanaf €{priceFrom} excl. BTW",
+  "detailPageStatic": {
+    "backToServices": "← Terug naar Alle Diensten",
+    "ourPackages": "Onze Pakketten",
+    "noPackagesTitle": "Gedetailleerde pakketten zijn onderweg!",
+    "noPackagesDescription": "We zijn de perfecte opties voor deze dienst aan het samenstellen. Neem in de tussentijd contact op voor een consult op maat.",
+    "contactUsButton": "Neem Contact Op",
+    "mostPopularRibbon": "Meest Populair",
+    "perfectForLabel": "Perfect voor:",
+    "strategySectionTitle": "Strategie",
+    "productionSectionTitle": "Productie",
+    "deliverablesSectionTitle": "Deliverables",
+    "serviceSectionTitle": "Service",
+    "priceSuffix": ",- excl. BTW",
+    "bookServiceButton": "Boek deze dienst"
+  },
+  "servicesList": {
+    "brand": {
+      "title": "Merkverhaal Elevatie",
+      "shortDesc": "Het creëren van meeslepende verhalen die resoneren met uw publiek en de aanwezigheid van uw merk verhogen.",
+      "detailPage": {
+        "pageTitle": "Volledige Merkverhaal Videoproductie (NL)",
+        "pageDescription": "Gedetailleerde beschrijving van onze merkverhaal elevatie dienst, gericht op hoe we uw verhaal transformeren in een meeslepende visuele reis van begin tot eind (NL).",
+        "tiers": {
+          "Standard Launch Tier": { // Key should be the original English tier name for lookup
+            "name": "Standaard Lanceer Pakket (NL)",
+            "perfectFor": "Gepolijste content snel voor een menuvernieuwing, soft opening of re-brand (NL)",
+            "strategy": ["1 x pre-shoot contentstrategie meeting (NL)"],
+            "production": ["1 × halve dag shoot (≈ 4-5 u, één locatie) (NL)"],
+            "deliverables": [
+              "1 x hero video-edit van 1-2 minuten lang (NL)",
+              "10 x volledig bewerkte foto's in bibliotheek (NL)"
+            ],
+            "serviceFeatures": [
+              "1 x feedbackronde (NL)",
+              "3 werkdagen levering (na draaidag) (NL)"
+            ]
+          }
+          // Add Pro Momentum Tier and Custom Quote here later
+        }
+      }
+    },
+    "lifestyle-event-showcase": {
+      "title": "Levensstijl & Evenementen Showcase",
+      "shortDesc": "De essentie van levensstijlen en evenementen vastleggen met authentieke en boeiende visuele storytelling."
+      // Detail page and tiers to be added later
+    },
+    "social-media-burst": {
+      "title": "Social Media Burst",
+      "shortDesc": "Creëren van impactvolle, scroll-stoppende content op maat voor uw social media succes."
+      // Detail page and tiers to be added later
+    },
+    "wedding-films": {
+      "title": "Bruiloftsfilms",
+      "shortDesc": "Prachtig vastleggen van de magie en emotie van uw speciale dag met cinematografische bruiloftsfilms."
+      // Detail page and tiers to be added later
+    }
+  }
+}

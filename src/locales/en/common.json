@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "services": "Services",
+    "showcase": "Showcase",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "header": {
+    "scheduleCall": "Schedule a call"
+  }
+}
