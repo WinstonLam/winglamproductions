@@ -72,14 +72,14 @@ const Services = () => {
             ),
         },
         {
-            title: t('services.tabSocials'),
+            title: t('services.tabPhotoshoot'),
             value: 'social', // Ensure this value aligns if used to dynamically fetch videoId
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second ">
-                        <h1 className="font-bold text-xl md:text-4xl">{t('services.socialsTitle')}</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">{t('services.photoshootTitle')}</h1>
                         <p className=" text-base md:text-lg">
-                            {t('services.socialsDesc')}
+                            {t('services.photoshootDesc')}
                         </p>
                     </div>
                     {/* Video/Coming Soon section for Socials */}

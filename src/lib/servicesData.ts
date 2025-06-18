@@ -1,16 +1,22 @@
 // src/lib/servicesData.ts
 
 const videoIds = {
-    brand: "3S8BE5M0fI0",
+    brand: "LxFu2WuuxxI",
     lifestyle: "y_oWn83xevQ"
 };
+
+export interface DeliverableChoice {
+    type: 'choice';
+    label: string; // e.g., "Choose one of the following"
+    options: string[]; // The actual options to choose from
+}
 
 export interface Tier {
     name: string;
     perfectFor: string;
     strategy?: string[];
     production?: string[];
-    deliverables: string[];
+    deliverables: (string | DeliverableChoice)[]; // Now can be string or DeliverableChoice
     serviceFeatures: string[]; // Renamed from 'service'
     price: string;
 }
@@ -44,7 +50,15 @@ export const servicesData: Service[] = [
                 strategy: ["1 x pre-shoot content strategie meeting"],
                 production: ["1 × halve dag shoot (≈ 4-5 uur, één locatie)"],
                 deliverables: [
-                    "1 x flagship brand film (≈ 2 minuten lang) OR 5 x social media reels (≈ 20-30 seconden lang)",
+                    // MODIFIED HERE
+                    {
+                        type: 'choice',
+                        label: 'Choose one of the following:',
+                        options: [
+                            "1 x flagship brand film (≈ 2 minuten lang)",
+                            "5 x social media reels (≈ 20-30 seconden lang)"
+                        ]
+                    },
                     "10 x volledig bewerkte foto’s"
                 ],
                 serviceFeatures: [
@@ -87,33 +101,7 @@ export const servicesData: Service[] = [
             }
         ]
     },
-    {
-        title: "Dynamic Photoshoot",
-        slug: "dynamic-photoshoot",
-        video: "",
-        shortDesc: "Professional on-location photoshoots including live photos and short form hero shots. Perfect for capturing dynamic images of individuals or products.",
-        priceFrom: "150",
-        pageTitle: "Dynamic Photoshoot: On-Location Photography",
-        pageDescription: "Our Dynamic Photoshoot service offers flexible on-location photography. We specialize in creating vibrant images, including live photos and short hero shots, tailored to your needs. Please note that specific packages and pricing are being finalized. Contact us for a custom consultation.",
-        tiers: [
-            {
-                name: "Starter On-Location Shoot",
-                perfectFor: "Individuals or small businesses looking for a quick, professional photoshoot.",
-                strategy: ["Consultation to define shoot goals and location specifics"],
-                production: ["1-hour on-location photo session"],
-                deliverables: [
-                    "Set of professionally edited digital images",
-                    "Online gallery for viewing and downloading photos",
-                    "Includes a selection of live photos and short form hero shots"
-                ],
-                serviceFeatures: [
-                    "Quick turnaround time",
-                    "Travel within Amsterdam included (additional travel may incur extra cost)"
-                ],
-                price: "€175"
-            }
-        ]
-    },
+
     {
         title: "Lifestyle / Event Showcase",
         slug: "lifestyle-event-showcase", // Manually defined slug
@@ -140,6 +128,33 @@ export const servicesData: Service[] = [
                 deliverables: ["1 x main event film (3-5 minutes)", "5 x social media reels", "50 x edited photos"],
                 serviceFeatures: ["2 feedback rounds", "7 working days delivery"],
                 price: "€600"
+            }
+        ]
+    },
+    {
+        title: "Dynamic Photoshoot",
+        slug: "dynamic-photoshoot",
+        video: "",
+        shortDesc: "Professional on-location photoshoots including live photos and short form hero shots. Perfect for capturing dynamic images of individuals or products.",
+        priceFrom: "150",
+        pageTitle: "Dynamic Photoshoot: On-Location Photography",
+        pageDescription: "Our Dynamic Photoshoot service offers flexible on-location photography. We specialize in creating vibrant images, including live photos and short hero shots, tailored to your needs. Please note that specific packages and pricing are being finalized. Contact us for a custom consultation.",
+        tiers: [
+            {
+                name: "Starter On-Location Shoot",
+                perfectFor: "Individuals or small businesses looking for a quick, professional photoshoot.",
+                strategy: ["Consultation to define shoot goals and location specifics"],
+                production: ["1-hour on-location photo session"],
+                deliverables: [
+                    "Set of professionally edited digital images",
+                    "Online gallery for viewing and downloading photos",
+                    "Includes a selection of live photos and short form hero shots"
+                ],
+                serviceFeatures: [
+                    "Quick turnaround time",
+                    "Travel within Amsterdam included (additional travel may incur extra cost)"
+                ],
+                price: "€175"
             }
         ]
     },

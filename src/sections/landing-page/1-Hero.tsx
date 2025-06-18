@@ -34,11 +34,12 @@ const Hero = () => {
                 </motion.div>
                 <motion.h1
                     className="translate-y-30 text-4xl md:text-5xl z-10"
+
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <TextGenerateEffect words={t('hero.title')} />
+                    <TextGenerateEffect key={t('hero.title')} words={t('hero.title')} />
                     {/* <span className="font-bold">Elevating</span> your story <br /> with professional media */}
                 </motion.h1>
                 <motion.div initial={{ opacity: 0, scale: 0.8 }}

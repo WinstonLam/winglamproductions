@@ -98,10 +98,10 @@ export default function ContactPage() {
                         <p>
                             <span className="font-semibold">Phone:</span>{' '}
                             <a
-                                href="tel:+31123456789"
+                                href="tel:+31 6 37349782"
                                 className="underline underline-offset-2 decoration-primary hover:text-primary"
                             >
-                                +31 12 345 6789
+                                +31 6 37349782
                             </a>
                         </p>
                         <p>
@@ -228,13 +228,12 @@ export default function ContactPage() {
                                     <option value="" disabled>
                                         Select an option
                                     </option>
-                                    <option>&lt; €2,500</option>
-                                    <option>€2,500 - €5,000</option>
-                                    <option>€5,000 - €7,500</option>
-                                    <option>&gt; €7,500</option>
+                                    <option>&lt; €500</option>
+                                    <option>€500 - €1,000</option>
+                                    <option>&gt; €1,000</option>
                                 </select>
                                 <p className="text-sm mt-1 font-light">
-                                    On average, most of our video projects sit between €2,500 - €7,500 excl. tax
+                                    On average, most of our video projects sit between €500 - €1,000 excl. tax
                                 </p>
                             </label>
 

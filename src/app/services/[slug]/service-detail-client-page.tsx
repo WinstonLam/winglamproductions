@@ -1,17 +1,20 @@
 // src/app/services/[slug]/service-detail-client-page.tsx
 "use client"; // This component will be a Client Component
 
-import { Service as ServiceType, Tier as TierType } from "@/lib/servicesData"; // Use descriptive names
+import { Service as ServiceType, Tier as TierType, DeliverableChoice } from "@/lib/servicesData"; // Use descriptive names
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { CheckCircleIcon, StarIcon } from '@heroicons/react/24/solid';
 import { AnimatedUnderlineLink } from "@/components/ui/animate-underline";
 import { cn } from "@/lib/utils";
 
+// Helper function to check if an item is a DeliverableChoice
+function isDeliverableChoice(item: string | DeliverableChoice): item is DeliverableChoice {
+    return (item as DeliverableChoice).type === 'choice';
+}
 
 
-// Helper component for tier cards (remains part of this client component)
-// Helper component for tier cards
+
 const TierCard = ({
     tier,
     themeColor = "black",
@@ -21,16 +24,41 @@ const TierCard = ({
     themeColor?: string,
     isPopular?: boolean // New prop
 }) => {
-    const renderList = (items?: string[]) => {
+    const renderList = (items?: (string | DeliverableChoice)[]) => {
         if (!items || items.length === 0) return null;
         return (
             <ul className="space-y-1.5 text-sm text-zinc-700 dark:text-zinc-300">
-                {items.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                        <CheckCircleIcon className={`h-5 w-5 dark:text-second mr-2 mt-0.5 flex-shrink-0`} />
-                        <span>{item}</span>
-                    </li>
-                ))}
+                {items.map((item, index) => {
+                    if (isDeliverableChoice(item)) {
+                        // Render choice structure
+                        return (
+                            <li key={index} className="!mt-3 list-none"> {/* Remove default li styling, add margin top */}
+                                <p className="font-semibold text-zinc-800 dark:text-zinc-200 mb-1.5">{item.label}</p>
+                                {item.options.map((option, optionIndex) => (
+                                    <div key={optionIndex} className="mb-1">
+                                        <p className="ml-0 text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-0.5">
+                                            Option {String.fromCharCode(65 + optionIndex)}:
+                                        </p>
+                                        <ul className="list-none pl-0"> {/* To contain the single "option itself" as a list item */}
+                                            <li className="flex items-start ml-4"> {/* Indented item */}
+                                                <CheckCircleIcon className={`h-5 w-5 dark:text-second mr-2 mt-0.5 flex-shrink-0`} />
+                                                <span>{option}</span> {/* This is the "option itself" */}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                ))}
+                            </li>
+                        );
+                    } else {
+                        // Render simple string item
+                        return (
+                            <li key={index} className="flex items-start">
+                                <CheckCircleIcon className={`h-5 w-5 dark:text-second mr-2 mt-0.5 flex-shrink-0`} />
+                                <span>{item}</span>
+                            </li>
+                        );
+                    }
+                })}
             </ul>
         );
     };
