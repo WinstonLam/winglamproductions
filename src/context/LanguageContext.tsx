@@ -9,9 +9,8 @@ interface LanguageContextType {
   setCurrentLanguage: (language: Locale) => void;
 }
 
-// Create the context with a default undefined value initially
-// We'll provide a proper default in the Provider
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 // Define the props for the LanguageProvider
 interface LanguageProviderProps {

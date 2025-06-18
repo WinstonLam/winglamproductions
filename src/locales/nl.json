@@ -15,14 +15,14 @@
     "services": {
       "aboutUsTitle": "Over ons",
       "aboutUsP1": "Gepassioneerde verhalen versterken door creatieve, professionele filmproductie.",
-      "aboutUsP2": "Bij Winglam Productions is het onze missie om mensen in staat te stellen hun passie in het leven te delen, waarbij wij deze verhalen tot leven brengne met professionele media. Wij geloven dat elk verhaal uniek is en het verdient om verteld te worden met creativiteit en professionaliteit ✨",
+      "aboutUsP2": "Bij Winglam Productions is het onze missie om mensen in staat te stellen hun passie in het leven te delen, en wij zijn er om dit te verheffen door het op het scherm tot leven te brengen. Wij geloven dat elk verhaal uniek is en het verdient om verteld te worden met creativiteit en professionaliteit ✨",
       "ourServicesTitle": "Onze Diensten",
       "moreInfoButton": "Meer informatie",
       "tabBrand": "Merk",
       "tabLifestyle": "Levensstijl",
       "tabPhotoshoot": "Fotoshoot",
       "tabWedding": "Bruiloft",
-      "brandTitle": "Merkverhaal Elevatie",
+      "brandTitle": "Brand Elevation",
       "brandDesc": "Verhef het verhaal van uw merk",
       "lifestyleTitle": "Levensstijl Elevatie",
       "lifestyleDesc": "Leg het authentieke ritme van het dagelijks leven vast",
@@ -39,208 +39,385 @@
       "projectAuroraTech": "Aurora Tech",
       "projectVintageWheels": "Vintage Wielen",
       "testimonialsTitle": "Recensies",
-      "testimonial1Quote": "De aandacht voor detail en innovatieve functies hebben onze workflow volledig getransformeerd. Dit is precies wat we zochten.",
-      "testimonial1Name": "Sarah Chen",
-      "testimonial1Designation": "Productmanager bij TechFlow",
-      "projectPosterAlt": "{title} poster"
+      "testimonials": [
+        {
+          "quote": "De implementatie was naadloos en de resultaten overtroffen onze verwachtingen. De flexibiliteit van het platform is opmerkelijk.",
+          "name": "Michael Rodriguez",
+          "designation": "CTO bij InnovateSphere",
+          "src": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop"
+        },
+        {
+          "quote": "Deze oplossing heeft de productiviteit van ons team aanzienlijk verbeterd. De intuïtieve interface maakt complexe taken eenvoudig.",
+          "name": "Emily Watson",
+          "designation": "Operationeel Directeur bij CloudScale",
+          "src": "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop"
+        },
+        {
+          "quote": "Uitstekende ondersteuning en robuuste functies. Het is zeldzaam om een product te vinden dat al zijn beloftes waarmaakt.",
+          "name": "James Kim",
+          "designation": "Hoofd Engineering bij DataPro",
+          "src": "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop"
+        },
+        {
+          "quote": "De schaalbaarheid en prestaties zijn baanbrekend geweest voor onze organisatie. Sterk aanbevolen voor elk groeiend bedrijf.",
+          "name": "Lisa Thompson",
+          "designation": "VP Technologie bij FutureNet",
+          "src": "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop"
+        }
+      ]
     },
     "contact": {
-      "title": "Uw verhaal naar nieuwe hoogtes tillen met professionele media"
-  },
-  "servicesPage": {
-    "title": "Bekijk al onze diensten",
-    "moreInfoButton": "Meer informatie",
-    "visualComingSoon": "Visueel materiaal binnenkort beschikbaar",
-    "priceFromFormat": "Vanaf €{price} excl. BTW"
+      "title": "Breng jouw verhaal naar een nieuw niveau",
+      "cta": "Plan een gesprek"
+    }
   },
   "services": {
+    "mainTitle": "Onze Diensten",
+    "ctaButton": "Meer informatie",
+    "comingSoon": "Binnenkort beschikbaar",
     "brand": {
-      "title": "Merkverhaal Elevatie",
-      "shortDesc": "Een krachtige, cinematische film die uw merk-DNA vertaalt naar een meeslepend verhaal van 1,5-2 minuten. Perfect voor website hero banners en pre-roll advertenties.",
-      "priceFrom": "Vanaf €385 excl. BTW",
-      "pageTitle": "Merkverhaal Elevatie: Maak Uw Merk Impactvol",
-      "pageDescription": "Vandaag de dag beweegt aandacht met de snelheid van een swipe. Onze Merkverhaal Elevatie Service transformeert de persoonlijkheid, het vakmanschap en de sfeer van uw restaurant in scroll-stoppende video- en fotocontent die eruitziet, voelt en smaakt als uw merk. Van een enkele shoot van een halve dag tot een cinematische productie op meerdere locaties, elke onderstaande laag is ontworpen om u precies het volume, de afwerking en de strategische begeleiding te bieden die u nodig heeft.",
-      "tiers": [
-        {
-          "name": "Sociale Vonk",
-          "perfectFor": "Ideaal voor het presenteren van uw merk met een gericht contentpakket.",
-          "strategy": ["1 x pre-shoot contentstrategiebespreking"],
-          "production": ["1 × halve dag shoot (≈ 4-5 uur, één locatie)"],
-          "deliverables": [
-            {
-              "type": "choice",
-              "label": "Kies één van de volgende:",
-              "options": [
-                "1 x vlaggenschip merkfilm (≈ 2 minuten lang)",
-                "5 x social media reels (≈ 20-30 seconden lang)"
-              ]
+      "title": "Brand Story Elevation",
+      "shortDesc": "Een krachtige, filmische video die het DNA van jouw merk samenvat in een meeslepende story van 1,5-2 minuten. Ideaal voor website-hero banners en pre-roll advertenties.",
+      "priceFrom": "Vanaf €385 excl. btw",
+      "videoId": "LxFu2WuuxxI",
+      "pageTitle": "Brand Story Elevation: Maak jouw merk impactvol",
+      "pageDescription": "Aandacht beweegt vandaag de dag zo snel als een swipe. Met onze Brand Story Elevation-service vertalen we de persoonlijkheid, het vakmanschap en de sfeer van jouw restaurant naar scroll-stoppende video- en fotocontent die helemaal voelt als jouw merk. Van één halve-dagshoot tot een cinematografische productie op meerdere locaties: elke tier hieronder geeft je precies de hoeveelheid content, afwerking en strategische begeleiding die je nodig hebt.",
+      "tiers": {
+        "socialSpark": {
+          "name": "Social Spark",
+          "perfectFor": "Ideaal om je merk te laten schitteren met een gerichte contentbundel.",
+          "price": "€385",
+          "strategy": {
+            "item1": "1 × pre-shoot-contentstrategiesessie"
+          },
+          "production": {
+            "item1": "1 × halve-dagshoot (≈ 4-5 uur, één locatie)"
+          },
+          "deliverables": {
+            "choice1": {
+              "label": "Kies een van de volgende opties:",
+              "optionA": "1 × vlaggenschip-brandfilm (≈ 2 minuten)",
+              "optionB": "5 × social-media-reels (≈ 20-30 seconden)"
             },
-            "10 x volledig bewerkte foto’s"
-          ],
-          "serviceFeatures": [
-            "1 x feedbackronde",
-            "3 werkdagen oplevering (na filmdag)"
-          ],
-          "price": "€385"
+            "item1": "10 × volledig bewerkte foto’s"
+          },
+          "serviceFeatures": {
+            "item1": "1 × feedbackronde",
+            "item2": "Levering binnen 3 werkdagen (na de opnamedag)"
+          }
         },
-        {
+        "proMomentum": {
           "name": "Pro Momentum",
-          "perfectFor": "Voor een uitgebreid merkverhaal en aanwezigheid op sociale media.",
-          "strategy": ["1 x pre-shoot contentstrategiebespreking"],
-          "production": ["1 × volle dag shoot (≈ 7-8 uur, één locatie)"],
-          "deliverables": [
-            "1 x vlaggenschip merkfilm ≈ 2 minuten lang",
-            "3 x social media reels (≈ 20-30 seconden lang)",
-            "25 x volledig bewerkte foto’s"
-          ],
-          "serviceFeatures": [
-            "1 x feedbackronde",
-            "5 werkdagen oplevering (na filmdag)"
-          ],
-          "price": "€575"
+          "perfectFor": "Voor een compleet merknarratief en een sterke social-mediapresentatie.",
+          "price": "€575",
+          "strategy": {
+            "item1": "1 × pre-shoot-contentstrategiesessie"
+          },
+          "production": {
+            "item1": "1 × hele-dagshoot (≈ 7-8 uur, één locatie)"
+          },
+          "deliverables": {
+            "item1": "1 × vlaggenschip-brandfilm (≈ 2 minuten)",
+            "item2": "3 × social-media-reels (≈ 20-30 seconden)",
+            "item3": "25 × volledig bewerkte foto’s"
+          },
+          "serviceFeatures": {
+            "item1": "1 × feedbackronde",
+            "item2": "Levering binnen 5 werkdagen (na de opnamedag)"
+          }
         },
-        {
+        "contentMomentum": {
           "name": "Content Momentum",
-          "perfectFor": "Ultieme contentcreatie voor maximale impact op meerdere platforms.",
-          "strategy": ["1 x pre-shoot contentstrategiebespreking"],
-          "production": ["volle dagen shoots (≈ 7-8 uur, meerdere locaties)"],
-          "deliverables": [
-            "1 x op maat gemaakte vlaggenschip merkfilm",
-            "5 x social media reels (≈ 20-30 seconden lang)",
-            "40 x volledig bewerkte foto’s"
-          ],
-          "serviceFeatures": [
-            "2 x feedbackrondes",
-            "7 werkdagen oplevering (na filmdag)"
-          ],
-          "price": "€1050"
+          "perfectFor": "De ultieme contentboost voor maximale impact op meerdere platforms.",
+          "price": "€1050",
+          "strategy": {
+            "item1": "1 × pre-shoot-contentstrategiesessie"
+          },
+          "production": {
+            "item1": "Volledige-dagshoot(s) (≈ 7-8 uur, meerdere locaties)"
+          },
+          "deliverables": {
+            "item1": "1 × custom-made vlaggenschip-brandfilm",
+            "item2": "5 × social-media-reels (≈ 20-30 seconden)",
+            "item3": "40 × volledig bewerkte foto’s"
+          },
+          "serviceFeatures": {
+            "item1": "2 × feedbackrondes",
+            "item2": "Levering binnen 7 werkdagen (na de opnamedag)"
+          }
         }
-      ]
+      }
     },
     "lifestyle-event-showcase": {
-      "title": "Lifestyle / Evenement Showcase",
-      "shortDesc": "We leggen authentieke, ambitieuze beelden vast van het dagelijks leven om uw product te verbinden met de levensstijl waar uw publiek van droomt.",
-      "priceFrom": "Vanaf €395 excl. BTW",
-      "pageTitle": "Lifestyle & Evenement Showcase: Authentieke Momenten Vastleggen",
-      "pageDescription": "Toon de levendige levensstijl die uw merk belichaamt of de onvergetelijke sfeer van uw evenementen. We creëren meeslepende visuele verhalen die op emotioneel niveau contact maken met uw publiek.",
-      "tiers": [
-        {
-          "name": "Essentieel Lifestyle Pakket",
-          "perfectFor": "Kleine merken of evenementen die een beknopte, impactvolle showcase nodig hebben.",
-          "strategy": [],
-          "production": ["1 x halve dag shoot (≈ 4u, één locatie)"],
-          "deliverables": [
-            "1 x highlight video (1,5-2 minuten)",
-            "2 x social media clips (15-30s)",
-            "15 x bewerkte foto's"
-          ],
-          "serviceFeatures": [
-            "1 feedbackronde",
-            "3 werkdagen levering"
-          ],
-          "price": "€395"
+      "title": "Lifestyle / Event Showcase",
+      "shortDesc": "We leggen authentieke, inspirerende day-in-the-life-beelden vast die jouw product verbinden met de lifestyle waar je doelgroep van droomt.",
+      "priceFrom": "Vanaf €395 excl. btw",
+      "videoId": "y_oWn83xevQ",
+      "pageTitle": "Lifestyle & Event Showcase: Authentieke momenten vastleggen",
+      "pageDescription": "Laat de levendige lifestyle die jouw merk belichaamt, of de onvergetelijke sfeer van je events, tot leven komen. Wij maken meeslepende visuele verhalen die je publiek emotioneel raken.",
+      "tiers": {
+        "essentialLifestyle": {
+          "name": "Essential Lifestyle Package",
+          "perfectFor": "Kleine merken of events die een compacte, impactvolle showcase willen.",
+          "price": "€395 excl. btw",
+          "strategy": {},
+          "production": {
+            "item1": "1 × halve-dagshoot (≈ 4 uur, één locatie)"
+          },
+          "deliverables": {
+            "item1": "1 × highlightvideo (1,5-2 minuten)",
+            "item2": "2 × social-media-clips (15-30 seconden)",
+            "item3": "15 × bewerkte foto’s"
+          },
+          "serviceFeatures": {
+            "item1": "1 feedbackronde",
+            "item2": "Levering binnen 3 werkdagen"
+          }
         },
-        {
-          "name": "Uitgebreide Evenementverslaglegging",
-          "perfectFor": "Grotere evenementen of campagnes die uitgebreid beeldmateriaal nodig hebben.",
-          "strategy": [],
-          "production": ["1 x volledige dag shoot (≈ 8u, meerdere camerahoeken)"],
-          "deliverables": [
-            "1 x hoofdevenement film (3-5 minuten)",
-            "5 x social media reels",
-            "50 x bewerkte foto's"
-          ],
-          "serviceFeatures": [
-            "2 feedbackrondes",
-            "7 werkdagen levering"
-          ],
-          "price": "€600"
+        "comprehensiveEvent": {
+          "name": "Comprehensive Event Coverage",
+          "perfectFor": "Grotere events of campagnes die uitgebreid beeldmateriaal nodig hebben.",
+          "price": "€600 excl. btw",
+          "strategy": {},
+          "production": {
+            "item1": "1 × hele-dagshoot (≈ 8 uur, multi-angle)"
+          },
+          "deliverables": {
+            "item1": "1 × main-event-film (3-5 minuten)",
+            "item2": "5 × social-media-reels",
+            "item3": "50 × bewerkte foto’s"
+          },
+          "serviceFeatures": {
+            "item1": "2 feedbackrondes",
+            "item2": "Levering binnen 7 werkdagen"
+          }
         }
-      ]
+      }
     },
     "dynamic-photoshoot": {
-      "title": "Dynamische Fotoshoot",
-      "shortDesc": "Professionele fotoshoots op locatie inclusief live foto's en korte hero shots. Perfect voor het vastleggen van dynamische beelden van personen of producten.",
-      "priceFrom": "Vanaf €150 excl. BTW",
-      "pageTitle": "Dynamische Fotoshoot: Fotografie op Locatie",
-      "pageDescription": "Onze Dynamische Fotoshoot service biedt flexibele fotografie op locatie. Wij zijn gespecialiseerd in het creëren van levendige beelden, inclusief live foto's en korte hero shots, afgestemd op uw behoeften. Specifieke pakketten en prijzen worden momenteel afgerond. Neem contact met ons op voor een persoonlijk consult.",
-      "tiers": [
-        {
-          "name": "Starter Op Locatie Shoot",
-          "perfectFor": "Particulieren of kleine bedrijven die op zoek zijn naar een snelle, professionele fotoshoot.",
-          "strategy": ["Consultatie om shootdoelen en locatiespecifieke details te bepalen"],
-          "production": ["1 uur fotosessie op locatie"],
-          "deliverables": [
-            "Set professioneel bewerkte digitale afbeeldingen",
-            "Online galerij voor het bekijken en downloaden van foto's",
-            "Inclusief een selectie van live foto's en korte hero shots"
-          ],
-          "serviceFeatures": [
-            "Snelle levertijd",
-            "Reiskosten binnen Amsterdam inbegrepen (extra reiskosten kunnen van toepassing zijn)"
-          ],
-          "price": "€175"
+      "title": "Dynamic Photoshoot",
+      "shortDesc": "Professionele on-location fotoshoots met live foto’s en short-form hero shots. Perfect om dynamische beelden van personen of producten vast te leggen.",
+      "priceFrom": "Vanaf €150 excl. btw",
+      "videoId": "",
+      "pageTitle": "Dynamic Photoshoot: On-location fotografie",
+      "pageDescription": "Onze Dynamic Photoshoot-service biedt flexibele on-location fotografie. We creëren levendige beelden, inclusief live foto’s en short hero shots, afgestemd op jouw wensen. Specifieke pakketten en prijzen worden momenteel afgerond. Neem contact met ons op voor een consult op maat.",
+      "tiers": {
+        "starterOnLocation": {
+          "name": "Starter On-Location Shoot",
+          "perfectFor": "Particulieren of kleine bedrijven die snel een professionele fotoshoot willen.",
+          "price": "€175",
+          "strategy": {
+            "item1": "Consult om doelen en locatie-specifieke details vast te leggen"
+          },
+          "production": {
+            "item1": "1-uur on-location fotosessie"
+          },
+          "deliverables": {
+            "item1": "Set professioneel bewerkte digitale afbeeldingen",
+            "item2": "Online gallery voor viewing en download",
+            "item3": "Inclusief een selectie live foto’s en short hero shots"
+          },
+          "serviceFeatures": {
+            "item1": "Snelle levertijd",
+            "item2": "Reizen binnen Amsterdam inbegrepen (extra afstand tegen meerprijs)"
+          }
         }
-      ]
+      }
     },
     "wedding-films": {
-      "title": "Bruiloftsfilms",
-      "shortDesc": "Van bruidsvoorbereiding tot dansvloer, elke traan & lach verpakt in een tijdloze highlight film—geleverd in prachtig 4K HDR.",
-      "priceFrom": "Vanaf €380 excl. BTW",
-      "pageTitle": "Cinematografische Bruiloftsfilms: Uw Liefdesverhaal, Prachtig Verteld",
-      "pageDescription": "Bewaar de magie van uw trouwdag met een adembenemende cinematografische film. We leggen elke emotie vast, van de intieme voorbereidingsmomenten tot de vreugdevolle viering op de dansvloer, en leveren een tijdloos aandenken in verbluffende 4K HDR.",
-      "tiers": [
-        {
-          "name": "Highlight Reel Pakket",
-          "perfectFor": "De essentie van uw speciale dag vastleggen.",
-          "strategy": [],
-          "production": ["6 uur verslaglegging"],
-          "deliverables": [
-            "1 x cinematografische highlight film (3-5 minuten)",
-            "Online galerij"
-          ],
-          "serviceFeatures": [
-            "Consultatiegesprek",
-            "Dronebeelden (indien locatie het toelaat)"
-          ],
-          "price": "1200"
+      "title": "Wedding Films",
+      "shortDesc": "Van bridal prep tot dansvloer – elke traan en lach samengevat in een tijdloze highlightfilm, geleverd in prachtige 4K HDR.",
+      "priceFrom": "Vanaf €380 excl. btw",
+      "videoId": "",
+      "pageTitle": "Cinematic Wedding Films: Jullie liefdesverhaal prachtig verteld",
+      "pageDescription": "Bewaar de magie van jullie trouwdag met een adembenemende cinematic film. We leggen elke emotie vast, van de intieme voorbereidingen tot de feestelijke dansvloer, en leveren een blijvende herinnering in verbluffende 4K HDR.",
+      "tiers": {
+        "highlightReel": {
+          "name": "Highlight Reel Package",
+          "perfectFor": "Het vastleggen van de essentie van jullie dag.",
+          "price": "€1200",
+          "strategy": {},
+          "production": {
+            "item1": "6 uur coverage"
+          },
+          "deliverables": {
+            "item1": "1 × cinematic highlightfilm (3-5 minuten)",
+            "item2": "Online gallery"
+          },
+          "serviceFeatures": {
+            "item1": "Consultatie-call",
+            "item2": "Drone-opnames (locatie-afhankelijk)"
+          }
         },
-        {
-          "name": "Speelfilm Pakket",
-          "perfectFor": "Een uitgebreid verhaal van uw trouwdag.",
-          "strategy": [],
-          "production": ["Volledige dag verslaglegging (10 uur)"],
-          "deliverables": [
-            "1 x speelfilm (15-20 minuten)",
-            "1 x highlight film (3-5 minuten)",
-            "Volledige ceremonie & speeches montage",
-            "USB levering"
-          ],
-          "serviceFeatures": [
-            "Twee cinematografen",
-            "Uitgebreide consultatie",
-            "Dronebeelden"
-          ],
-          "price": "2500"
+        "featureFilm": {
+          "name": "Feature Film Package",
+          "perfectFor": "Een volledige, meeslepende weergave van jullie trouwdag.",
+          "price": "€2500",
+          "strategy": {},
+          "production": {
+            "item1": "Hele-dag coverage (10 uur)"
+          },
+          "deliverables": {
+            "item1": "1 × feature film (15-20 minuten)",
+            "item2": "1 × highlightfilm (3-5 minuten)",
+            "item3": "Volledige ceremonie- en speeches-edit",
+            "item4": "USB-levering"
+          },
+          "serviceFeatures": {
+            "item1": "Twee cinematografen",
+            "item2": "Uitgebreide consultatie",
+            "item3": "Drone-opnames"
+          }
         }
-      ]
-    }
+      }
     }
   },
   "serviceDetailPage": {
     "backToServices": "← Terug naar Alle Diensten",
     "ourPackages": "Onze Pakketten",
-    "tier.perfectForPrefix": "Perfect voor:",
-    "tier.strategyTitle": "Strategie",
-    "tier.productionTitle": "Productie",
-    "tier.deliverablesTitle": "Op te leveren",
-    "tier.serviceFeaturesTitle": "Service Kenmerken",
-    "tier.deliverableOptionLabel": "Optie {optionLetter}:",
-    "tier.mostPopular": "Meest Populair",
-    "tier.priceSuffix": ",- excl. BTW",
-    "tier.bookServiceButton": "Boek deze dienst",
+    "perfectForPrefix": "Perfect voor:",
+    "strategyTitle": "Strategie",
+    "productionTitle": "Productie",
+    "deliverablesTitle": "Op te leveren",
+    "serviceFeaturesTitle": "Service Kenmerken",
+    "deliverableOptionLabel": "Optie {optionLetter}:",
+    "mostPopular": "Meest Populair",
+    "priceSuffix": ",- excl. BTW",
+    "bookServiceButton": "Boek deze dienst",
     "noPackages.title": "Gedetailleerde pakketten zijn onderweg!",
     "noPackages.description": "We zijn de perfecte opties voor deze dienst aan het samenstellen. Neem in de tussentijd contact op voor een consult op maat.",
     "noPackages.contactButton": "Neem contact op"
+  },
+  "showcase": {
+    "open": "Meer bekijken",
+    "close": "Sluiten",
+    "ourShowcase": "Onze showcase",
+    "comingTitle": "Binnenkort beschikbaar: wat kunt u verwachten",
+    "comingFeatures": "Belangrijkste kenmerken die u zult zien:",
+    "clientRequest": "Verzoek van de klant:",
+    "ourSolution": "Onze oplossing:",
+    "comingCtaCopy": "Enthousiast over onze aanstaande {{cat}}-diensten? Laten we bespreken hoe we ze voor u op maat kunnen maken.",
+    "schedule": "Plan een gesprek",
+    "comingSoon": "Binnenkort beschikbaar",
+    "brandStories": {
+      "title": "Merkverhalen",
+      "webDesign": {
+        "label": "WebDesign By Hand",
+        "desc": "Onze klant vroeg om een krachtige flagship-film voor hun webdesignbedrijf.",
+        "p1": "Scriptontwikkeling en storyboarding",
+        "p2": "Hele dag shoot met gimbal en slider",
+        "p3": "Dynamische montage in interviewstijl"
+      }
+    },
+    "lifestyle": {
+      "title": "Lifestyle",
+      "bbq": {
+        "label": "Keanu BBQ Event",
+        "desc": "Een gedenkwaardige lifestylefilm die de warmte van een speciaal BBQ-evenement vastlegt.",
+        "p1": "Unieke sfeer en sleutel­momenten vastleggen",
+        "p2": "Interacties tussen gasten en het eten benadrukken",
+        "p3": "Een hartverwarmende lifestylefilm produceren",
+        "p4": "Verzorgde video voor sociale media"
+      }
+    },
+    "socialMedia": {
+      "title": "Social media",
+      "comingSoon": {
+        "desc": "Energieke snackformaat clips, geoptimaliseerd voor Reels & TikTok, goed voor een verdubbeling van het bereik.",
+        "p1": "Verticaal kader van opname tot oplevering",
+        "p2": "Onderzoek naar captions en hashtags voor maximaal bereik",
+        "p3": "Integratie van trending sounds, vrijgegeven voor gebruik"
+      }
+    },
+    "weddings": {
+      "title": "Bruiloften",
+      "comingSoon": {
+        "desc": "Een intieme, filmische samenvatting die elke emotie van jouw grote dag vastlegt.",
+        "p1": "Volledige dagdekking van voorbereiding tot finale",
+        "p2": "4-minuten highlightfilm in 4K HDR",
+        "p3": "Drone-opnames van de locatie",
+        "p4": "Social-media­voorproefje binnen 48 uur"
+      }
+    }
+  },
+  "about": {
+    "title": "Ons Verhaal, Passie & Doel",
+    "subTitle": "Onze Missie",
+    "mission": "We exist to empower passionate stories through the craft of professional filmmaking. Every project—whether a 60 second brand film or a feature‑length documentary—gets the same dedication: cinematic visuals, compelling narrative, and an obsession with detail that leaves audiences wanting more.",
+    "subMission": "From concept to final delivery, we collaborate closely with clients to make sure the heart of their message sings on screen.",
+    "term1": "Creativiteit",
+    "subTerm1": "Bold ideas & fresh visual language",
+    "term2": "Vakmanschap",
+    "subTerm2": "Meticulous attention to sight & sound",
+    "term3": "Collaboratie",
+    "subTerm3": "Transparent process, real partnership",
+    "ctaTitle": "Klaar om jouw verhaal te innoveren?",
+    "cta": "Plan een gesprek"
+  },
+  "contactPage": {
+    "title": "Samen maken we jouw verhaal",
+    "flipWords": [
+      "Bijzonder",
+      "Adembenemend",
+      "Inspirerend",
+      "Magisch",
+      "Pakkend",
+      "Onvergetelijk",
+      "Impactvol",
+      "Spectaculair",
+      "Fenomenaal",
+      "Eeuwig"
+    ],
+    "description": "Stuur ons een bericht, plan een kennismakingsgesprek of zeg gewoon hallo—wij praten graag over verhalen die het waard zijn om te vertellen.",
+    "emailLabel": "E-mail:",
+    "phoneLabel": "Telefoon:",
+    "studioLabel": "Studio:",
+    "studioValue": "Amsterdam, NL",
+    "formTitle": "Stuur ons een bericht",
+    "errorRequired": "Vul alle verplichte velden in.",
+    "firstNamePlaceholder": "Voornaam",
+    "lastNamePlaceholder": "Achternaam",
+    "websitePlaceholder": "Bedrijfswebsite / social-media link",
+    "emailPlaceholder": "E-mail",
+    "phonePlaceholder": "Telefoonnummer",
+    "legendServices": "Welke diensten zoek je?",
+    "services": {
+      "videography": "Videografie",
+      "photography": "Fotografie",
+      "both": "Beide"
+    },
+    "legendReasons": "Waarom wil je video inzetten voor je bedrijf?",
+    "reasons": {
+      "engagement": "Website-betrokkenheid vergroten",
+      "credibility": "Geloofwaardigheid & vertrouwen opbouwen",
+      "qualify": "Leads sneller kwalificeren in sales",
+      "awareness": "Merkbekendheid vergroten op social media"
+    },
+    "labelBudget": "Wat is je geschatte budget voor dit project?",
+    "budget": {
+      "lt500": "< €500",
+      "500to1000": "€500 – €1 000",
+      "gt1000": "> €1 000"
+    },
+    "budgetNote": "Gemiddeld liggen onze videoprojecten tussen €500 – €1 000 excl. btw",
+    "labelTimeline": "Hoe snel wil je beginnen?",
+    "timeline": {
+      "asap": "Zo snel mogelijk (binnen 2 weken)",
+      "1to2": "1 – 2 maanden",
+      "3to6": "3 – 6 maanden",
+      "research": "Ik onderzoek alleen nog"
+    },
+    "referencesPlaceholder": "Links naar visuele referenties die we kunnen gebruiken voor inspiratie",
+    "visionPlaceholder": "Vertel ons je visie voor het project",
+    "labelReferral": "Hoe heb je ons gevonden?",
+    "referral": {
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "google": "Google-zoekopdracht",
+      "friend": "Via vriend / referral",
+      "other": "Anders"
+    },
+    "selectOption": "Kies een optie",
+    "submit": "Plan een gesprek"
   }
 }

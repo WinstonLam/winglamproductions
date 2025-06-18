@@ -9,9 +9,17 @@ import { BackgroundGradient } from "@/components/ui/background-gradient";
 import Link from "next/link";
 import Image from "next/image";
 import YouTubeEmbed from "@/lib/youtubeVideo";
+import { useTranslations } from "@/lib/useTranslations"; // Added
+import { useLanguage } from "@/context/LanguageContext";
+
+
 
 export default function AboutPage() {
     const video = 'W9pzgz4NTZY'
+
+    const { currentLanguage } = useLanguage();
+    const { t } = useTranslations(currentLanguage);
+
     return (
         <main className="flex flex-col gap-28 bg-second dark:bg-black text-black dark:text-second">
             {/* ───────────────── HERO ───────────────── */}
@@ -31,7 +39,7 @@ export default function AboutPage() {
                     transition={{ duration: 0.8 }}
                     className="relative z-10 text-4xl md:text-6xl font-bold text-center text-second px-4"
                 >
-                    <TextGenerateEffect words="Our Story, Passion & Purpose" duration={0.8} />
+                    <TextGenerateEffect key={t('about.title')} words={t('about.title')} duration={0.8} />
                 </motion.h1>
             </section>
 
@@ -44,16 +52,12 @@ export default function AboutPage() {
                     transition={{ duration: 0.6 }}
                     className="space-y-6"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold">{t('about.subTitle')}</h2>
                     <p className="text-lg leading-relaxed">
-                        We exist to <span className="font-semibold">empower passionate stories</span> through the craft
-                        of professional filmmaking. Every project—whether a 60&nbsp;second brand film or a feature‑length
-                        documentary—gets the same dedication: cinematic visuals, compelling narrative, and an obsession
-                        with detail that leaves audiences wanting more.
+                        {t('about.mission')}
                     </p>
                     <p className="text-lg leading-relaxed">
-                        From concept to final delivery, we collaborate closely with clients to make sure the heart of
-                        their message sings on screen.
+                        {t('about.subMission')}
                     </p>
                 </motion.div>
 
@@ -81,9 +85,9 @@ export default function AboutPage() {
             <section className="bg-prime dark:bg-second py-16 px-6 text-second dark:text-prime">
                 <div className="max-w-6xl mx-auto grid sm:grid-cols-3 gap-10 text-center">
                     {[
-                        { title: "Creativity", desc: "Bold ideas & fresh visual language" },
-                        { title: "Craft", desc: "Meticulous attention to sight & sound" },
-                        { title: "Collaboration", desc: "Transparent process, real partnership" },
+                        { title: t('about.term1'), desc: t('about.subTerm1') },
+                        { title: t('about.term2'), desc: t('about.subTerm2') },
+                        { title: t('about.term3'), desc: t('about.subTerm3') },
                     ].map(({ title, desc }) => (
                         <motion.div
                             key={title}
@@ -108,14 +112,13 @@ export default function AboutPage() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                     className="text-3xl md:text-4xl font-bold mb-6"
-                >
-                    Ready to elevate <span className="text-primary">your</span> story?
+                >{t('about.ctaTitle')}
                 </motion.h2>
                 <Link
                     href="/contact"
                     className="text-prime dark:text-second font-medium px-6 py-3 rounded-full border shadow-xl/30 hover:bg-prime hover:text-second dark:hover:bg-second dark:hover:text-prime transition-all duration-300"
                 >
-                    Schedule a call
+                    {t('about.cta')}
                 </Link>
             </section>
         </main>

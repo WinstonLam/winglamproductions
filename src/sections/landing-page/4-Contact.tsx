@@ -28,7 +28,7 @@ const Contact = () => {
                         className=" inline-block bg-primary text-cream font-medium px-6 py-3 rounded border shadow-xl/30 dark:shadow-second
                         dark:shadow-xl/10 rounded-full z-10 hover:text-second hover:bg-prime dark:hover:bg-second dark:hover:text-prime transition-all duration-300"
                     >
-                        {t('landing.header.scheduleCall')}
+                        {t('landing.contact.cta')}
                     </Link>
                 </motion.div>
 

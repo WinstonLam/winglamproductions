@@ -22,12 +22,12 @@
       "tabLifestyle": "Lifestyle",
       "tabPhotoshoot": "Photoshoot",
       "tabWedding": "Wedding",
-      "brandTitle": "Brand Story Elevation",
-      "brandDesc": "Elevate the story of your brand",
+      "brandTitle": "Brand Elevation",
+      "brandDesc": "Elevate your brand’s story",
       "lifestyleTitle": "Lifestyle Elevation",
-      "lifestyleDesc": "Capture the genuine rhythm of everyday life",
-      "photoshootTitle": "Dynamic Photoshoot",
-      "photoshootDesc": "Professional on-location photoshoots including live photos and short form hero shots.",
+      "lifestyleDesc": "Capture the authentic rhythm of everyday life",
+      "photoshootTitle": "Dynamic Photo Shoot",
+      "photoshootDesc": "Professional on-location photo shoots, including candid photos and short hero shots.",
       "weddingTitle": "Wedding Elevation",
       "weddingDesc": "Capturing your most special moment.",
       "comingSoon": "Coming Soon"
@@ -39,202 +39,384 @@
       "projectAuroraTech": "Aurora Tech",
       "projectVintageWheels": "Vintage Wheels",
       "testimonialsTitle": "Testimonials",
-      "testimonial1Quote": "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      "testimonial1Name": "Sarah Chen",
-      "testimonial1Designation": "Product Manager at TechFlow",
-      "projectPosterAlt": "{title} poster"
+      "testimonials": [
+        {
+          "quote": "Implementation was seamless and the results exceeded our expectations. The platform’s flexibility is remarkable.",
+          "name": "Michael Rodriguez",
+          "designation": "CTO at InnovateSphere",
+          "src": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop"
+        },
+        {
+          "quote": "This solution has significantly improved our team’s productivity. The intuitive interface makes complex tasks simple.",
+          "name": "Emily Watson",
+          "designation": "Operations Director at CloudScale",
+          "src": "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop"
+        },
+        {
+          "quote": "Outstanding support and robust features. It’s rare to find a product that delivers on all its promises.",
+          "name": "James Kim",
+          "designation": "Engineering Lead at DataPro",
+          "src": "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop"
+        },
+        {
+          "quote": "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+          "name": "Lisa Thompson",
+          "designation": "VP of Technology at FutureNet",
+          "src": "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop"
+        }
+      ]
     },
     "contact": {
-      "title": "Elevate your story now"
+      "title": "Elevate your story now",
+      "cta": "Schedule a call"
     }
   },
   "services": {
+    "mainTitle": "Our Services",
+    "ctaButton": "more information",
+    "comingSoon": "Coming Soon",
     "brand": {
       "title": "Brand Story Elevation",
       "shortDesc": "A punchy, cinematic film that distils your brand DNA into a compelling 1.5-2 minute story. Perfect for website hero banners and ad pre‑roll.",
       "priceFrom": "From €385 excl. VAT",
+      "videoId": "LxFu2WuuxxI",
       "pageTitle": "Brand Story Elevation: Making Your Brand Impactful",
       "pageDescription": "Today, attention moves at the speed of a swipe. Our Brand Story Elevation Service turns your restaurant’s personality, craft, and atmosphere into scroll-stopping video and photo content that looks, feels, and tastes like your brand. From a single half-day shoot to a multi-location cinematic production, each tier below is built to give you exactly the volume, polish, and strategic guidance you need.",
-      "tiers": [
-        {
+      "tiers": {
+        "socialSpark": {
           "name": "Social Spark",
           "perfectFor": "Ideal for showcasing your brand with a focused content package.",
-          "strategy": ["1 x pre-shoot content strategie meeting"],
-          "production": ["1 × halve dag shoot (≈ 4-5 uur, één locatie)"],
-          "deliverables": [
-            {
-              "type": "choice",
+          "price": "€385",
+          "strategy": {
+            "item1": "1 x pre-shoot content strategy meeting"
+          },
+          "production": {
+            "item1": "1 × half day shoot (≈ 4-5 hours, one location)"
+          },
+          "deliverables": {
+            "choice1": {
               "label": "Choose one of the following:",
-              "options": [
-                "1 x flagship brand film (≈ 2 minuten lang)",
-                "5 x social media reels (≈ 20-30 seconden lang)"
-              ]
+              "optionA": "1 x flagship brand film (≈ 2 minutes long)",
+              "optionB": "5 x social media reels (≈ 20-30 seconds long)"
             },
-            "10 x volledig bewerkte foto’s"
-          ],
-          "serviceFeatures": [
-            "1 x feedback ronde",
-            "3 werkdagen oplevering (na dag van filmen)"
-          ],
-          "price": "€385"
+            "item1": "10 x fully edited photos"
+          },
+          "serviceFeatures": {
+            "item1": "1 x feedback round",
+            "item2": "3 working days delivery (after day of filming)"
+          }
         },
-        {
+        "proMomentum": {
           "name": "Pro Momentum",
           "perfectFor": "For a comprehensive brand narrative and social media presence.",
-          "strategy": ["1 x pre-shoot content strategie meeting"],
-          "production": ["1 × volle dag shoot (≈ 7-8 uur, één locatie)"],
-          "deliverables": [
-            "1 x flagship brand film ≈ 2 minuten lang",
-            "3 x social media reels (≈ 20-30 seconden lang)",
-            "25 x volledig bewerkte foto’s"
-          ],
-          "serviceFeatures": [
-            "1 x feedback ronde",
-            "5 werkdagen oplevering (na dag van filmen)"
-          ],
-          "price": "€575"
+          "price": "€575",
+          "strategy": {
+            "item1": "1 x pre-shoot content strategy meeting"
+          },
+          "production": {
+            "item1": "1 × full day shoot (≈ 7-8 hours, one location)"
+          },
+          "deliverables": {
+            "item1": "1 x flagship brand film ≈ 2 minutes long",
+            "item2": "3 x social media reels (≈ 20-30 seconds long)",
+            "item3": "25 x fully edited photos"
+          },
+          "serviceFeatures": {
+            "item1": "1 x feedback round",
+            "item2": "5 working days delivery (after day of filming)"
+          }
         },
-        {
+        "contentMomentum": {
           "name": "Content Momentum",
           "perfectFor": "Ultimate content creation for maximum impact across multiple platforms.",
-          "strategy": ["1 x pre-shoot content strategie meeting"],
-          "production": ["volle dagen shoots (≈ 7-8 uur, meerdere locaties)"],
-          "deliverables": [
-            "1 x op maat gemaakte flagship brand film",
-            "5 x social media reels (≈ 20-30 seconden lang)",
-            "40 x volledig bewerkte foto’s"
-          ],
-          "serviceFeatures": [
-            "2 x feedback rondes",
-            "7 werkdagen oplevering (na dag van filmen)"
-          ],
-          "price": "€1050"
+          "price": "€1050",
+          "strategy": {
+            "item1": "1 x pre-shoot content strategy meeting"
+          },
+          "production": {
+            "item1": "full days shoots (≈ 7-8 hours, multiple locations)"
+          },
+          "deliverables": {
+            "item1": "1 x custom-made flagship brand film",
+            "item2": "5 x social media reels (≈ 20-30 seconds long)",
+            "item3": "40 x fully edited photos"
+          },
+          "serviceFeatures": {
+            "item1": "2 x feedback rounds",
+            "item2": "7 working days delivery (after day of filming)"
+          }
         }
-      ]
+      }
     },
     "lifestyle-event-showcase": {
       "title": "Lifestyle / Event Showcase",
       "shortDesc": "We capture authentic, aspirational day‑in‑the‑life footage to connect your product with the lifestyle your audience dreams of.",
       "priceFrom": "From €395 excl. VAT",
+      "videoId": "y_oWn83xevQ",
       "pageTitle": "Lifestyle & Event Showcase: Capturing Authentic Moments",
       "pageDescription": "Showcase the vibrant lifestyle your brand embodies or the unforgettable atmosphere of your events. We craft compelling visual narratives that connect with your audience on an emotional level.",
-      "tiers": [
-        {
+      "tiers": {
+        "essentialLifestyle": {
           "name": "Essential Lifestyle Package",
           "perfectFor": "Small brands or events needing a concise, impactful showcase.",
-          "strategy": [],
-          "production": ["1 x half-day shoot (≈ 4h, one location)"],
-          "deliverables": [
-            "1 x highlight video (1.5-2 minutes)",
-            "2 x social media clips (15-30s)",
-            "15 x edited photos"
-          ],
-          "serviceFeatures": [
-            "1 feedback round",
-            "3 working days delivery"
-          ],
-          "price": "€395"
+          "price": "€395",
+          "strategy": {},
+          "production": {
+            "item1": "1 x half-day shoot (≈ 4h, one location)"
+          },
+          "deliverables": {
+            "item1": "1 x highlight video (1.5-2 minutes)",
+            "item2": "2 x social media clips (15-30s)",
+            "item3": "15 x edited photos"
+          },
+          "serviceFeatures": {
+            "item1": "1 feedback round",
+            "item2": "3 working days delivery"
+          }
         },
-        {
+        "comprehensiveEvent": {
           "name": "Comprehensive Event Coverage",
           "perfectFor": "Larger events or campaigns needing extensive footage.",
-          "strategy": [],
-          "production": ["1 x full-day shoot (≈ 8h, multi-angle)"],
-          "deliverables": [
-            "1 x main event film (3-5 minutes)",
-            "5 x social media reels",
-            "50 x edited photos"
-          ],
-          "serviceFeatures": [
-            "2 feedback rounds",
-            "7 working days delivery"
-          ],
-          "price": "€600"
+          "price": "€600",
+          "strategy": {},
+          "production": {
+            "item1": "1 x full-day shoot (≈ 8h, multi-angle)"
+          },
+          "deliverables": {
+            "item1": "1 x main event film (3-5 minutes)",
+            "item2": "5 x social media reels",
+            "item3": "50 x edited photos"
+          },
+          "serviceFeatures": {
+            "item1": "2 feedback rounds",
+            "item2": "7 working days delivery"
+          }
         }
-      ]
+      }
     },
     "dynamic-photoshoot": {
       "title": "Dynamic Photoshoot",
       "shortDesc": "Professional on-location photoshoots including live photos and short form hero shots. Perfect for capturing dynamic images of individuals or products.",
       "priceFrom": "From €150 excl. VAT",
+      "videoId": "",
       "pageTitle": "Dynamic Photoshoot: On-Location Photography",
       "pageDescription": "Our Dynamic Photoshoot service offers flexible on-location photography. We specialize in creating vibrant images, including live photos and short hero shots, tailored to your needs. Please note that specific packages and pricing are being finalized. Contact us for a custom consultation.",
-      "tiers": [
-        {
+      "tiers": {
+        "starterOnLocation": {
           "name": "Starter On-Location Shoot",
           "perfectFor": "Individuals or small businesses looking for a quick, professional photoshoot.",
-          "strategy": ["Consultation to define shoot goals and location specifics"],
-          "production": ["1-hour on-location photo session"],
-          "deliverables": [
-            "Set of professionally edited digital images",
-            "Online gallery for viewing and downloading photos",
-            "Includes a selection of live photos and short form hero shots"
-          ],
-          "serviceFeatures": [
-            "Quick turnaround time",
-            "Travel within Amsterdam included (additional travel may incur extra cost)"
-          ],
-          "price": "€175"
+          "price": "€175",
+          "strategy": {
+            "item1": "Consultation to define shoot goals and location specifics"
+          },
+          "production": {
+            "item1": "1-hour on-location photo session"
+          },
+          "deliverables": {
+            "item1": "Set of professionally edited digital images",
+            "item2": "Online gallery for viewing and downloading photos",
+            "item3": "Includes a selection of live photos and short form hero shots"
+          },
+          "serviceFeatures": {
+            "item1": "Quick turnaround time",
+            "item2": "Travel within Amsterdam included (additional travel may incur extra cost)"
+          }
         }
-      ]
+      }
     },
     "wedding-films": {
       "title": "Wedding Films",
       "shortDesc": "From bridal prep to dance‑floor, every tear & laugh wrapped into a timeless highlight film—delivered in beautiful 4K HDR.",
       "priceFrom": "From €380 excl. VAT",
+      "videoId": "",
       "pageTitle": "Cinematic Wedding Films: Your Love Story, Beautifully Told",
       "pageDescription": "Preserve the magic of your wedding day with a breathtaking cinematic film. We capture every emotion, from the intimate moments of preparation to the joyous celebration on the dance floor, delivering a timeless keepsake in stunning 4K HDR.",
-      "tiers": [
-        {
+      "tiers": {
+        "highlightReel": {
           "name": "Highlight Reel Package",
           "perfectFor": "Capturing the essence of your special day.",
-          "strategy": [],
-          "production": ["6 hours coverage"],
-          "deliverables": [
-            "1 x cinematic highlight film (3-5 minutes)",
-            "Online gallery"
-          ],
-          "serviceFeatures": [
-            "Consultation call",
-            "Drone footage (location permitting)"
-          ],
-          "price": "1200"
+          "price": "1200",
+          "strategy": {},
+          "production": {
+            "item1": "6 hours coverage"
+          },
+          "deliverables": {
+            "item1": "1 x cinematic highlight film (3-5 minutes)",
+            "item2": "Online gallery"
+          },
+          "serviceFeatures": {
+            "item1": "Consultation call",
+            "item2": "Drone footage (location permitting)"
+          }
         },
-        {
+        "featureFilm": {
           "name": "Feature Film Package",
           "perfectFor": "A comprehensive story of your wedding day.",
-          "strategy": [],
-          "production": ["Full day coverage (10 hours)"],
-          "deliverables": [
-            "1 x feature film (15-20 minutes)",
-            "1 x highlight film (3-5 minutes)",
-            "Full ceremony & speeches edit",
-            "USB delivery"
-          ],
-          "serviceFeatures": [
-            "Two cinematographers",
-            "Extended consultation",
-            "Drone footage"
-          ],
-          "price": "2500"
+          "price": "2500",
+          "strategy": {},
+          "production": {
+            "item1": "Full day coverage (10 hours)"
+          },
+          "deliverables": {
+            "item1": "1 x feature film (15-20 minutes)",
+            "item2": "1 x highlight film (3-5 minutes)",
+            "item3": "Full ceremony & speeches edit",
+            "item4": "USB delivery"
+          },
+          "serviceFeatures": {
+            "item1": "Two cinematographers",
+            "item2": "Extended consultation",
+            "item3": "Drone footage"
+          }
         }
-      ]
+      }
     }
   },
   "serviceDetailPage": {
     "backToServices": "← Back to All Services",
     "ourPackages": "Our Packages",
-    "tier.perfectForPrefix": "Perfect for:",
-    "tier.strategyTitle": "Strategy",
-    "tier.productionTitle": "Production",
-    "tier.deliverablesTitle": "Deliverables",
-    "tier.serviceFeaturesTitle": "Service Features",
-    "tier.deliverableOptionLabel": "Option {optionLetter}:",
-    "tier.mostPopular": "Most Popular",
-    "tier.priceSuffix": ",- excl. VAT",
-    "tier.bookServiceButton": "Book this service",
+    "perfectForPrefix": "Perfect for:",
+    "strategyTitle": "Strategy",
+    "productionTitle": "Production",
+    "deliverablesTitle": "Deliverables",
+    "serviceFeaturesTitle": "Service Features",
+    "deliverableOptionLabel": "Option {optionLetter}:",
+    "mostPopular": "Most Popular",
+    "priceSuffix": ",- excl. VAT",
+    "bookServiceButton": "Book this service",
     "noPackages.title": "Detailed packages are on their way!",
     "noPackages.description": "We're crafting the perfect options for this service. In the meantime, please reach out for a custom consultation.",
     "noPackages.contactButton": "Contact Us"
+  },
+  "showcase": {
+    "open": "View More",
+    "close": "Close",
+    "ourShowcase": "Our Showcase",
+    "comingTitle": "Coming Soon: What to Expect",
+    "comingFeatures": "Key Features You'll See:",
+    "clientRequest": "Client's Request:",
+    "ourSolution": "Our Solution:",
+    "comingCtaCopy": "Excited about our upcoming {{cat}} services? Let’s discuss how we can tailor them for you.",
+    "schedule": "Schedule a Call",
+    "comingSoon": "Coming Soon",
+    "brandStories": {
+      "title": "Brand Stories",
+      "webDesign": {
+        "label": "WebDesign By Hand",
+        "desc": "Our client requested an impactful flagship film of their web-design business.",
+        "p1": "Script development & storyboarding",
+        "p2": "Full day shoot with gimbal & slider",
+        "p3": "Dynamic interview-style edit"
+      }
+    },
+    "lifestyle": {
+      "title": "Lifestyle",
+      "bbq": {
+        "label": "Keanu BBQ Event",
+        "desc": "A memorable lifestyle film capturing the warmth of a special BBQ event.",
+        "p1": "Capture unique atmosphere and key moments",
+        "p2": "Highlight guest interactions and food",
+        "p3": "Produce a heart-warming lifestyle film",
+        "p4": "Polished video for social media"
+      }
+    },
+    "socialMedia": {
+      "title": "Social Media",
+      "comingSoon": {
+        "desc": "High-energy snack-size clips optimised for Reels & TikTok, boosting reach 2×.",
+        "p1": "Vertical framing from capture to delivery",
+        "p2": "Caption & hashtag research for maximum lift",
+        "p3": "Trending-sound integration cleared for use"
+      }
+    },
+    "weddings": {
+      "title": "Weddings",
+      "comingSoon": {
+        "desc": "An intimate cinematic recap capturing every emotion of your big day.",
+        "p1": "Full-day coverage from prep to finale",
+        "p2": "4-minute highlight film delivered in 4K HDR",
+        "p3": "Drone establishing shots of the venue",
+        "p4": "Social-media teaser within 48 hours"
+      }
+    }
+  },
+  "about": {
+    "title": "Our Story, Passion & Purpose",
+    "subTitle": "Our Mission",
+    "mission": "We exist to empower passionate stories through the craft of professional filmmaking. Every project—whether a 60 second brand film or a feature‑length documentary—gets the same dedication: cinematic visuals, compelling narrative, and an obsession with detail that leaves audiences wanting more. From concept to final delivery, we collaborate closely with clients to make sure the heart of their message sings on screen.",
+    "term1": "Creativity",
+    "subTerm1": "Bold ideas & fresh visual language",
+    "term2": "Craft",
+    "subTerm2": "Meticulous attention to sight & sound",
+    "term3": "Collaboration",
+    "subTerm3": "Transparent process, real partnership",
+    "ctaTitle": "Ready to elevate your story?",
+    "cta": "Schedule a call"
+  },
+  "contactPage": {
+    "title": "Let’s make your story",
+    "flipWords": [
+      "Extraordinary",
+      "Breathtaking",
+      "Inspiring",
+      "Magical",
+      "Captivating",
+      "Unforgettable",
+      "Impactful",
+      "Spectacular",
+      "Phenomenal",
+      "Everlasting"
+    ],
+    "description": "Drop us a line, book a discovery call, or just say hi—we’re always keen to chat about stories worth telling.",
+    "emailLabel": "Email:",
+    "phoneLabel": "Phone:",
+    "studioLabel": "Studio:",
+    "studioValue": "Amsterdam, NL",
+    "formTitle": "Send us a message",
+    "errorRequired": "Please fill in all required fields.",
+    "firstNamePlaceholder": "First name",
+    "lastNamePlaceholder": "Last name",
+    "websitePlaceholder": "Business website / social-media link",
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "Phone number",
+    "legendServices": "What services are you interested in?",
+    "services": {
+      "videography": "Videography",
+      "photography": "Photography",
+      "both": "Both"
+    },
+    "legendReasons": "Why do you want to implement video into your business?",
+    "reasons": {
+      "engagement": "Increase website engagement",
+      "credibility": "Build credibility & trust with prospects",
+      "qualify": "Save time & qualify leads in sales process",
+      "awareness": "Increase brand awareness on social media"
+    },
+    "labelBudget": "What is your estimated budget for this project?",
+    "budget": {
+      "lt500": "< €500",
+      "500to1000": "€500 – €1 000",
+      "gt1000": "> €1 000"
+    },
+    "budgetNote": "On average, most of our video projects sit between €500 – €1 000 excl. tax",
+    "labelTimeline": "How soon do you want to get started?",
+    "timeline": {
+      "asap": "ASAP (next 2 weeks)",
+      "1to2": "1 – 2 months",
+      "3to6": "3 – 6 months",
+      "research": "Just researching for now"
+    },
+    "referencesPlaceholder": "Links to any visual references you’d like us to match",
+    "visionPlaceholder": "Tell us about your vision for the project",
+    "labelReferral": "How did you hear about us?",
+    "referral": {
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "google": "Google search",
+      "friend": "Friend / referral",
+      "other": "Other"
+    },
+    "selectOption": "Select an option",
+    "submit": "Book a call"
   }
 }
