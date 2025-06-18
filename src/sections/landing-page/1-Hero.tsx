@@ -39,7 +39,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <TextGenerateEffect key={t('hero.title')} words={t('hero.title')} />
+                    <TextGenerateEffect key={t('landing.hero.title')} words={t('landing.hero.title')} />
                     {/* <span className="font-bold">Elevating</span> your story <br /> with professional media */}
                 </motion.h1>
                 <motion.div initial={{ opacity: 0, scale: 0.8 }}

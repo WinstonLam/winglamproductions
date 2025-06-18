@@ -50,7 +50,6 @@ export const servicesData: Service[] = [
                 strategy: ["1 x pre-shoot content strategie meeting"],
                 production: ["1 × halve dag shoot (≈ 4-5 uur, één locatie)"],
                 deliverables: [
-                    // MODIFIED HERE
                     {
                         type: 'choice',
                         label: 'Choose one of the following:',

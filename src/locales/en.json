@@ -8,42 +8,76 @@
   "header": {
     "scheduleCall": "Schedule a call"
   },
-  "hero": {
-    "title": "Elevating your story with professional media"
+  "landing": {
+    "hero": {
+      "title": "Elevating your story with professional media"
+    },
+    "services": {
+      "aboutUsTitle": "About us",
+      "aboutUsP1": "Empowering passionate stories through creative, professional filmmaking.",
+      "aboutUsP2": "At Winglam Productions our mission is to empower people to share their passion in life, and we are there to elevate it by bringing it to life on screen. We believe every story is unique and deserves to be told with creativity and professionalism ✨",
+      "ourServicesTitle": "Our Services",
+      "moreInfoButton": "More information",
+      "tabBrand": "Brand",
+      "tabLifestyle": "Lifestyle",
+      "tabPhotoshoot": "Photoshoot",
+      "tabWedding": "Wedding",
+      "brandTitle": "Brand Story Elevation",
+      "brandDesc": "Elevate the story of your brand",
+      "lifestyleTitle": "Lifestyle Elevation",
+      "lifestyleDesc": "Capture the genuine rhythm of everyday life",
+      "photoshootTitle": "Dynamic Photoshoot",
+      "photoshootDesc": "Professional on-location photoshoots including live photos and short form hero shots.",
+      "weddingTitle": "Wedding Elevation",
+      "weddingDesc": "Capturing your most special moment.",
+      "comingSoon": "Coming Soon"
+    },
+    "showcase": {
+      "mainTitle": "Project Showcase",
+      "projectJohnsBurgers": "John's Burgers",
+      "projectLotusYoga": "Lotus Yoga",
+      "projectAuroraTech": "Aurora Tech",
+      "projectVintageWheels": "Vintage Wheels",
+      "testimonialsTitle": "Testimonials",
+      "testimonial1Quote": "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+      "testimonial1Name": "Sarah Chen",
+      "testimonial1Designation": "Product Manager at TechFlow",
+      "projectPosterAlt": "{title} poster"
+    },
+    "contact": {
+      "title": "Elevate your story now"
+    }
   },
   "services": {
-    "aboutUsTitle": "About us",
-    "aboutUsP1": "Empowering passionate stories through creative, professional filmmaking.",
-    "aboutUsP2": "At Winglam Productions our mission is to empower people to share their passion in life, and we are there to elevate it by bringing it to life on screen. We believe every story is unique and deserves to be told with creativity and professionalism ✨",
-    "ourServicesTitle": "Our Services",
-    "moreInfoButton": "More information",
-    "tabBrand": "Brand",
-    "tabLifestyle": "Lifestyle",
-    "tabPhotoshoot": "Photoshoot",
-    "tabWedding": "Wedding",
-    "brandTitle": "Brand Story Elevation",
-    "brandDesc": "Elevate the story of your brand",
-    "lifestyleTitle": "Lifestyle Elevation",
-    "lifestyleDesc": "Capture the genuine rhythm of everyday life",
-    "photoshootTitle": "Dynamic Photoshoot",
-    "photoshootDesc": "Professional on-location photoshoots including live photos and short form hero shots.",
-    "weddingTitle": "Wedding Elevation",
-    "weddingDesc": "Capturing your most special moment.",
-    "comingSoon": "Coming Soon"
-  },
-  "showcase": {
-    "mainTitle": "Project Showcase",
-    "projectJohnsBurgers": "John's Burgers",
-    "projectLotusYoga": "Lotus Yoga",
-    "projectAuroraTech": "Aurora Tech",
-    "projectVintageWheels": "Vintage Wheels",
-    "testimonialsTitle": "Testimonials",
-    "testimonial1Quote": "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-    "testimonial1Name": "Sarah Chen",
-    "testimonial1Designation": "Product Manager at TechFlow",
-    "projectPosterAlt": "{title} poster"
-  },
-  "contact": {
-    "title": "Elevate your story now"
+    "service1": {
+      "Title": "Brand Story Elevation",
+      "Desc": "A punchy, cinematic film that distils your brand DNA into a compelling 1.5-2 minute story. Perfect for website hero banners and ad pre‑roll.",
+      "Price": "From €385 excl. VAT",
+      "CTA": "More Information",
+      "subPage": {
+        "Title": "Brand Story Elevation: Making Your Brand Impactful",
+        "Desc": "Today, attention moves at the speed of a swipe. Our Brand Story Elevation Service turns your restaurant’s personality, craft, and atmosphere into scroll-stopping video and photo content that looks, feels, and tastes like your brand. From a single half-day shoot to a multi-location cinematic production, each tier below is built to give you exactly the volume, polish, and strategic guidance you need.",
+        "PackagesTitle": "Our Packages",
+        "Packages": ""
+      }
+    },
+    "service2": {
+      "Title": "",
+      "Desc": "",
+      "Price": "",
+      "CTA": ""
+    },
+    "service3": {
+      "Title": "",
+      "Desc": "",
+      "Price": "",
+      "CTA": ""
+    },
+    "service4": {
+      "Title": "",
+      "Desc": "",
+      "Price": "",
+      "CTA": ""
+    }
   }
 }

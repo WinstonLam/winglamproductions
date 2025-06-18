@@ -8,42 +8,44 @@
   "header": {
     "scheduleCall": "Plan een gesprek"
   },
-  "hero": {
-    "title": "Uw verhaal naar nieuwe hoogtes tillen met professionele media"
-  },
-  "services": {
-    "aboutUsTitle": "Over ons",
-    "aboutUsP1": "Gepassioneerde verhalen versterken door creatieve, professionele filmproductie.",
-    "aboutUsP2": "Bij Winglam Productions is het onze missie om mensen in staat te stellen hun passie in het leven te delen, waarbij wij deze verhalen tot leven brengne met professionele media. Wij geloven dat elk verhaal uniek is en het verdient om verteld te worden met creativiteit en professionaliteit ✨",
-    "ourServicesTitle": "Onze Diensten",
-    "moreInfoButton": "Meer informatie",
-    "tabBrand": "Merk",
-    "tabLifestyle": "Levensstijl",
-    "tabPhotoshoot": "Fotoshoot",
-    "tabWedding": "Bruiloft",
-    "brandTitle": "Merkverhaal Elevatie",
-    "brandDesc": "Verhef het verhaal van uw merk",
-    "lifestyleTitle": "Levensstijl Elevatie",
-    "lifestyleDesc": "Leg het authentieke ritme van het dagelijks leven vast",
-    "photoshootTitle": "Dynamische Fotoshoot",
-    "photoshootDesc": "Professionele fotoshoots op locatie, inclusief live foto's en korte hero shots.",
-    "weddingTitle": "Bruiloft Elevatie",
-    "weddingDesc": "Uw meest speciale moment vastleggen.",
-    "comingSoon": "Binnenkort beschikbaar"
-  },
-  "showcase": {
-    "mainTitle": "Projecten",
-    "projectJohnsBurgers": "John's Burgers",
-    "projectLotusYoga": "Lotus Yoga",
-    "projectAuroraTech": "Aurora Tech",
-    "projectVintageWheels": "Vintage Wielen",
-    "testimonialsTitle": "Recensies",
-    "testimonial1Quote": "De aandacht voor detail en innovatieve functies hebben onze workflow volledig getransformeerd. Dit is precies wat we zochten.",
-    "testimonial1Name": "Sarah Chen",
-    "testimonial1Designation": "Productmanager bij TechFlow",
-    "projectPosterAlt": "{title} poster"
-  },
-  "contact": {
-    "title": "Uw verhaal naar nieuwe hoogtes tillen met professionele media"
+  "landing": {
+    "hero": {
+      "title": "Uw verhaal naar nieuwe hoogtes tillen met professionele media"
+    },
+    "services": {
+      "aboutUsTitle": "Over ons",
+      "aboutUsP1": "Gepassioneerde verhalen versterken door creatieve, professionele filmproductie.",
+      "aboutUsP2": "Bij Winglam Productions is het onze missie om mensen in staat te stellen hun passie in het leven te delen, waarbij wij deze verhalen tot leven brengne met professionele media. Wij geloven dat elk verhaal uniek is en het verdient om verteld te worden met creativiteit en professionaliteit ✨",
+      "ourServicesTitle": "Onze Diensten",
+      "moreInfoButton": "Meer informatie",
+      "tabBrand": "Merk",
+      "tabLifestyle": "Levensstijl",
+      "tabPhotoshoot": "Fotoshoot",
+      "tabWedding": "Bruiloft",
+      "brandTitle": "Merkverhaal Elevatie",
+      "brandDesc": "Verhef het verhaal van uw merk",
+      "lifestyleTitle": "Levensstijl Elevatie",
+      "lifestyleDesc": "Leg het authentieke ritme van het dagelijks leven vast",
+      "photoshootTitle": "Dynamische Fotoshoot",
+      "photoshootDesc": "Professionele fotoshoots op locatie, inclusief live foto's en korte hero shots.",
+      "weddingTitle": "Bruiloft Elevatie",
+      "weddingDesc": "Uw meest speciale moment vastleggen.",
+      "comingSoon": "Binnenkort beschikbaar"
+    },
+    "showcase": {
+      "mainTitle": "Projecten",
+      "projectJohnsBurgers": "John's Burgers",
+      "projectLotusYoga": "Lotus Yoga",
+      "projectAuroraTech": "Aurora Tech",
+      "projectVintageWheels": "Vintage Wielen",
+      "testimonialsTitle": "Recensies",
+      "testimonial1Quote": "De aandacht voor detail en innovatieve functies hebben onze workflow volledig getransformeerd. Dit is precies wat we zochten.",
+      "testimonial1Name": "Sarah Chen",
+      "testimonial1Designation": "Productmanager bij TechFlow",
+      "projectPosterAlt": "{title} poster"
+    },
+    "contact": {
+      "title": "Uw verhaal naar nieuwe hoogtes tillen met professionele media"
+    }
   }
 }

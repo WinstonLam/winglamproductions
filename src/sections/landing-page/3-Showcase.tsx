@@ -39,10 +39,10 @@ function isRaw(t: RawTestimonial | Testimonial): t is RawTestimonial {
    ──────────────────────────── */
 
 const projects: Project[] = [
-    { titleKey: 'showcase.projectJohnsBurgers', id: 'johns-burgers' },
-    { titleKey: 'showcase.projectLotusYoga', id: 'lotus-yoga' },
-    { titleKey: 'showcase.projectAuroraTech', id: 'aurora-tech' },
-    { titleKey: 'showcase.projectVintageWheels', id: 'vintage-wheels' },
+    { titleKey: 'landing.showcase.projectJohnsBurgers', id: 'johns-burgers' },
+    { titleKey: 'landing.showcase.projectLotusYoga', id: 'lotus-yoga' },
+    { titleKey: 'landing.showcase.projectAuroraTech', id: 'aurora-tech' },
+    { titleKey: 'landing.showcase.projectVintageWheels', id: 'vintage-wheels' },
 ];
 
 const testimonials: (RawTestimonial | Testimonial)[] = [
@@ -112,7 +112,7 @@ export default function Showcase() {
             <div className="max-w-6xl mx-auto">
                 {/* ── Main title ── */}
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                    {t('showcase.mainTitle')}
+                    {t('landing.showcase.mainTitle')}
                 </h2>
 
                 {/* ── Project grid ── */}
@@ -125,7 +125,7 @@ export default function Showcase() {
                 {/* ── Testimonials ── */}
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mt-20">
-                        {t('showcase.testimonialsTitle')}
+                        {t('landing.showcase.testimonialsTitle')}
                     </h2>
                     <AnimatedTestimonials testimonials={processedTestimonials} autoplay />
                 </div>
@@ -181,7 +181,7 @@ function ShowcaseCard({ title, index }: { title: string; index: number }) {
                 <div className="relative w-[80%] overflow-hidden rounded-lg shadow-lg group-hover:-translate-y-2 transition-all duration-300 flex items-center justify-center">
                     <img
                         src="/hero.png"
-                        alt={t('showcase.projectPosterAlt').replace('{title}', title)}
+                        alt={t('landing.showcase.projectPosterAlt').replace('{title}', title)}
                         className="w-full h-56 md:h-64 object-cover"
                     />
                 </div>

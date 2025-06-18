@@ -22,20 +22,20 @@ const Services = () => {
     // Helper for the "Coming Soon" message
     const ComingSoonMessage = () => (
         <h2 className="text-4xl sm:text-6xl -mt-20 font-bold text-center text-black dark:text-second">
-            {t('services.comingSoon')}
+            {t('landing.services.comingSoon')}
         </h2>
     );
 
     const services = [
         {
-            title: t('services.tabBrand'),
+            title: t('landing.services.tabBrand'),
             value: 'brand',
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second">
-                        <h1 className="font-bold text-xl md:text-4xl">{t('services.brandTitle')}</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">{t('landing.services.brandTitle')}</h1>
                         <p className=" text-base md:text-lg">
-                            {t('services.brandDesc')}
+                            {t('landing.services.brandDesc')}
                         </p>
                     </div>
                     {/* Video/Coming Soon section for Brand */}
@@ -50,14 +50,14 @@ const Services = () => {
             ),
         },
         {
-            title: t('services.tabLifestyle'),
+            title: t('landing.services.tabLifestyle'),
             value: 'lifestyle',
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second">
-                        <h1 className="font-bold text-xl md:text-4xl">{t('services.lifestyleTitle')}</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">{t('landing.services.lifestyleTitle')}</h1>
                         <p className=" text-base md:text-lg">
-                            {t('services.lifestyleDesc')}
+                            {t('landing.services.lifestyleDesc')}
                         </p>
                     </div>
                     {/* Video/Coming Soon section for Lifestyle */}
@@ -72,14 +72,14 @@ const Services = () => {
             ),
         },
         {
-            title: t('services.tabPhotoshoot'),
+            title: t('landing.services.tabPhotoshoot'),
             value: 'social', // Ensure this value aligns if used to dynamically fetch videoId
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second ">
-                        <h1 className="font-bold text-xl md:text-4xl">{t('services.photoshootTitle')}</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">{t('landing.services.photoshootTitle')}</h1>
                         <p className=" text-base md:text-lg">
-                            {t('services.photoshootDesc')}
+                            {t('landing.services.photoshootDesc')}
                         </p>
                     </div>
                     {/* Video/Coming Soon section for Socials */}
@@ -94,14 +94,14 @@ const Services = () => {
             ),
         },
         {
-            title: t('services.tabWedding'),
+            title: t('landing.services.tabWedding'),
             value: 'wedding',
             content: (
                 <div className="w-full h-full relative overflow-hidden rounded-2xl bg-second dark:bg-stone-950 text-second">
                     <div className="p-4 z-10 text-black dark:text-second">
-                        <h1 className="font-bold text-xl md:text-4xl">{t('services.weddingTitle')}</h1>
+                        <h1 className="font-bold text-xl md:text-4xl">{t('landing.services.weddingTitle')}</h1>
                         <p className=" text-base md:text-lg">
-                            {t('services.weddingDesc')}
+                            {t('landing.services.weddingDesc')}
                         </p>
                     </div>
                     {/* Video/Coming Soon section for Wedding */}
@@ -144,12 +144,12 @@ const Services = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     viewport={{ once: true }}>
                     <motion.h1 className="text-3xl md:text-2xl mb-4 font-bold text-shadow-lg dark:text-shadow-lg/50">
-                        {t('services.aboutUsTitle')}
+                        {t('landing.services.aboutUsTitle')}
                     </motion.h1>
                     <motion.p
                         className="text-xl md:text-3xl mb-4 text-shadow-lg dark:text-shadow-lg/50"
                     >
-                        {t('services.aboutUsP1')}
+                        {t('landing.services.aboutUsP1')}
                     </motion.p>
                 </motion.div>
                 <motion.div className="w-full sm:w-[50%]"
@@ -159,7 +159,7 @@ const Services = () => {
                     viewport={{ once: true }}>
                     <motion.p
                         className="text-lg md:text-xl">
-                        {t('services.aboutUsP2')}
+                        {t('landing.services.aboutUsP2')}
                     </motion.p>
                 </motion.div>
             </div>
@@ -169,7 +169,7 @@ const Services = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}>
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-12 text-shadow-lg dark:text-shadow-lg/50">
-                    {t('services.ourServicesTitle')}
+                    {t('landing.services.ourServicesTitle')}
                 </h2>
                 <div className="h-[25rem] sm:h-[35rem] md:h-[40rem] [perspective:1000px] relative flex flex-col items-center ">
                     <Link
@@ -179,7 +179,7 @@ const Services = () => {
                             shadow-xl/20 dark:shadow-xl/70 transition-all duration-300 w-[60%] sm:w-[30%] min-w-[152px] text-center hover:bg-second hover:text-black
                             `}
                     >
-                        {t('services.moreInfoButton')}
+                        {t('landing.services.moreInfoButton')}
                     </Link>
                     <Tabs tabs={services} />
                 </div>
