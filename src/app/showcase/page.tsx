@@ -9,12 +9,12 @@ import { cn } from "@/lib/utils";
 import YouTubeEmbed from "@/lib/youtubeVideo";
 
 const imagesPlaceholder = [
-    `/hero.png`,
-    `/hero.png`,
-    `/hero.png`,
-    `/hero.png`,
-    `/hero.png`,
-    `/hero.png`,
+    `https://images.winglamproductions.com/Still%202025-06-18%20102201_1.12.1.png`,
+    `https://images.winglamproductions.com/Still%202025-06-18%20102201_1.14.1.png`,
+    `https://images.winglamproductions.com/Still%202025-06-18%20102201_1.15.1.png`,
+    `https://images.winglamproductions.com/Still%202025-06-18%20102201_1.16.1.png`,
+    `https://images.winglamproductions.com/Still%202025-06-18%20102201_1.17.1.png`,
+    `https://images.winglamproductions.com/Still%202025-06-18%20102201_1.2.1.png`,
 ] as const;
 
 const categories = [
